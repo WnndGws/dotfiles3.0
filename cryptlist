@@ -1,4 +1,4 @@
 .config/polybar_credentials/:desktop
-.centerim5/clogs/:desktop
-.centerim5/logs/:desktop
 .gist-vim:desktop
+.gitconfig:desktop
+

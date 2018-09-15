@@ -21,10 +21,11 @@
 .files/:desktop
 .mailboxes:desktop
 .notmuch-config:desktop
-.offlineimparc:desktop
+.offlineimaprc:desktop
 .oh-my-zsh/:desktop
 .passwords.asc:desktop
 .scimrc:desktop
+.screenlayout:desktop
 .vim/:desktop
 .vimrc:desktop
 .xinitrc:desktop
