@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<account version='1.0'>
+	<account>
+		<protocol>prpl-facebook</protocol>
+		<name>wynand.gouws.wg</name>
+		<password>V3JV4SSKXQ</password>
+		<alias>Wynand</alias>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='invisible' name='Invisible' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='cid' type='string'>gYTZbX3ttLo1bd9YgnoG</setting>
+			<setting name='stoken' type='string'>1999654311</setting>
+			<setting name='token' type='string'>EAADo1TDZCuu8BABOIQAWLHn4sD6TwpkWgQVAnbDa7vtlhxs5f83F8vp7ykAunT7wRkjEcfLvAEkGeXffOwMjpHjYjYBKPFs6tPEaT9jO8LFZC9p0XkqQ3pTaoTOpQVkmqaZBp9pxitX5tif0iJZA6lBnH52shFjX1Rd4JW1zMgZDZD</setting>
+			<setting name='uid' type='string'>100001828825922</setting>
+			<setting name='show-self' type='bool'>0</setting>
+			<setting name='did' type='string'>5853b022-2f9c-4b56-818c-4f24b3963828</setting>
+			<setting name='mid' type='string'>3745302732</setting>
+		</settings>
+		<settings ui='centerim5'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-hangouts</protocol>
+		<name>wynandgouwswg@gmail.com</name>
+		<password>1/xY-_ixs4uaRL36uuF97ZUXcbAhFbOxsUxsd7Pgzt3WE</password>
+		<alias>Wynand</alias>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='treat_invisible_as_offline' type='bool'>1</setting>
+			<setting name='last_event_timestamp_low' type='int'>-838747232</setting>
+			<setting name='self_gaia_id' type='string'>116797814448723518518</setting>
+			<setting name='last_event_timestamp_high' type='int'>357841</setting>
+		</settings>
+		<settings ui='centerim5'>
+			<setting name='auto-login' type='bool'>0</setting>
+		</settings>
+		<current_error>
+			<type>2</type>
+			<description>SAPISID Cookie not received</description>
+		</current_error>
+	</account>
+</account>

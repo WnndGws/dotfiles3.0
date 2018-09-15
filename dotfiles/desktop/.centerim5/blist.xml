@@ -1,0 +1,819 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<purple version='1.0'>
+	<blist>
+		<group name='Hangouts'>
+			<chat proto='prpl-hangouts' account='wynandgouwswg@gmail.com'>
+				<alias>Ammar, 灘佳代, Wynand Gouws</alias>
+				<component name='conv_id'>Ugzb1kjCEHRwKgG6I114AaABAQ</component>
+			</chat>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>117973444094311910437</name>
+					<alias>WYN 9000</alias>
+					<setting name='buddy_icon' type='string'>c4a02c09568b1e15350a89dbb4c262198868d9d0.png</setting>
+					<setting name='icon_checksum' type='string'>https://lh5.googleusercontent.com/-8J2EZ8B5AFI/AAAAAAAAAAI/AAAAAAAAAAo/kBcjX0xxd5I/photo.jpg</setting>
+					<setting name='last_activity' type='int'>1536746324</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>116797814448723518518</name>
+					<alias>Wynand Gouws</alias>
+					<setting name='last_seen' type='int'>1536920576</setting>
+					<setting name='buddy_icon' type='string'>e0eaad0620e82228386ee04121b5c73d28c91217.jpg</setting>
+					<setting name='icon_checksum' type='string'>https://lh6.googleusercontent.com/-liTR784mevw/AAAAAAAAAAI/AAAAAAAAbgg/sjdgOwa9EBA/photo.jpg</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>115265062698519249794</name>
+					<alias>灘佳代</alias>
+					<setting name='last_seen' type='int'>1536920576</setting>
+					<setting name='buddy_icon' type='string'>b1aab8bb4a963b1aa9210bb75a5d9fd64826211f.jpg</setting>
+					<setting name='icon_checksum' type='string'>https://lh3.googleusercontent.com/-oE75Q4fEjFM/AAAAAAAAAAI/AAAAAAAAAmM/lTodE-hivXc/photo.jpg</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>104062054821796402056</name>
+					<alias>Ammar</alias>
+					<setting name='last_seen' type='int'>1536920576</setting>
+					<setting name='buddy_icon' type='string'>1f3c2390c77d3d3b2547a3502f126e69af2fda72.jpg</setting>
+					<setting name='icon_checksum' type='string'>https://lh5.googleusercontent.com/-ebjPB3ON_7E/AAAAAAAAAAI/AAAAAAAA_ko/ycKa9JSuEwQ/photo.jpg</setting>
+					<setting name='last_activity' type='int'>1536908778</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>101427933158333383437</name>
+					<alias>Anita Swarts</alias>
+					<setting name='buddy_icon' type='string'>b7269298d9ff4b3adfdf5ef97e55122ced06ab71.png</setting>
+					<setting name='icon_checksum' type='string'>https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5MqYjPEJmNGuuxyBr7bZ6QxQIhkKAUEQ____________ARjAmoH4______8B/photo.jpg</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>104604003629140399873</name>
+					<alias>Eliza Laycock</alias>
+					<setting name='buddy_icon' type='string'>7f37988ce2610442a389f03792326a0ec6aedef6.jpg</setting>
+					<setting name='icon_checksum' type='string'>https://lh6.googleusercontent.com/-t-kBTWzQ6Yg/WaaoVReaUoI/AAAAAAAAAAA/6-lW8wvgMFMXUX7kSpuSEDrAT2GhOl40gCOQCEAE/photo.jpg</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynandgouwswg@gmail.com' proto='prpl-hangouts'>
+					<name>115099169687185522073</name>
+					<alias>TCC IT Tech Support</alias>
+					<setting name='buddy_icon' type='string'>85fa930f302382f38a0dafbd96bc7970c26a25e7.png</setting>
+					<setting name='icon_checksum' type='string'>https://lh5.googleusercontent.com/-sLuT3C2NSA4/AAAAAAAAAAI/AAAAAAAAAHM/4dSRprcdj_0/photo.jpg</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Facebook Friends'>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>645718315</name>
+					<setting name='buddy_icon' type='string'>f4022f8bacfa33652161f6c1ec969a9c9cc8b92f.jpg</setting>
+					<setting name='icon_checksum' type='string'>c6caae9946966046778b61018dab706b</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1105723014</name>
+					<setting name='last_seen' type='int'>1536927138</setting>
+					<setting name='buddy_icon' type='string'>a999017ab3a69674a9e0689ffde7778fdee348cb.jpg</setting>
+					<setting name='icon_checksum' type='string'>3e50eeaaf259d41daba28a24971a8025</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1371303448</name>
+					<setting name='buddy_icon' type='string'>7e46fc7aff10bf2bf8a9cb0737f135e6a230ede7.jpg</setting>
+					<setting name='icon_checksum' type='string'>08ee9a87a0b0fb0d30879c013b2aa4f3</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>610809820</name>
+					<setting name='last_seen' type='int'>1536925930</setting>
+					<setting name='buddy_icon' type='string'>cd03a618b0eee5420b2640540300a3e53e475a4f.jpg</setting>
+					<setting name='icon_checksum' type='string'>d33fdd9cc4ab3293b1e251956a1ededb</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100002089296403</name>
+					<setting name='buddy_icon' type='string'>89ac6fa0191cb6b63ab637ddac80bf1862947e1d.jpg</setting>
+					<setting name='icon_checksum' type='string'>1c141710f118d4fd5736f6f249636f20</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>645510554</name>
+					<setting name='buddy_icon' type='string'>fa7d6a5fbb2699d70fd29e17cd78c5c6b4cef2fb.jpg</setting>
+					<setting name='icon_checksum' type='string'>fb1df7122b9aacc84ac5b0f6faa88419</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1539367987</name>
+					<setting name='buddy_icon' type='string'>0b65695bd66275d44c6f1ba9c4c535b67668df45.jpg</setting>
+					<setting name='icon_checksum' type='string'>3680690ed051f339de4f340a09977735</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>533871377</name>
+					<setting name='buddy_icon' type='string'>cc8643bf13f38eca1006189da7772211f7306f80.jpg</setting>
+					<setting name='icon_checksum' type='string'>f34e9937d6a169ea752846a414734b23</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>566371625</name>
+					<setting name='buddy_icon' type='string'>283a61740211274047a6a1287354118c2868354a.jpg</setting>
+					<setting name='icon_checksum' type='string'>e8caef862f817daa94893907fb0a1b7c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>673191336</name>
+					<setting name='buddy_icon' type='string'>2b0ae6abca42182fd3b0def64b846f8f24176283.jpg</setting>
+					<setting name='icon_checksum' type='string'>0e5598ee6700c815ffce17ff9f5ce515</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000590054360</name>
+					<setting name='buddy_icon' type='string'>0b88ff8f0e7a330ebe195411bba63b681c19541a.jpg</setting>
+					<setting name='icon_checksum' type='string'>aae6f8f20830d1a88327c25c2872f3be</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100001168983714</name>
+					<setting name='buddy_icon' type='string'>141c19059295045916d154c30b1548c452f6824a.jpg</setting>
+					<setting name='icon_checksum' type='string'>8ab8b2bd3f93564279083d9d0fed3e9d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000821216311</name>
+					<setting name='buddy_icon' type='string'>ecd1f39a539a7103fd9bd76c324860dbf663d44a.jpg</setting>
+					<setting name='icon_checksum' type='string'>be76d5fd8cd509d1f053b852b1c97b7c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>741027194</name>
+					<setting name='buddy_icon' type='string'>93446a0ff4f0df653f8c246857f6e70c60849c5c.jpg</setting>
+					<setting name='icon_checksum' type='string'>0fac1c5adaffd2e106773a64286f9c99</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1181619149</name>
+					<setting name='buddy_icon' type='string'>e5208b0c5fc86c36670b12cc7b9cda872453b2c4.jpg</setting>
+					<setting name='icon_checksum' type='string'>5012555b2518f55916b25e2cf4ed7dce</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>699964025</name>
+					<setting name='last_seen' type='int'>1536926987</setting>
+					<setting name='buddy_icon' type='string'>6e2c4932002de2c2034b1c9b344c9f2634271fec.jpg</setting>
+					<setting name='icon_checksum' type='string'>6cbba162f3fa226cd33ae04168b435f1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1319954159</name>
+					<setting name='buddy_icon' type='string'>27bcd9857841dc391751978cefa7021570208ff7.jpg</setting>
+					<setting name='icon_checksum' type='string'>bdcb7b4aa6a33dc4f9b627ebce64e238</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100009096171258</name>
+					<setting name='buddy_icon' type='string'>5294ade5e9a93f430fe1cc6e7e1962e9760a2d6c.jpg</setting>
+					<setting name='icon_checksum' type='string'>3938b71388a411595bbf9a59802ae908</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>59301994</name>
+					<setting name='buddy_icon' type='string'>81acfcd0fcaa80331062feab9d723f6ea4f20ecb.jpg</setting>
+					<setting name='icon_checksum' type='string'>a5945999d39ff2924527dd952d3715f7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>661606608</name>
+					<setting name='buddy_icon' type='string'>b473d4b3f83680396fe82484c99cb6ad1cb159b4.jpg</setting>
+					<setting name='icon_checksum' type='string'>22cb106618f5eef3609c1d720734fe66</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1081750898</name>
+					<setting name='buddy_icon' type='string'>9f8ab44b0581b825a54ab22fb1e18e6810b3bdf7.jpg</setting>
+					<setting name='icon_checksum' type='string'>69f58e7f0d1d9e1c6e531516d0a8ea93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>544128553</name>
+					<setting name='buddy_icon' type='string'>96877000de880ede8e76dad9c3006b3c0ecf6b1b.jpg</setting>
+					<setting name='icon_checksum' type='string'>c286a619c88c806c93d4ac3b739cbd95</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>774548763</name>
+					<setting name='buddy_icon' type='string'>0b175f45ba881f77c16ad649c33579e95c94a3f9.jpg</setting>
+					<setting name='icon_checksum' type='string'>6804003af753a59ffd8fc7d1aadf148a</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1433811017</name>
+					<setting name='buddy_icon' type='string'>533db504ebad38d20ab36896f0e35b004521589d.jpg</setting>
+					<setting name='icon_checksum' type='string'>8ff9e0c58b2d0e35bf9638a13785e644</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1316267688</name>
+					<setting name='buddy_icon' type='string'>da28f7c1dd2fb21d1ad140ae7206ddc0f09ce6ef.jpg</setting>
+					<setting name='icon_checksum' type='string'>e2ff68bc52829ad4322b0ec1cd0d35bc</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100003520266405</name>
+					<setting name='buddy_icon' type='string'>63cc1ed2c9571d352266e75cdd1bcf1d2d54d8c3.jpg</setting>
+					<setting name='icon_checksum' type='string'>6ec69c888529d9c085a5879b9103d045</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>547918395</name>
+					<setting name='buddy_icon' type='string'>efa1d175d29bb494ee61b39b1d629cdb9968bd0b.jpg</setting>
+					<setting name='icon_checksum' type='string'>d235135bba166fe7f1cfb29701073f4f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>739295679</name>
+					<setting name='buddy_icon' type='string'>a3f97f12da43daef8849a6b2051485c6b336ebb3.jpg</setting>
+					<setting name='icon_checksum' type='string'>1cfe8f3521443f1fdb1f5f04dde4d9aa</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1070731474</name>
+					<setting name='buddy_icon' type='string'>f74e4c4cc94a0032f7471ceb9abbbf27a4131e9a.jpg</setting>
+					<setting name='icon_checksum' type='string'>2de197a5f37d7debf46a627ada6b3134</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1124277479</name>
+					<setting name='buddy_icon' type='string'>aec0c12d23081a40eeae9cd91d85034032bc1515.jpg</setting>
+					<setting name='icon_checksum' type='string'>bc12b13340814eb5dd1612746e50b267</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>689412616</name>
+					<setting name='buddy_icon' type='string'>4872f9fcf32a96bac1e45e644fb4b7dc609f9f41.jpg</setting>
+					<setting name='icon_checksum' type='string'>4fece57201fe109108b70424540972e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>816908153</name>
+					<setting name='buddy_icon' type='string'>a80ab48c1f0ca6ab44070f031f596a0a1d4d7355.jpg</setting>
+					<setting name='icon_checksum' type='string'>d372ce193c1349584a2c0e2e4b5c385a</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1757179300</name>
+					<setting name='buddy_icon' type='string'>2513f300d58c40eecca514b4111f9251ffa079a5.jpg</setting>
+					<setting name='icon_checksum' type='string'>5a3b5b7c8cc5c741567d33d2aa833631</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>720699679</name>
+					<setting name='last_seen' type='int'>1536921098</setting>
+					<setting name='buddy_icon' type='string'>9568f0116d628bf06d6590e2500f7ee6c664c86a.jpg</setting>
+					<setting name='icon_checksum' type='string'>1bf32e079664d3f7b25b3c454c46b72f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100001429941271</name>
+					<setting name='buddy_icon' type='string'>0912aba3f42313ee1d0e4d62b7f4894a254485b1.jpg</setting>
+					<setting name='icon_checksum' type='string'>bbb23f015f96e8dd6b75bc7ba2cb583c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>607930093</name>
+					<setting name='buddy_icon' type='string'>18f2ee142a2ec831078b9963bd0654b3cb263147.jpg</setting>
+					<setting name='icon_checksum' type='string'>aaa9e21d0a84c93f4a2fe5248ba88e9f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100002412522599</name>
+					<setting name='buddy_icon' type='string'>579e9f5a6740a2d577d52d6644ee440c1e64d222.jpg</setting>
+					<setting name='icon_checksum' type='string'>6ccd46d826526ca4505141c0f90129a0</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>780504710</name>
+					<setting name='buddy_icon' type='string'>138cd3243ebbe5a2eb6ef4e60beae953a086f8ea.jpg</setting>
+					<setting name='icon_checksum' type='string'>a85f24dec9cb9af1eeb00268fe71ee7f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>672865206</name>
+					<setting name='buddy_icon' type='string'>f7dd1c9f8c6d23b68c61fc458c1de54ba057b78a.jpg</setting>
+					<setting name='icon_checksum' type='string'>7c327ef8762890430cad6e22ebd2c9d1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000256928396</name>
+					<setting name='last_seen' type='int'>1536925234</setting>
+					<setting name='buddy_icon' type='string'>48b8fab62af125152614d12d8efa00bfd6d0f596.jpg</setting>
+					<setting name='icon_checksum' type='string'>07f1dac8c69a662fca780d51c2f933fe</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>649391977</name>
+					<setting name='buddy_icon' type='string'>ce2de676e2d6fc14262ed6cc902bae44402a3a10.jpg</setting>
+					<setting name='icon_checksum' type='string'>69ed3a5e2fab7099837b1a73dbdd0792</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>591084609</name>
+					<setting name='last_seen' type='int'>1536914605</setting>
+					<setting name='buddy_icon' type='string'>24134c66bf34d7a232232a8eed88cf07d046f0c5.jpg</setting>
+					<setting name='icon_checksum' type='string'>dffd0e6d0c22bb2bc054c927278e506c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>619712213</name>
+					<setting name='buddy_icon' type='string'>1dc9b564311f88a78fc26347d2bdd2fa6a54904c.jpg</setting>
+					<setting name='icon_checksum' type='string'>50dc0db3c9b9b5d1da706fee56a56fe6</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>585677354</name>
+					<setting name='buddy_icon' type='string'>3a86352c652a037023f217e26b19c664c6043c73.jpg</setting>
+					<setting name='icon_checksum' type='string'>d8b7a0efc917e3ca38fa940969fba27c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>522185976</name>
+					<setting name='buddy_icon' type='string'>37aaef01769abd941ce60df5eff04032e9811a23.jpg</setting>
+					<setting name='icon_checksum' type='string'>6a81906defbc6e3139f1abaf03e5d91e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>595757783</name>
+					<setting name='buddy_icon' type='string'>2a09eedb9d1fe0447f064c631cd1045ffbdb38a9.jpg</setting>
+					<setting name='icon_checksum' type='string'>3e8784f958c364961e4d86cdb1edbf8f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>652905189</name>
+					<setting name='buddy_icon' type='string'>2079a22933b8a7bf8c80bd6b2f702b2e95ff9980.jpg</setting>
+					<setting name='icon_checksum' type='string'>30a7b4a659957b9e37227340f08ee2d7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1368320511</name>
+					<setting name='last_seen' type='int'>1536925930</setting>
+					<setting name='buddy_icon' type='string'>b2bafe518c70c1153ccc467365525e67468e6d18.jpg</setting>
+					<setting name='icon_checksum' type='string'>6561898da3b9331e4a9ead5c90f424a9</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100001590305687</name>
+					<setting name='buddy_icon' type='string'>2af98ba59db34d101a715deb18e15e4c421a0273.jpg</setting>
+					<setting name='icon_checksum' type='string'>ce83b195038bef0b70b59fe4621713e5</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1047427540</name>
+					<setting name='buddy_icon' type='string'>89e9ad1511e35608ee13cc082fc0054839558412.jpg</setting>
+					<setting name='icon_checksum' type='string'>7a6839ed55328d8d7a0865391c8e1c45</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>759614084</name>
+					<setting name='buddy_icon' type='string'>2b56c8b2741885bdc6c50e8252dbac6608750dcf.jpg</setting>
+					<setting name='icon_checksum' type='string'>648bbceb5c25c41a591a876f87eba667</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100001397351155</name>
+					<setting name='buddy_icon' type='string'>5308c3b3fa51cec51526149d6d61a8b6bc7f3c18.jpg</setting>
+					<setting name='icon_checksum' type='string'>0a4dd3419caaf57d0021bd52af5e3b7e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1111189451</name>
+					<setting name='buddy_icon' type='string'>4d6c86b45be30ed002780a17489b8e852a997400.jpg</setting>
+					<setting name='icon_checksum' type='string'>9e38b50d2d0174265d334e8b1694db03</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000602021556</name>
+					<setting name='buddy_icon' type='string'>379640b289d6280b00bd9a6c0b129051fcd3bfb4.jpg</setting>
+					<setting name='icon_checksum' type='string'>6eb8ee3ac8573ada9e8e3efadac208db</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>644606186</name>
+					<setting name='buddy_icon' type='string'>8edb031cbbde44d26da3a2faa4ab3d0b1d11aefb.jpg</setting>
+					<setting name='icon_checksum' type='string'>a4f2906ae6e45ebe7ca967b19c4de857</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000859313674</name>
+					<setting name='buddy_icon' type='string'>0f98ae8a35362781e7d41f74b35b7ec505f5e721.jpg</setting>
+					<setting name='icon_checksum' type='string'>7cf94bc210cecd442545bbf9b1cb9b74</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1140922136</name>
+					<setting name='buddy_icon' type='string'>4aacde96afc5ed031d895195d79e0904b22b5170.jpg</setting>
+					<setting name='icon_checksum' type='string'>207fba455d2ef6822d5bbae73d3c5fb2</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>701130851</name>
+					<setting name='buddy_icon' type='string'>a1d59a11534376e63adfc8afaa77cfc5a635485d.jpg</setting>
+					<setting name='icon_checksum' type='string'>5c98247ace4df55a9a2f330cb29f21a3</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>590837212</name>
+					<setting name='buddy_icon' type='string'>25570afc68e06db02aa3051a16f10d7624760d0d.jpg</setting>
+					<setting name='icon_checksum' type='string'>36042730e7d0364e3e25f22c4bdacf97</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>606005274</name>
+					<setting name='buddy_icon' type='string'>4d0453a7a81cd41d616c7a16da0d140f2aad4fa3.jpg</setting>
+					<setting name='icon_checksum' type='string'>59772688b0523b9430997d0175c4d44f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1204593408</name>
+					<setting name='buddy_icon' type='string'>738bbb9d6dbbdcc058b6d7236870431a252e372c.jpg</setting>
+					<setting name='icon_checksum' type='string'>b13ae9b417cb2b467f2aae3bcb5d1deb</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1011044345</name>
+					<setting name='buddy_icon' type='string'>7a1e6edc4294a604b698cc4fc4603bf32d729179.jpg</setting>
+					<setting name='icon_checksum' type='string'>3eab0ef0b20a92b57f511d7134c2eca7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>761797844</name>
+					<setting name='buddy_icon' type='string'>be62f886de049e8932cd116558485acc087ae1f0.jpg</setting>
+					<setting name='icon_checksum' type='string'>f165a49703f52375f80fcccd8164ff61</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>709670734</name>
+					<setting name='buddy_icon' type='string'>3d0fd7698d31436ba5e4d3e1b4868ae317119ced.jpg</setting>
+					<setting name='icon_checksum' type='string'>d6922eb2c53487af73677eabb3699bab</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>615125574</name>
+					<setting name='buddy_icon' type='string'>34f9cb0b1b500366d6fc8c133148d2929d9f95c0.jpg</setting>
+					<setting name='icon_checksum' type='string'>dea839234df9949a661783a8ce6d0709</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1499443318</name>
+					<setting name='last_seen' type='int'>1536920645</setting>
+					<setting name='buddy_icon' type='string'>b297307bdf2e7fee859bd2eb9f36f549abf73200.jpg</setting>
+					<setting name='icon_checksum' type='string'>47a82a8e2c6ce5c95adcbe297ca1084d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1337727552</name>
+					<setting name='buddy_icon' type='string'>74b6a9f0664fd0ff912f0273e721ea1ad8ae147f.jpg</setting>
+					<setting name='icon_checksum' type='string'>8765d42e4f17f49225da5095c123831c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>565619021</name>
+					<setting name='buddy_icon' type='string'>6892c766c6de3a08a6217fa5bcf720e1ea28a07d.jpg</setting>
+					<setting name='icon_checksum' type='string'>d7386a52ce00d1a18f955fffdff4af24</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1254324913</name>
+					<setting name='buddy_icon' type='string'>9e28ba81daa51ee05b68f9a01d05d7122628756d.jpg</setting>
+					<setting name='icon_checksum' type='string'>6331d8a28755ca3ac105c2f4c37d5afb</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1021652694</name>
+					<setting name='buddy_icon' type='string'>3bb79ac38bf2364bca10a5e5338aa70eb673fc37.jpg</setting>
+					<setting name='icon_checksum' type='string'>0764c9425a9ec7ac834dbaf990035fce</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1301996360</name>
+					<setting name='buddy_icon' type='string'>aaaffe937fda7b4697b48511719da6cdf34f5ed2.jpg</setting>
+					<setting name='icon_checksum' type='string'>a02ca2f8b2e911f2874694fa86dc5d6e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1512426401</name>
+					<setting name='buddy_icon' type='string'>7c3de1a346cc9ca10318132d7f5efa695993fc22.jpg</setting>
+					<setting name='icon_checksum' type='string'>1598ac0eefa2cd07fc020edcb11ce322</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>668598195</name>
+					<setting name='buddy_icon' type='string'>5d933c124d266068e0f2483eac0fa31e95a7ca7e.jpg</setting>
+					<setting name='icon_checksum' type='string'>37be6b257626665dd0623f1d8e8872ca</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1358029449</name>
+					<setting name='buddy_icon' type='string'>a5d37b2a70a7f8e5e22b1225d92738513b23a53c.jpg</setting>
+					<setting name='icon_checksum' type='string'>fae44da3bad43f7001bd12a644313c93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1074540427</name>
+					<setting name='buddy_icon' type='string'>7b901400161f831a2c6c012eee095901742ad364.jpg</setting>
+					<setting name='icon_checksum' type='string'>0b6071b78254bb2694020a48ea730fce</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1350326993</name>
+					<setting name='buddy_icon' type='string'>8b287ac11a9794ca2f0358a39cd954f751ce701d.jpg</setting>
+					<setting name='icon_checksum' type='string'>25900e5fabbf38019f95fa1ca6bf1707</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>513631223</name>
+					<setting name='buddy_icon' type='string'>3b3411a2c5341f675e8899c6649964f56fb3463e.jpg</setting>
+					<setting name='icon_checksum' type='string'>9fbd31e66900aa407b8ff26d73278bee</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1046896359</name>
+					<setting name='buddy_icon' type='string'>5747b3038d49dbdda01568589f6b6a788dc09eec.jpg</setting>
+					<setting name='icon_checksum' type='string'>306fdc40193f0cc86c5205e9dad61a9a</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>645087791</name>
+					<setting name='buddy_icon' type='string'>23a38e59690c21b2f6ad4f6330154d92c8d63d62.jpg</setting>
+					<setting name='icon_checksum' type='string'>64074a336bb76aadb4ad4c3bb2cabbec</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>550645737</name>
+					<setting name='buddy_icon' type='string'>c1fe5b9a550376c23d7f4e278d948896b9145d4e.jpg</setting>
+					<setting name='icon_checksum' type='string'>d98d7a85014d0437307f5fc3bb4f2955</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>623721121</name>
+					<setting name='buddy_icon' type='string'>cac3c3b6f62d9d1c02ef176dbfcbc4b41ce9719b.jpg</setting>
+					<setting name='icon_checksum' type='string'>d72e9091586050c20250b55fcdd5493e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>567879227</name>
+					<setting name='buddy_icon' type='string'>a1491bb95d2ca7c2ce11bc09b6e941468f351fd6.jpg</setting>
+					<setting name='icon_checksum' type='string'>d754ab85c9efbe8b06e6cb5655da5e66</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>617155640</name>
+					<setting name='buddy_icon' type='string'>cba8fe2089ab6f53699d38fa9769dcdca4e24fd4.jpg</setting>
+					<setting name='icon_checksum' type='string'>e4af32d20f914b918efa498c1404b752</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>624128962</name>
+					<setting name='buddy_icon' type='string'>1c048d55b414a8dc0dacad20fd1b7e4ba7649bba.jpg</setting>
+					<setting name='icon_checksum' type='string'>f58b7cb9ab705fd1dd3e555c88293998</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>553036864</name>
+					<setting name='buddy_icon' type='string'>329dc813944ad365338bf9e427c1829ac3ef7363.jpg</setting>
+					<setting name='icon_checksum' type='string'>21c22c8c7d3f33d1a36c3dfc312fce7c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>668464891</name>
+					<setting name='buddy_icon' type='string'>64a07d0dc0677a4048326286d052eed0d1d1c397.jpg</setting>
+					<setting name='icon_checksum' type='string'>dbcb5a6c6d52026dff784be70274a983</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1089897565</name>
+					<setting name='buddy_icon' type='string'>f06efb562dcff6a732ca4cd4bf4e86b4f00350ed.jpg</setting>
+					<setting name='icon_checksum' type='string'>7bcf16bc8c791fcfc7c7378074b5d4c0</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>585046489</name>
+					<setting name='buddy_icon' type='string'>0e57d7ccf17ff2e3f9f84ec19d1e48908e4a031b.jpg</setting>
+					<setting name='icon_checksum' type='string'>125a6b1abe33a4a36e5c61b84c276b50</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1297036930</name>
+					<setting name='buddy_icon' type='string'>bf02e014e8ff3e95150eb66e0ec432bd4bc5f377.jpg</setting>
+					<setting name='icon_checksum' type='string'>90dbde67e1574e83ec7555508f6083a3</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000904521162</name>
+					<setting name='buddy_icon' type='string'>18268bd399ecc327f093664607e16a9d046c318e.jpg</setting>
+					<setting name='icon_checksum' type='string'>6d0f8b9fb455fc3d31e87f6e4a86ad30</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100001674703498</name>
+					<setting name='buddy_icon' type='string'>d0095bbd884b47bba19fb718ee6bd42b274503a6.jpg</setting>
+					<setting name='icon_checksum' type='string'>7faeef15c5181894a2948f2f464c66a2</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100000859265032</name>
+					<setting name='buddy_icon' type='string'>ca6d2153f27ffc5597a67b580a144d818db0d9ab.jpg</setting>
+					<setting name='icon_checksum' type='string'>ddd1251b54d69a83aa76e0e1945dd7ff</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1643082305</name>
+					<setting name='buddy_icon' type='string'>e49fa1f7983c167299417464447135301e397523.jpg</setting>
+					<setting name='icon_checksum' type='string'>dbba771739d451b399b8a7b3eaf64c50</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>511319943</name>
+					<setting name='buddy_icon' type='string'>553d6b558c017561bb80e34c7a636eb84ff8d6d0.jpg</setting>
+					<setting name='icon_checksum' type='string'>4583a6bb4abb923e925bce4317f180d9</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>589271185</name>
+					<setting name='buddy_icon' type='string'>c63387e09734b2a10e210979e1f3d74a0c035700.jpg</setting>
+					<setting name='icon_checksum' type='string'>95e0c4d0a131e4562d7a1e27be265520</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>720794152</name>
+					<setting name='last_seen' type='int'>1536927586</setting>
+					<setting name='buddy_icon' type='string'>5617884a9855a76c33f577452a8814737e73ae42.jpg</setting>
+					<setting name='icon_checksum' type='string'>8f42982a0796ea6e51e601c463bda314</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>667529623</name>
+					<setting name='buddy_icon' type='string'>646a8e760a4f4e1e469c6454f84585fba29f2e47.jpg</setting>
+					<setting name='icon_checksum' type='string'>21830198bcc5de56e37dace1bfc78ecc</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>783844752</name>
+					<setting name='buddy_icon' type='string'>8edfbf4453747389e3bb2d0d4c7eb40c2d0f475f.jpg</setting>
+					<setting name='icon_checksum' type='string'>75e4d0e57279db1de547bf39e4f65e99</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>1069233525</name>
+					<setting name='last_seen' type='int'>1536925779</setting>
+					<setting name='buddy_icon' type='string'>c120782c077bc93c675fa9b7bff0e19317e68d71.jpg</setting>
+					<setting name='icon_checksum' type='string'>70ac0008181f9d1261b6996873ddcdde</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>656526111</name>
+					<setting name='last_seen' type='int'>1536926829</setting>
+					<setting name='buddy_icon' type='string'>9b9793b5ad3389580faea217afb852b74b8aeeb6.jpg</setting>
+					<setting name='icon_checksum' type='string'>549b0ca38989f242913f7c3477858c13</setting>
+					<setting name='last_activity' type='int'>1536553960</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>769267317</name>
+					<setting name='last_seen' type='int'>1536927893</setting>
+					<setting name='buddy_icon' type='string'>e91114ea7ee6c6ef5ed153fcc195fe0dea02aab1.jpg</setting>
+					<setting name='icon_checksum' type='string'>71bbbdc474d5f00f44b858d2277d5cd8</setting>
+					<setting name='last_activity' type='int'>1536899774</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>679716949</name>
+					<setting name='last_seen' type='int'>1536918680</setting>
+					<setting name='buddy_icon' type='string'>2bfb780aef5e967e83bd296952b3f350ff1cfc80.jpg</setting>
+					<setting name='icon_checksum' type='string'>1ff6038b6044db1ba4bbc47caac3ce61</setting>
+					<setting name='last_activity' type='int'>1536894865</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Facebook Non-Friends'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='wynand.gouws.wg' proto='prpl-facebook'>
+					<name>100001828825922</name>
+					<alias>Wynand Nader</alias>
+					<setting name='last_activity' type='int'>1536894072</setting>
+				</buddy>
+			</contact>
+		</group>
+	</blist>
+	<privacy>
+		<account proto='prpl-facebook' name='wynand.gouws.wg' mode='1'/>
+		<account proto='prpl-hangouts' name='wynandgouwswg@gmail.com' mode='1'/>
+	</privacy>
+</purple>
