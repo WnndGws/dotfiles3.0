@@ -242,7 +242,7 @@ alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 |
 alias ccm='cammu'
 #Extract urls itiot sends me
 
-alias dm='cd ~/Git/dotfiles3.0 && dotgit update desktop'
+alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
