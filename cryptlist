@@ -1,4 +1,4 @@
 .config/polybar_credentials/:desktop
 .gist-vim:desktop
-.gitconfig:desktop
+.config/git/:desktop
 

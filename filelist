@@ -21,7 +21,7 @@
 .files/:desktop
 .mailboxes:desktop
 .notmuch-config:desktop
-.offlineimaprc:desktop
+.config/offlineimap/:desktop
 .oh-my-zsh/:desktop
 .passwords.asc:desktop
 .scimrc:desktop
