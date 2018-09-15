@@ -1,5 +1,7 @@
 .Xresources:desktop
-.centerim5/:desktop
+.centerim5/binds.xml:desktop
+.centerim5/colorschemes.xml:desktop
+.centerim5/prefs.xml:desktop
 .config/cmus/rc:desktop
 .config/feh/:desktop
 .config/htop/:desktop
