@@ -55,7 +55,6 @@ i3blocks
 i3ipc-python
 i3lock
 i3status
-ibam
 imagemagick
 insync
 intel-ucode
