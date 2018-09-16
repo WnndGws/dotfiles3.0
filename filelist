@@ -29,4 +29,5 @@
 .vim/:desktop
 .vimrc:desktop
 .xinitrc:desktop
+.Xmodmap:deskop
 .zshrc:desktop
