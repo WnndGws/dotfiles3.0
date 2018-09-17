@@ -1,6 +1,8 @@
 0ad
 acpi
 alsa-utils
+android-sdk-platform-tools
+android-udev
 aria2
 asciidoc
 aur-auto-vote-git
@@ -115,6 +117,7 @@ python-pip
 python-pipenv
 python-pytest
 python-requests-html
+python-unidecode
 python-utils
 radarr
 ranger
