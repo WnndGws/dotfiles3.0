@@ -1,4 +1,4 @@
-.config/polybar_credentials/:desktop
 .gist-vim:desktop
+.config/credentials/boxing_client_secrets.json:desktop
 .config/git/:desktop
-
+.config/polybar_credentials/:desktop
