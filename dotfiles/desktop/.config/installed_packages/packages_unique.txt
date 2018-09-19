@@ -80,7 +80,6 @@ nerd-fonts-complete-mono-glyphs
 nethogs
 newsboat
 nim
-noteshrink
 noto-fonts-cjk
 noto-fonts-emoji
 offlineimap
@@ -134,7 +133,6 @@ scrot
 simple-mtpfs
 slic3r-git
 sonarr
-stow
 syncthing
 tealdeer
 tesseract-data-eng-git
@@ -159,7 +157,6 @@ udiskie-dmenu-git
 unclutter
 unzip
 urlscan
-urxvt-vtwheel
 vnstat
 w3m
 wget

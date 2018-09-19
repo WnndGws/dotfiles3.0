@@ -1,0 +1,1 @@
+../../../desktop/.config/neomutt/getmuttpass.sh
