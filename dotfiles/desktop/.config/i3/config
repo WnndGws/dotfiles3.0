@@ -82,7 +82,6 @@ bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+q exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Quit?' "i3-msg kill"
-bindsym $mod+p exec --no-startup-id kodi-standalone
 # Start Kodi
 
 # change focus
@@ -201,6 +200,13 @@ set $text-colour            #D3D7CF
 set $inactive-text-colour   #EEEEEC
 set $urgent-bg-colour       #BD2C40
 set $indicator-colour       #D3D7CF
+set $bar-bg                 #2e3436
+set $bar-bg-inactive        #555753
+set $bar-bg-active          #3465a4
+set $bar-fg                 #d3d7cf
+set $bar-primary            #ffb52a
+set $bar-secondary          #e60053
+set $bar-urgent             #bd2c40
 
 #                    Border                   Background              Text                     Indicator
 client.focused       $bg-colour               $bg-colour              $text-colour             $indicator-colour
@@ -215,6 +221,20 @@ client.urgent        $urgent-bg-colour        $urgent-bg-colour       $text-colo
 exec_always --no-startup-id exec ~/.config/polybar/launch.sh
 exec --no-startup-id exec xrdb -merge ~/.Xresources
 ## sets my urxvt settings
+
+#bar{
+    #font pango: 15px
+    #position top
+    #workspace_buttons yes
+    #status_command /usr/bin/i3status-rs $HOME/.config/i3status/config
+    #colors{
+        #separator $bar-urgent
+        #background $bar-bg
+        #statusline $bar-urgent
+        #focused_workspace $bar-bg-active $bar-bg-active $text-colour
+        #urgent_workspace $bar-urgent $bar-urgent $text-colour
+    #}
+#}
 
 #. -------------------------- #
 # >>>> Program Shortcuts <<<< #
@@ -291,7 +311,7 @@ bindsym $mod+v exec --no-startup-id "xclip -o -sel clip"
 #bindsym $mod+Shift+v
 #bindsym $mod+ctrl+v
 
-bindsym $mod+b exec --no-startup-id rxvtc -e zsh -c ~/Git/OneOffCodes/Shell/chat_urls.sh
+#bindsym $mod+b
 bindsym $mod+Shift+b exec --no-startup-id xtrlock
 bindsym $mod+ctrl+b exec --no-startup-id urxvtc -e ~/Git/OneOffCodes/Shell/lock.sh -name lock
 assign [title="lock.sh"] number 10
