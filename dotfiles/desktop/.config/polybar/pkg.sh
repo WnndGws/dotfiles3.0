@@ -17,10 +17,10 @@ case "$1" in
 esac
 
 
-#if [[ "$check" != "0" ]]
-#then
-    ##echo "$pac %{F#5b5b5b}%{F-} $aur"
+if [[ "$check" != "0" ]]
+then
+    echo "$pac %{F#5b5b5b}%{F-} $aur"
     #echo "$pac  $aur  "
-#fi
+fi
 
-echo "$pac  $aur  "
+#echo "$pac  $aur  "

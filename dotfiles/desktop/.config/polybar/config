@@ -260,8 +260,8 @@ format-underline = ${colors.background-alt}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${colors.secondary}
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 
 ramp-0 = 
 ramp-1 = 

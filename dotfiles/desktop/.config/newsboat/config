@@ -19,13 +19,14 @@ ignore-mode "display"
 download-timeout 120
 
 feedlist-format     "%30t %-10u (%T)"
-articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
+articlelist-format  "%3i %D   %?T?|%-17T|  ?%t"
 
 bind-key o open-in-browser-and-mark-read
 bind-key O open-all-unread-in-browser-and-mark-read
 bind-key j down
 bind-key k up
 bind-key h quit
+bind-key H clear-filter
 bind-key l open
 bind-key S set-tag
 bind-key A clear-tag
@@ -40,17 +41,25 @@ macro f set browser "$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh %u" ; 
 macro d set browser "urxvtc -e youtube-dl %u"; open-in-browser ; set browser $HOME/Git/OneOffCodes/Shell/openWith.sh
 macro p set browser "$HOME/Git/OneOffCodes/Shell/openWith_noImages.sh"; open-in-browser ; set browser "$HOME/Git/OneOffCodes/Shell/openWith.sh"
 
-color background  default    default
-color listnormal  black    default
-color listnormal_unread color7 default
-color listfocus    white    color2 bold
-color info         white    black underline
-color article      default  default
+color background          white   default
+color listnormal          magenta   default
+color listfocus           black  blue   bold
+color listnormal_unread   white default
+color listfocus_unread    yellow blue   bold
+color info                green  black
+color article             white   default
 
 # highlights
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
+
+# filters list
+define-filter "01_Newstube" "unread_count > 0 and tags # \"04_Newstube\""
+define-filter "02_Text" "unread_count > 0 and ( tags # \"02_Tech\" or tags # \"03_Ideas\" )"
+define-filter "03_Sport" "unread_count > 0 and ( tags # \"06_NFL\" or tags # \"06_Rugby\" or tags # \"06_Cricket\" or tags # \"06_Soccer\" or tags # \"06_Highlights\" or tags # \"06_Torrents\" )"
+define-filter "04_Linus" "unread_count > 0 and tags # \"07_Linux\""
+define-filter "05_Videos" "unread_count > 0 and ( tags # \"09_Youtube\" or tags # \"10_TWIT\" or tags # \"11_Education\" or tags # \"12_AnimatedEducation\" )"
 
 # filters
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoLrcjPV5PbUrUyXq5mjc_A" "title !~ \"SF\""
