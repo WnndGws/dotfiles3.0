@@ -269,7 +269,7 @@ ramp-2 = 
 
 [module/pkg]
 type = custom/script
-interval = 3600
+interval = 86400
 exec = ~/.config/polybar/pkg.sh --checking
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 format-underline = ${colors.red}
