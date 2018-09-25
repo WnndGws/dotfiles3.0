@@ -221,7 +221,7 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 "Delete trailing white space on save, useful for Python and CoffeeScript
 
-autocmd BufWritePost *py :term ipython * <afile>
+autocmd BufWritePost *.py :term ipython %:p
 "Run ipython everytime save python file
 
 fun! ExitInsertMode()
