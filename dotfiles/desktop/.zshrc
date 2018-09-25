@@ -16,7 +16,6 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
-export GPG_TTY
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
 export IPYTHONDIR="$XDG_CONFIG_HOME"/ipython
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
@@ -30,6 +29,8 @@ export RTV_URLVIEWER=/usr/bin/urlscan
 #Export RTV
 
 GPG_TTY=$(tty)
+export GPG_TTY
+
 if [ ! -e ~/.ssh/agentsock ]; then
     eval $(ssh-agent -a ~/.ssh/agentsock)
     ssh-add

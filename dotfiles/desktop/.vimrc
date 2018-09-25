@@ -217,8 +217,12 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+
 autocmd BufWrite *.py :call DeleteTrailingWS()
 "Delete trailing white space on save, useful for Python and CoffeeScript
+
+autocmd BufWritePost *py :term ipython * <afile>
+"Run ipython everytime save python file
 
 fun! ExitInsertMode()
     if &ft =~ 'tex'
