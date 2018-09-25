@@ -125,6 +125,7 @@ redshift-minimal
 ripgrep
 rrdtool
 rsync
+rtl8821au-dkms-git
 rtv
 rxvt-unicode-patched
 sabnzbd

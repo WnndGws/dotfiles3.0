@@ -173,7 +173,8 @@ label =  %percentage_used%%
 
 [module/wlan_essid]
 type = internal/network
-interface = wlp0s20u3
+#interface = wlp0s20u3
+interface = wlp0s20u1
 interval = 10
 accumulate-stats = true
 

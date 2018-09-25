@@ -309,7 +309,7 @@ alias mp='mount_phone'
 alias unmount_phone='fusermount -u /mnt/Nexus6p'
 #Allows me to mtp mount and unmount phone easily
 
-alias nb='killall newsboat; newsboat'
+alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
 #Saves typing
 
 alias nf="neofetch"
@@ -372,6 +372,7 @@ alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
 #Sleep until a certain time
 
 alias sleeptonight='sudo rtcwake -m mem --date tomorrow; shutdown_in 7:00:00'
+alias st='sleeptonight'
 #Wake up at midnight, then shutdown at 7am
 
 alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
@@ -389,6 +390,9 @@ alias pin='pikaur -S --noconfirm'
 
 alias ping='~/Git/OneOffCodes/Shell/prettyping --nolegend'
 #Use prettyping
+
+alias torrent='~/Git/OneOffCodes/Shell/seed_single_torrent.sh'
+#Use aria2c to download a specified torrent
 
 alias time='hyperfine'
 #Use hyperfine to time commands
