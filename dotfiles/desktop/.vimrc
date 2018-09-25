@@ -218,12 +218,6 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 
-autocmd BufWrite *.py :call DeleteTrailingWS()
-"Delete trailing white space on save, useful for Python and CoffeeScript
-
-autocmd BufWritePost *.py :term ipython %:p
-"Run ipython everytime save python file
-
 fun! ExitInsertMode()
     if &ft =~ 'tex'
         return
@@ -302,6 +296,12 @@ EOF
 "Allows you complete me to find the venv packages
 
 let python_highlight_all=1
+
+autocmd BufWrite *.py :call DeleteTrailingWS()
+"Delete trailing white space on save, useful for Python and CoffeeScript
+
+autocmd BufWritePost *.py :term ipython %:p
+"Run ipython everytime save python file
 
 "------------------------"
 " VIMTEX
