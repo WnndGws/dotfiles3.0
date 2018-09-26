@@ -5,7 +5,6 @@
 .config/cmus/rc:desktop,laptop
 .config/feh/:desktop,laptop
 .config/htop/:desktop,laptop
-.config/installed_packages/:desktop
 .config/kitty/:desktop,laptop
 .config/latexmk/:desktop,laptop
 .config/mailcap/:desktop,laptop
@@ -13,7 +12,6 @@
 .config/neofetch/:desktop,laptop
 .config/neomutt/:desktop,laptop
 .config/newsboat/:desktop,laptop
-.config/polybar/:desktop
 .config/pymodoro/:desktop,laptop
 .config/ranger/:desktop,laptop
 .config/rtv/:desktop,laptop
@@ -23,15 +21,19 @@
 .config/offlineimap/:desktop,laptop
 .passwords.asc:desktop,laptop
 .scimrc:desktop,laptop
-.screenlayout:desktop
 .vim/:desktop,laptop
 .vimrc:desktop,laptop
 
 ## Seperate Computers
 .config/i3/:desktop
 .config/i3/:laptop
+.config/installed_packages/:desktop
+.config/installed_packages/:laptop
+.config/polybar/:desktop
+.config/polybar/:laptop
 .oh-my-zsh/:desktop
 .oh-my-zsh/:laptop
+.screenlayout:desktop
 .xinitrc:desktop
 .xinitrc:laptop
 .Xmodmap:deskop
