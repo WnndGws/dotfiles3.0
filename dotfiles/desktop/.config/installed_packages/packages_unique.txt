@@ -134,7 +134,7 @@ samba
 sc-im
 scrot
 simple-mtpfs
-slic3r-git
+slic3r
 sonarr
 syncthing
 tealdeer
