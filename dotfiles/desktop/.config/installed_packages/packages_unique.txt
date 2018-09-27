@@ -12,15 +12,12 @@ beamercolorthemesolarized
 biber
 bind-tools
 brightnessctl
-castnow-git
 celt
 centerim5-git
-chromecastize-git
 cmus
 cower
 cpupower
 devtools
-discord
 dmenu2
 dotgit
 downgrade
@@ -42,7 +39,6 @@ gcalcli
 git
 glu
 goobook-git
-gparted
 grub
 gvfs
 gvfs-mtp
@@ -56,11 +52,9 @@ i3-gaps
 i3blocks
 i3ipc-python
 i3lock
-i3status
 i3status-rust-git
 imagemagick
 insync
-intel-ucode
 ipython
 jsoncpp
 kitty
@@ -98,7 +92,6 @@ picard
 pikaur
 pkgconf
 polybar
-powertop
 pulseaudio
 pulseaudio-alsa
 purple-facebook
@@ -121,14 +114,13 @@ python-requests-html
 python-unidecode
 python-utils
 radarr
-ranger
+ranger-git
 redshift-minimal
 ripgrep
 rrdtool
 rsync
 rtl8821au-dkms-git
 rtv
-rxvt-unicode-patched
 sabnzbd
 samba
 sc-im
@@ -150,7 +142,6 @@ texlive-latexextra
 texlive-pictures
 texlive-pstricks
 texlive-science
-tlp
 trash-cli
 ttf-anonymous-pro
 ttf-dejavu
@@ -161,7 +152,6 @@ unclutter
 unzip
 urlscan
 vnstat
-w3m
 wget
 wireless_tools
 wmctrl

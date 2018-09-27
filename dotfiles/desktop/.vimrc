@@ -300,7 +300,7 @@ let python_highlight_all=1
 autocmd BufWrite *.py :call DeleteTrailingWS()
 "Delete trailing white space on save, useful for Python and CoffeeScript
 
-autocmd BufWritePost *.py :term ipython %:p
+"autocmd BufWritePost *.py :term ipython %:p
 "Run ipython everytime save python file
 
 "------------------------"

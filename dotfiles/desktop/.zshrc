@@ -244,6 +244,7 @@ alias ccm='cammu'
 #Extract urls itiot sends me
 
 alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
+alias dmd='dm desktop'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
