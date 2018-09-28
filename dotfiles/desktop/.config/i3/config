@@ -42,7 +42,7 @@ exec --no-startup-id insync-headless start
 #exec --no-startup-id synclient ClickFinger3=2
 # Enable Middle-click by double tapping 3 fingers
 
-#exec --no-startup-id xset r rate 500 50
+exec --no-startup-id xset r rate 500 50
 # Increase key rate
 
 #exec --no-startup-id $HOME/Git/OneOffCodes/Expects/bluetooth_connect_nexus6p.exp
@@ -57,7 +57,7 @@ exec --no-startup-id exec unclutter -jitter 10 -idle 2
 exec --no-startup-id exec udiskie --no-notify --no-file-manager --all --recursive --no-config
 # use udiskie to automount connected ecternal drives
 
-exec_always --no-startup-id exec ~/Git/OneOffCodes/Python/wallpaper_maker/wallpaper_maker.py change_wallpaper --bing --agenda --quote_file ~/Git/OneOffCodes/Python/wallpaper_maker/quotes.txt --wallpaper_dir ~/GoogleDrive/01_Personal/01_Personal/05_Images/Wallpapers --font /usr/share/fonts/TTF/Sauce\ Code\ Pro\ Bold\ Nerd\ Font\ Complete\ Mono.ttf --font-size 20
+exec_always --no-startup-id exec ~/Git/OneOffCodes/Python/wallpaper_maker/wallpaper_maker.py change-wallpaper --bing --agenda --quote_file ~/Git/OneOffCodes/Python/wallpaper_maker/quotes.txt --wallpaper_dir ~/GoogleDrive/01_Personal/01_Personal/05_Images/Wallpapers --font /usr/share/fonts/TTF/Sauce\ Code\ Pro\ Bold\ Nerd\ Font\ Complete\ Mono.ttf --font-size 20
 # Sets new wallpaper at each startup
 
 exec --no-startup-id exec redshift -b 1.0:0.7 -l -33:117 -t 5500:2700
@@ -274,7 +274,7 @@ bindsym $mod+Shift+Return exec --no-startup-id kitty -e ranger
 #bindsym $mod+Shift+a
 #bindsym $mod+ctrl+a
 
-#bindsym $mod+s exec --no-startup-id spotify
+bindsym $mod+s exec --no-startup-id wmfocus
 #bindsym $mod+Shift+s
 #bindsym $mod+ctrl+s exec --no-startup-id urxvtc -e suspend
 

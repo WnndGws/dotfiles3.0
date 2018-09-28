@@ -135,7 +135,7 @@ bindkey -M vicmd v edit-command-line
 #. ----------------------------- #
 # >>>>> OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------- #
-export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python/myman:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 #Path includes path to all scripts i want to run natively
 
 ZSH=/usr/share/oh-my-zsh
@@ -300,7 +300,7 @@ alias ls='exa --color always --color-scale'
 alias md2pdf='$HOME/Git/OneOffCodes/Shell/md2pdf.sh'
 #Use my own script using pandoc
 
-alias mm='myman try_tldr --program'
+alias mm='myman'
 #Uses vimman instead of normal man
 
 alias mkdir='mkdir -p'
@@ -450,6 +450,9 @@ unset fasd_cache
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 #FZF
+
+eval "$(_MYMAN_COMPLETE=source_zsh myman)"
+#My Scripts
 #. ----------------------- #
 # >>>>> END SOURCING <<<<< #
 #. ----------------------- #
