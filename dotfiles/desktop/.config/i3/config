@@ -2,8 +2,11 @@
 # -------------------------- #
 # >>>> GENERAL SETTINGS <<<< #
 # -------------------------- #
-## Sets Windows key as the mod
 set $mod Mod1
+## Sets Alt key as the mod
+
+#set $mod Mod3
+#Make space the mod key
 
 ## Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -65,7 +68,11 @@ exec --no-startup-id exec redshift -b 1.0:0.7 -l -33:117 -t 5500:2700
 
 exec --no-startup-id xmodmap -e "clear lock"; xmodmap -e "keysym Caps_Lock = Escape"
 # Makes Caps an Escape
-exec --no-startup-id xmodmap -pke > ~/.Xmodmap
+
+exec --no-startup-id xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"
+# Set Right Shift as mod button
+
+exec_always --no-startup-id xmodmap -pke > ~/.Xmodmap
 ## Sets keys
 
 #. ---------------------------- #
@@ -77,6 +84,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Tab exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+q exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Quit?' "i3-msg kill"

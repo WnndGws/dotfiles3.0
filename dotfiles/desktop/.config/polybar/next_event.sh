@@ -8,8 +8,15 @@ mkdir -p /home/wynand/.cache/polybar
 file="/home/wynand/.cache/polybar/agenda.txt"
 ##TODO: check why $XDG_CACHE_HOME doesnt work. Suspect polybar run as root
 
+gcalcli agenda $time_now 23:59 > $file
+
 # Test if file is younger than an hour old
 if [ $(stat --format=%Y $file) -le $(( $(date +%s) - 3600 )) ]; then 
+    gcalcli agenda $time_now 23:59 > $file
+fi
+
+# Test if have enough events
+if [[ $(cat $file | wc -l) -le 3 ]]; then
     gcalcli agenda $time_now $tomorrow > $file
 fi
 
