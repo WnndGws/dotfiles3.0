@@ -11,6 +11,7 @@ beamercolorthemesolarized
 biber
 bind-tools
 brightnessctl
+buku
 celt
 centerim5-git
 cmus
@@ -127,8 +128,6 @@ scrot
 simple-mtpfs
 slic3r
 sonarr
-steam
-steam-native-runtime
 syncthing
 tealdeer
 tesseract-data-eng-git
@@ -159,6 +158,7 @@ wmctrl
 wmfocus
 wpa_actiond
 wpa_supplicant
+xcape
 xclip
 xdg-user-dirs
 xdotool

@@ -11,7 +11,7 @@
 .config/mpv/:desktop,laptop
 .config/neofetch/:desktop,laptop
 .config/neomutt/:desktop,laptop
-.config/newsboat/:desktop,laptop
+.config/newsboat/config:desktop,laptop
 .config/pymodoro/:desktop,laptop
 .config/ranger/:desktop,laptop
 .config/rtv/:desktop,laptop

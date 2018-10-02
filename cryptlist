@@ -2,3 +2,4 @@
 .config/credentials/:desktop,laptop
 .config/git/:desktop,laptop
 .config/polybar_credentials/:desktop,laptop
+.config/newsboat/urls:desktop,laptop
