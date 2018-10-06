@@ -40,5 +40,7 @@
 .Xmodmap:laptop
 .Xresources:desktop
 .Xresources:laptop
+.zprofile:desktop
+.zprofile:laptop
 .zshrc:desktop
 .zshrc:laptop

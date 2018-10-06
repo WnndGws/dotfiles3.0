@@ -28,6 +28,9 @@ export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
 export RTV_URLVIEWER=/usr/bin/urlscan
 #Export RTV
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+#Path includes path to all scripts i want to run natively
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -135,9 +138,6 @@ bindkey -M vicmd v edit-command-line
 #. ----------------------------- #
 # >>>>> OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------- #
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-#Path includes path to all scripts i want to run natively
-
 ZSH=/usr/share/oh-my-zsh
 #Path to your oh-my-zsh installation.
 
@@ -202,7 +202,6 @@ bindkey "^[^M" autosuggest-accept
 #. ----------------------------------#
 # >>>>> END OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------------#
-
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
@@ -242,6 +241,9 @@ alias cm="centerim5"
 alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 | urlscan -cn | uniq | tail | urlscan -c"
 alias ccm='cammu'
 #Extract urls itiot sends me
+
+alias dd='sudo dd status=progress conv=fsync'
+#alwas dd with same flags
 
 alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
 alias dmd='dm desktop'
@@ -359,6 +361,7 @@ alias torrent_ssh_tun='ssh -L 8082:localhost:8082 gouws.com.au -N'
 #Create ssh tunnels to my localhosts
 
 alias scim="sc-im"
+#saves typing
 
 alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt.sh"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
@@ -379,6 +382,9 @@ alias st='sleeptonight'
 
 alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
 #Always load profile
+
+alias ss="sudo systemctl"
+#Saves typing
 
 alias suspend="sudo rtcwake --date +1month -m mem; ~/Git/OneOffCodes/Shell/lock.sh; sudo systemctl restart openvpn.service"
 #Use rtc wake as suspend
