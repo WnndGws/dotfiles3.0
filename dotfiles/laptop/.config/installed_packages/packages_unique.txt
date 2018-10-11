@@ -2,6 +2,7 @@ acpi
 alsa-utils
 android-sdk-platform-tools
 android-udev
+arandr
 arch-wiki-cli
 aria2
 asciidoc
@@ -26,6 +27,7 @@ dpkg
 dtrx
 ell
 entr
+evdi-pre-release
 exa
 exercism-cli
 fasd

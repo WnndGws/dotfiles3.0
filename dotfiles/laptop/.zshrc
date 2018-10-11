@@ -245,6 +245,7 @@ alias ccm='cammu'
 #Extract urls itiot sends me
 
 alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
+alias dml='~/Git/OneOffCodes/Shell/dotmake.sh laptop'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
@@ -359,6 +360,7 @@ alias torrent_ssh_tun='ssh -L 8082:localhost:8082 gouws.com.au -N'
 #Create ssh tunnels to my localhosts
 
 alias scim="sc-im"
+#Saves typing
 
 alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt.sh"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
@@ -366,6 +368,9 @@ alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn.sh"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
 alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn.sh 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
+
+alias ss='sudo systemctl'
+#Saves typing
 
 convert_to_480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
 #Convert a video to 576p
