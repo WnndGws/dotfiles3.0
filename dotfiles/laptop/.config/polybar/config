@@ -104,7 +104,8 @@ font-0 = Font Awesome:pixelsize=10;1
 font-1 = CodeNewRoman Nerd Font:pixelsize=11;1
 
 modules-left =
-modules-center = date nextevent pomodoro redshift pkg memory cpu temperature pavolume weather wlan_essid wlan battery-shell
+#modules-center = date nextevent pomodoro redshift pkg memory cpu temperature pavolume weather wlan_essid wlan battery-shell
+modules-center = date pomodoro redshift pkg memory cpu temperature pavolume weather wlan_essid wlan battery-shell
 modules-right =
 separator = |
 
@@ -319,7 +320,7 @@ click-right = exec ~/.config/polybar/startRedshift.sh
 [module/nextevent]
 type = custom/script
 interval = 600
-exec = ~/.config/polybar/next_event.sh
+exec = ~/Git/OneOffCodes/Python/next_event/next_event.py
 #exec-if = "\ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 format-underline = ${colors.background-alt}
 

@@ -18,6 +18,7 @@ cmus
 cower
 cpupower
 devtools
+displaylink
 dmenu2
 dotgit
 downgrade
@@ -50,8 +51,6 @@ i3-gaps
 i3blocks
 i3ipc-python
 i3lock
-i3status
-i3status-rust-git
 ibam
 imagemagick
 insync
@@ -108,6 +107,7 @@ python-pillow
 python-pip
 python-pipenv
 python-pytest
+python-pytz
 python-requests-html
 python-unidecode
 python-utils
