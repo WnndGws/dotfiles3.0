@@ -1,16 +1,13 @@
-acpi
 alsa-utils
-android-sdk-platform-tools
-android-udev
 aria2
 asciidoc
 aur-auto-vote-git
 awesome-terminal-fonts
 bat
+bc
 beamercolorthemesolarized
 biber
 bind-tools
-brightnessctl
 buku
 celt
 centerim5-git
@@ -23,6 +20,7 @@ dotgit
 downgrade
 dpkg
 dtrx
+efibootmgr
 ell
 emby-server
 entr
@@ -31,6 +29,7 @@ exercism-cli
 fasd
 fd
 feh
+fetchmirrors
 fetchpkg
 firefox
 freeglut
@@ -49,10 +48,8 @@ headphones
 htop
 hyperfine
 i3-gaps
-i3blocks
 i3ipc-python
 i3lock
-i3status-rust-git
 imagemagick
 insync
 ipython
@@ -60,7 +57,6 @@ jsoncpp
 kitty
 lftp
 libmad
-libreoffice-fresh
 linux-lts
 linux-lts-headers
 magic-wormhole
@@ -98,6 +94,7 @@ purple-facebook
 purple-hangouts-hg
 purple-plugin-pack
 pymodoro-git
+python
 python-dateutil
 python-dnspython
 python-fontawesome
@@ -106,6 +103,7 @@ python-grip
 python-hypothesis
 python-i3-py
 python-nltk
+python-oauth2client
 python-pillow
 python-pip
 python-pipenv
@@ -114,11 +112,10 @@ python-requests-html
 python-unidecode
 python-utils
 radarr
-ranger-git
+ranger
 redshift-minimal
 ripgrep
 rrdtool
-rsync
 rtl8821au-dkms-git
 rtv
 sabnzbd
@@ -126,14 +123,9 @@ samba
 sc-im
 scrot
 simple-mtpfs
-slic3r
 sonarr
+speedread-git
 syncthing
-tealdeer
-tesseract-data-eng-git
-tesseract-data-equ-git
-tesseract-data-osd-git
-tesseract-ocr-git
 testdisk
 texlive-bibtexextra
 texlive-fontsextra
@@ -151,6 +143,7 @@ udiskie-dmenu-git
 unclutter
 unzip
 urlscan
+vim-pathogen
 vnstat
 wget
 wireless_tools
@@ -158,7 +151,6 @@ wmctrl
 wmfocus
 wpa_actiond
 wpa_supplicant
-xcape
 xclip
 xdg-user-dirs
 xdotool
@@ -208,6 +200,5 @@ xterm
 xtrlock
 youtube-dl
 zfs-dkms
-zfs-utils
 zsh
 zsh-syntax-highlighting

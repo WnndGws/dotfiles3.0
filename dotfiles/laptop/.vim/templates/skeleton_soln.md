@@ -1,1 +1,0 @@
-../../../desktop/.vim/templates/skeleton_soln.md
