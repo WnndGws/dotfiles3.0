@@ -28,7 +28,7 @@ git clone https://github.com/lervag/vimtex.git #use latex
 git clone https://github.com/dhruvasagar/vim-table-mode.git #tables in vim
 git clone https://github.com/mattn/webapi-vim.git #webapi for vim
 git clone https://github.com/lifepillar/vim-solarized8.git #colours
-git clone git://github.com/SirVer/ultisnips.git #snippets engine
-git clone git://github.com/honza/vim-snippets.git #snippets definitions
+git clone https://github.com/SirVer/ultisnips.git #snippets engine
+git clone https://github.com/honza/vim-snippets.git #snippets definitions
 git clone https://github.com/ervandew/supertab.git #needed for snippets and neocomplete to work together
-git clone git://github.com/shime/vim-livedown.git #need for md preview
+git clone https://github.com/shime/vim-livedown.git #need for md preview

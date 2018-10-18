@@ -2,6 +2,7 @@ acpi
 alsa-utils
 android-sdk-platform-tools
 android-udev
+arandr
 arch-wiki-cli
 aria2
 asciidoc
@@ -18,6 +19,7 @@ cmus
 cower
 cpupower
 devtools
+displaylink
 dmenu2
 dotgit
 downgrade
@@ -25,6 +27,7 @@ dpkg
 dtrx
 ell
 entr
+evdi-pre-release
 exa
 exercism-cli
 fasd
@@ -50,8 +53,6 @@ i3-gaps
 i3blocks
 i3ipc-python
 i3lock
-i3status
-i3status-rust-git
 ibam
 imagemagick
 insync
@@ -108,6 +109,7 @@ python-pillow
 python-pip
 python-pipenv
 python-pytest
+python-pytz
 python-requests-html
 python-unidecode
 python-utils

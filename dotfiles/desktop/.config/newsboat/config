@@ -70,5 +70,9 @@ ignore-article "http://feeds.lifehacker.com.au/LifehackerAustralia" "age >= 1"
 ignore-article "https://theconversation.com/au/articles.atom" "age >= 1"
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA" "title !~ \"Savage\""
 ignore-article "https://sportscult.org/rss2.php" "title !~ \"NFL\" and title !~ \"Boxing\""
+<<<<<<< HEAD
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"NFL 2018\" or title =~ \"49\""
 #ignore-article "https://old.reddit.com/user/notthebiggestfan1/.rss" "enclosure_url !~ \"youtu\""
+=======
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"2018\" or title =~ \"49ers\""
+>>>>>>> 6360e452645862ba7fd08b93215ba64811863d84
