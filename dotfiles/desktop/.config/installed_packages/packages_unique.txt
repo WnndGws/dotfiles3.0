@@ -108,6 +108,7 @@ python-pillow
 python-pip
 python-pipenv
 python-pytest
+python-pytz
 python-requests-html
 python-unidecode
 python-utils
@@ -126,6 +127,7 @@ simple-mtpfs
 sonarr
 speedread-git
 syncthing
+tealdeer-git
 testdisk
 texlive-bibtexextra
 texlive-fontsextra

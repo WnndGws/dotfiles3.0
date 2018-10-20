@@ -21,6 +21,15 @@ smart_gaps on
 # >>>> EXTERNAL STARTUPS <<<< #
 #. -------------------------- #
 
+exec --no-startup-id xmodmap -e "clear lock"; xmodmap -e "keysym Caps_Lock = Escape"
+# Makes Caps an Escape
+
+exec --no-startup-id xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"
+# Set Right Shift as mod button
+
+exec_always --no-startup-id xmodmap -pke > ~/.Xmodmap
+## Sets keys
+
 exec --no-startup-id xrandr --output DisplayPort-0 --off --output DVI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal
 # Screens on desktop
 
@@ -65,15 +74,6 @@ exec_always --no-startup-id exec ~/Git/OneOffCodes/Python/wallpaper_maker/wallpa
 
 exec --no-startup-id exec redshift -b 1.0:0.7 -l -33:117 -t 5500:2700
 # Starts redshift
-
-exec --no-startup-id xmodmap -e "clear lock"; xmodmap -e "keysym Caps_Lock = Escape"
-# Makes Caps an Escape
-
-exec --no-startup-id xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"
-# Set Right Shift as mod button
-
-exec_always --no-startup-id xmodmap -pke > ~/.Xmodmap
-## Sets keys
 
 #. ---------------------------- #
 # >>>> MOVEMENT SHORTCUTS <<<< #
