@@ -95,6 +95,7 @@ purple-hangouts-hg
 purple-plugin-pack
 pymodoro-git
 python
+python-cookies
 python-dateutil
 python-dnspython
 python-fontawesome

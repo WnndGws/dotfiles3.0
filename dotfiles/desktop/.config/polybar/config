@@ -199,8 +199,8 @@ format-underline = ${colors.background-alt}
 [module/daily_dl]
 type = custom/script
 label = %output%
-interval = 60
-exec = ~/.config/polybar/peak_offpeak_internet.sh
+interval = 600
+exec = python ~/Git/OneOffCodes/Python/iinet_daily/iinet_daily.py
 format-underline = ${colors.background-alt}
 
 [module/vpncheck]
