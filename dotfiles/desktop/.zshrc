@@ -205,7 +205,7 @@ bindkey "^[^M" autosuggest-accept
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
-alias archdate='pikaur -Syyuu; pikaur -T; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdate='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
 alias ad="archdate"
 #Update command
 

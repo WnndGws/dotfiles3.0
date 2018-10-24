@@ -15,7 +15,7 @@ delete-read-articles-on-quit yes
 mark-as-read-on-hover no
 show-read-feeds no
 show-read-articles yes
-ignore-mode "download"
+ignore-mode "display"
 download-timeout 120
 
 feedlist-format     "%40t %-15u (%T)"

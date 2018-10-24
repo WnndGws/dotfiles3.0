@@ -27,6 +27,7 @@ entr
 exa
 exercism-cli
 fasd
+fcron
 fd
 feh
 fetchmirrors
