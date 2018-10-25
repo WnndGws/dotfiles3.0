@@ -18,7 +18,7 @@ show-read-articles yes
 ignore-mode "display"
 download-timeout 120
 
-feedlist-format     "%30t %-10u (%T)"
+feedlist-format     "%40t %-15u (%T)"
 articlelist-format  "%3i %D   %?T?|%-17T|  ?%t"
 
 bind-key o open-in-browser-and-mark-read
@@ -65,9 +65,9 @@ define-filter "05_Videos" "unread_count > 0 and ( tags # \"09_Youtube\" or tags 
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoLrcjPV5PbUrUyXq5mjc_A" "title !~ \"SF\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCpdXIv0o46znhDWZH03fF4w" "title !~ \"Eagles\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDOGExGCsrrt_RrGDgLuMww" "title !~ \"Rebel\""
-ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoh_z6QB0AGB1oxWufvbDUg" "title !~ \"Warriors\" and title !~ \"Sixers\" and title !~ \"Lakers\""
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoh_z6QB0AGB1oxWufvbDUg" "title !~ \"Warriors|Sixers|Lakers\" or title !~ \"Full Game\""
 ignore-article "http://feeds.lifehacker.com.au/LifehackerAustralia" "age >= 1"
 ignore-article "https://theconversation.com/au/articles.atom" "age >= 1"
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA" "title !~ \"Savage\""
 ignore-article "https://sportscult.org/rss2.php" "title !~ \"NFL\" and title !~ \"Boxing\""
-ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"2018\" or title =~ \"49ers\""
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"2018\" or title =~ \"49\""

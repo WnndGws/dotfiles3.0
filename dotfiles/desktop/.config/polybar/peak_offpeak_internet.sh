@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 ## Parses VNStat into peak and offpeak
 
-vnstat --config /home/wynand/.config/vnstat/vnstat.conf --update -i wlp0s20u1
+#vnstat --config /home/wynand/.config/vnstat/vnstat.conf --update -i wlp0s20u3
 daily_dl=$(vnstat --config /home/wynand/.config/vnstat/vnstat.conf --hours | tail -n 8)
 time_hours=$(bc <<< $(date +"%H")+1)
 

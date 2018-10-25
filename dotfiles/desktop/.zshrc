@@ -205,7 +205,7 @@ bindkey "^[^M" autosuggest-accept
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
-alias archdate='pikaur -Syyuu; pikaur -T; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdate='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
 alias ad="archdate"
 #Update command
 
@@ -241,6 +241,9 @@ alias cm="centerim5"
 alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 | urlscan -cn | uniq | tail | urlscan -c"
 alias ccm='cammu'
 #Extract urls itiot sends me
+
+alias cx="chmod +x"
+#Change mode of file
 
 alias dd='sudo dd status=progress conv=fsync'
 #alwas dd with same flags
@@ -376,14 +379,18 @@ convert_to_480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec
 alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
 #Sleep until a certain time
 
-alias sleeptonight='sudo rtcwake -m mem --date tomorrow; shutdown_in 7:00:00'
+alias sleeptonight='sudo rtcwake -m mem --date $(date -d tomorrow +%Y%m%d020000); shutdown_in 5:30:00'
 alias st='sleeptonight'
-#Wake up at midnight, then shutdown at 7am
+#Wake up at 2am, then shutdown at 730am
 
 alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
 #Always load profile
 
 alias ss="sudo systemctl"
+alias sss="sudo systemctl status"
+alias ssr="sudo systemctl restart"
+alias sse="sudo systemctl enable"
+alias ssd="sudo systemctl disable"
 #Saves typing
 
 alias suspend="sudo rtcwake --date +1month -m mem; ~/Git/OneOffCodes/Shell/lock.sh; sudo systemctl restart openvpn.service"
