@@ -393,8 +393,9 @@ alias sse="sudo systemctl enable"
 alias ssd="sudo systemctl disable"
 #Saves typing
 
-alias suspend="sudo rtcwake --date +1month -m mem; ~/Git/OneOffCodes/Shell/lock.sh; sudo systemctl restart openvpn.service"
-#Use rtc wake as suspend
+alias sv='sudo vim'
+alias svim='sudo vim'
+#Saves typing
 
 alias p='pikaur -Ss'
 #Minimize keystrokes

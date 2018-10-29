@@ -10,7 +10,8 @@ biber
 bind-tools
 buku
 celt
-centerim5-git
+centerim
+chromecastize-git
 cmus
 cower
 cpupower
@@ -39,6 +40,7 @@ gcalcli
 git
 glu
 goobook-git
+gparted
 grub
 gvfs
 gvfs-mtp
@@ -58,6 +60,7 @@ jsoncpp
 kitty
 lftp
 libmad
+libpurple
 linux-lts
 linux-lts-headers
 magic-wormhole
@@ -203,6 +206,6 @@ xsel
 xterm
 xtrlock
 youtube-dl
-zfs-dkms
+zfs-linux-lts
 zsh
 zsh-syntax-highlighting
