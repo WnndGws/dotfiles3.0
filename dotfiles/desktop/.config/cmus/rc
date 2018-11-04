@@ -18,10 +18,10 @@ bind -f common d seek +5
 bind -f common f player-next
 bind -f common F push live-filter<space>
 bind -f common g player-pause
-#bind -f common h <++>
+bind -f common h win-next
 #bind -f common j <++>
 #bind -f common k <++>
-#bind -f common l <++>
+bind -f common l win-next
 #bind -f common z <++>
 #bind -f common x <++>
 #bind -f common c <++>

@@ -9,6 +9,7 @@ beamercolorthemesolarized
 biber
 bind-tools
 buku
+ca-certificates
 celt
 centerim
 chromecastize-git
@@ -65,6 +66,7 @@ linux-lts
 linux-lts-headers
 magic-wormhole
 massren
+megatools
 mesa
 mosh
 mpv
