@@ -90,7 +90,7 @@
 			<pref name='nss_prefs'>
 				<pref name='cipher_list' type='stringlist'/>
 				<pref name='min_tls' type='int' value='0'/>
-				<pref name='max_tls' type='int' value='0'/>
+				<pref name='max_tls' type='int' value='3'/>
 			</pref>
 			<pref name='joinpart'>
 				<pref name='delay' type='int' value='10'/>
