@@ -235,7 +235,8 @@ alias calcadd="gcalcli add --calendar 'Personal Calendar'"
 alias clean_latex="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
 #Remove lint latex files
 
-alias compile_latex='latexmk -xelatex -pvc -cd -quiet'
+#alias compile_latex='latexmk -xelatex -pvc -cd -quiet'
+alias compile_latex='fd -e tex --max-depth 1 | entr -c -d latexrun -Wall /_'
 alias cl='compile_latex'
 #Compile and open latex
 
