@@ -144,6 +144,7 @@ udiskie
 unclutter
 unzip
 urlscan
+vim-pathogen
 vnstat
 w3m
 wget

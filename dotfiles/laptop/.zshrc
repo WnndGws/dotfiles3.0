@@ -28,6 +28,9 @@ export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
 export RTV_URLVIEWER=/usr/bin/urlscan
 #Export RTV
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+#Path includes path to all scripts i want to run natively
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -37,7 +40,6 @@ if [ ! -e ~/.ssh/agentsock ]; then
 else
     export SSH_AUTH_SOCK=~/.ssh/agentsock
 fi
-
 #. ---------------------- #
 # >>>>> END EXPORTS <<<<< #
 #. ---------------------- #
@@ -136,9 +138,6 @@ bindkey -M vicmd v edit-command-line
 #. ----------------------------- #
 # >>>>> OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------- #
-export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python/myman:$PATH
-#Path includes path to all scripts i want to run natively
-
 ZSH=/usr/share/oh-my-zsh
 #Path to your oh-my-zsh installation.
 
@@ -203,11 +202,10 @@ bindkey "^[^M" autosuggest-accept
 #. ----------------------------------#
 # >>>>> END OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------------#
-
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
-alias archdate='pikaur -Syyuu; pikaur -T; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; polybar-msg cmd restart'
+alias archdate='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
 alias ad="archdate"
 #Update command
 
@@ -244,8 +242,14 @@ alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 |
 alias ccm='cammu'
 #Extract urls itiot sends me
 
+alias cx="chmod +x"
+#Change mode of file
+
+alias dd='sudo dd status=progress conv=fsync'
+#alwas dd with same flags
+
 alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
-alias dml='~/Git/OneOffCodes/Shell/dotmake.sh laptop'
+alias dmd='dm desktop'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
@@ -301,7 +305,7 @@ alias ls='exa --color always --color-scale'
 alias md2pdf='$HOME/Git/OneOffCodes/Shell/md2pdf.sh'
 #Use my own script using pandoc
 
-alias mm='myman try_tldr --program'
+alias mm='myman'
 #Uses vimman instead of normal man
 
 alias mkdir='mkdir -p'
@@ -360,7 +364,7 @@ alias torrent_ssh_tun='ssh -L 8082:localhost:8082 gouws.com.au -N'
 #Create ssh tunnels to my localhosts
 
 alias scim="sc-im"
-#Saves typing
+#saves typing
 
 alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt.sh"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
@@ -369,20 +373,25 @@ alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn.sh"
 alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn.sh 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
-alias ss='sudo systemctl'
-#Saves typing
-
 convert_to_480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
 #Convert a video to 576p
 
 alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
 #Sleep until a certain time
 
-alias sleeptonight='sudo rtcwake -m mem --date tomorrow; shutdown_in 7:00:00'
-#Wake up at midnight, then shutdown at 7am
+alias sleeptonight='sudo rtcwake -m mem --date $(date -d tomorrow +%Y%m%d020000); shutdown_in 5:30:00'
+alias st='sleeptonight'
+#Wake up at 2am, then shutdown at 730am
 
 alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
 #Always load profile
+
+alias ss="sudo systemctl"
+alias sss="sudo systemctl status"
+alias ssr="sudo systemctl restart"
+alias sse="sudo systemctl enable"
+alias ssd="sudo systemctl disable"
+#Saves typing
 
 alias suspend="sudo rtcwake --date +1month -m mem; ~/Git/OneOffCodes/Shell/lock.sh; sudo systemctl restart openvpn.service"
 #Use rtc wake as suspend
@@ -396,6 +405,9 @@ alias pin='pikaur -S --noconfirm'
 
 alias ping='~/Git/OneOffCodes/Shell/prettyping --nolegend'
 #Use prettyping
+
+alias torrent='~/Git/OneOffCodes/Shell/seed_single_torrent.sh'
+#Use aria2c to download a specified torrent
 
 alias time='hyperfine'
 #Use hyperfine to time commands
@@ -451,6 +463,9 @@ unset fasd_cache
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 #FZF
+
+eval "$(_MYMAN_COMPLETE=source_zsh myman)"
+#My Scripts
 #. ----------------------- #
 # >>>>> END SOURCING <<<<< #
 #. ----------------------- #
