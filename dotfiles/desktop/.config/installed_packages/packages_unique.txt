@@ -108,6 +108,7 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
+python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow

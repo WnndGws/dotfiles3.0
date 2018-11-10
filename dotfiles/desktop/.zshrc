@@ -205,7 +205,7 @@ bindkey "^[^M" autosuggest-accept
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
-alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild --needed; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
 alias add="archdatedisorder"
 #Update command
 
