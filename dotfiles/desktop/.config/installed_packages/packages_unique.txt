@@ -99,6 +99,7 @@ pulseaudio-alsa
 purple-facebook
 purple-hangouts-hg
 purple-plugin-pack
+pygtk
 pymodoro-git
 python
 python-cookies

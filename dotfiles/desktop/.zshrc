@@ -283,6 +283,9 @@ alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt.sh"
 alias hn="haxor-news"
 #Saves typing
 
+alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
+#Always open ipython with vim mappings
+
 alias largest_files="~/Git/OneOffCodes/Shell/largestFiles.sh"
 #Lists the 10 largest files in a given dir
 
