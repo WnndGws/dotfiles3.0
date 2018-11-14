@@ -121,6 +121,7 @@ python-pytz
 python-requests-html
 python-unidecode
 python-utils
+python2-spake2
 radarr
 ranger
 redshift-minimal
