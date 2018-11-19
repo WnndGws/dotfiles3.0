@@ -226,11 +226,8 @@ alias bluesink='$HOME/Git/OneOffCodes/Expects/bluetooth_connect_ticpods.exp && p
 alias bluetooth_nexus='$HOME/Git/OneOffCodes/Expects/bluetooth_connect_nexus6p.exp'
 #Connect to phone bluetooth
 
-alias calc="gcalcli --monday --detail_length --refresh calw"
-#Outputs google calendar
-
-alias calcadd="gcalcli add --calendar 'Personal Calendar'"
-#Add events to calendar
+alias calcadd='~/Git/OneOffCodes/Python/calcadd/calcadd.py'
+#Add to my calendar
 
 alias clean_latex="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
 #Remove lint latex files

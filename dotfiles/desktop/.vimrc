@@ -146,7 +146,7 @@ set nowrap
 "Don't wrap lines
 
 set nofoldenable
-"set foldmethod=indent
+set foldmethod=manual
 "Allow me to fold by my settings
 
 " --------------------------- "
@@ -252,6 +252,12 @@ let g:ale_sign_column_always = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_lint_on_save = 1
+let g:ale_linters_explicit = 1
+let g:ale_list_vertical = 1
+
+let g:ale_linters = {'latex': ['redpen', 'chktex'], 'python': ['pylint'], 'sh': ['shellcheck']}
+let g:ale_fixers = {'latex': ['redpen', 'chktex'], 'python': ['yapf'], 'sh': ['shellcheck']}
 
 "------------------------"
 " EMMET
@@ -305,6 +311,9 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 
 "------------------------"
 " VIMTEX
+filetype plugin indent on
+set grepprg=grep\ -nH\ $*
+
 let g:tex_flavor = 'latex'
 let g:vimtex_enabled=1
 let g:vimtex_compiler_method='latexmk'
@@ -315,7 +324,7 @@ let g:polyglot_disabled = ['latex']
 
 " Vimtex mappings
 
-let g:livepreview_previewer = 'mupdf'
+let g:livepreview_previewer = 'zathura'
 
 nnoremap <leader>vtc :VimtexCompile
 nnoremap <leader>vtr :VimtexReload

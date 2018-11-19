@@ -12,7 +12,6 @@ buku
 ca-certificates
 celt
 centerim
-chromecastize-git
 chromium
 cmus
 cower
@@ -38,7 +37,6 @@ fetchpkg
 firefox
 freeglut
 fzf
-gcalcli
 git
 glu
 goobook-git
@@ -88,7 +86,6 @@ openvpn
 os-prober
 p7zip
 pacman-utils
-pandoc
 pavucontrol
 picard
 pikaur
@@ -116,6 +113,7 @@ python-oauth2client
 python-pillow
 python-pip
 python-pipenv
+python-pylint
 python-pytest
 python-pytz
 python-requests-html
@@ -124,6 +122,7 @@ python-utils
 python2-spake2
 radarr
 ranger
+redpen
 redshift-minimal
 ripgrep
 rrdtool
@@ -133,6 +132,7 @@ sabnzbd
 samba
 sc-im
 scrot
+shellcheck
 simple-mtpfs
 sonarr
 speedread-git
@@ -210,6 +210,7 @@ xprintidle
 xsel
 xterm
 xtrlock
+yapf
 youtube-dl
 zathura
 zathura-pdf-mupdf
