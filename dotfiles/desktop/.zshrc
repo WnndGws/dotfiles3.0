@@ -423,7 +423,7 @@ alias tpon='synclient "TouchpadOff"=0'
 #Turns touchpad off and on
 
 alias udm="udiskie-mount -a"
-alias udum="udiskie-umount --detach -a"
+udum() {for folder in /run/media/wynand/*; do udiskie-umount --detach $folder ; done}
 #Udiskie
 
 alias un:pw="cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 8 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1; cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 32 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1"
