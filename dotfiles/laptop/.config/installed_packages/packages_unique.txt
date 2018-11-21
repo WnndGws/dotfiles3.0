@@ -15,6 +15,7 @@ biber
 bind-tools
 brightnessctl
 celt
+centerim
 cmus
 cower
 cpupower
@@ -27,7 +28,7 @@ dpkg
 dtrx
 ell
 entr
-evdi-pre-release
+evdi
 exa
 exercism-cli
 fasd
@@ -38,7 +39,6 @@ fetchpkg
 firefox
 freeglut
 fzf
-gcalcli
 git
 glu
 goobook-git
@@ -60,14 +60,13 @@ intel-ucode
 ipython
 jsoncpp
 kitty
+latexrun
 lftp
 libmad
 linux-headers
-magic-wormhole
 massren
 mosh
 mpv
-mupdf
 ncdu
 neofetch
 neomutt
@@ -84,7 +83,6 @@ openssh
 openvpn
 p7zip
 pacman-utils
-pandoc
 pavucontrol
 pikaur
 pkgconf
@@ -103,6 +101,7 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
+python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow
@@ -190,5 +189,6 @@ xprintidle
 xsel
 xtrlock
 youtube-dl
+zathura-pdf-mupdf
 zsh
 zsh-syntax-highlighting

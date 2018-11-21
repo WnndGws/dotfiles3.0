@@ -205,7 +205,11 @@ bindkey "^[^M" autosuggest-accept
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
-alias archdate='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias add="archdatedisorder"
+#Update command
+
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
 alias ad="archdate"
 #Update command
 
@@ -231,7 +235,8 @@ alias calcadd="gcalcli add --calendar 'Personal Calendar'"
 alias clean_latex="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
 #Remove lint latex files
 
-alias compile_latex='latexmk -xelatex -pvc -cd'
+#alias compile_latex='latexmk -xelatex -pvc -cd -quiet'
+alias compile_latex='fd -e tex --max-depth 1 | entr -c -d latexrun -Wall /_'
 alias cl='compile_latex'
 #Compile and open latex
 
@@ -393,8 +398,9 @@ alias sse="sudo systemctl enable"
 alias ssd="sudo systemctl disable"
 #Saves typing
 
-alias suspend="sudo rtcwake --date +1month -m mem; ~/Git/OneOffCodes/Shell/lock.sh; sudo systemctl restart openvpn.service"
-#Use rtc wake as suspend
+alias sv='sudo vim'
+alias svim='sudo vim'
+#Saves typing
 
 alias p='pikaur -Ss'
 #Minimize keystrokes
