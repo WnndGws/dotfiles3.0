@@ -1,0 +1,1 @@
+../../../desktop/.config/polybar_credentials/agenda.txt
