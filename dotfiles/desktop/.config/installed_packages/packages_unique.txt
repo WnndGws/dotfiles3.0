@@ -48,7 +48,6 @@ gvfs-mtp
 gvfs-smb
 gvim
 haxor-news
-headphones
 htop
 hyperfine
 i3-gaps
@@ -63,6 +62,7 @@ latexrun
 lftp
 libmad
 libpurple
+lidarr
 linux-lts
 linux-lts-headers
 massren
@@ -214,6 +214,7 @@ xtrlock
 yapf
 youtube-dl
 zathura
+zathura-cb
 zathura-pdf-mupdf
 zfs-dkms
 zsh
