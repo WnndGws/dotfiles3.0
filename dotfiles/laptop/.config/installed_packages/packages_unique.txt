@@ -1,9 +1,6 @@
 acpi
 alsa-utils
-android-sdk-platform-tools
-android-udev
 arandr
-arch-wiki-cli
 aria2
 asciidoc
 aur-auto-vote-git
@@ -16,6 +13,7 @@ bind-tools
 brightnessctl
 celt
 centerim
+chromium
 cmus
 cower
 cpupower
@@ -32,6 +30,7 @@ evdi
 exa
 exercism-cli
 fasd
+fcron
 fd
 feh
 fetchmirrors
@@ -101,18 +100,20 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
-python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow
 python-pip
 python-pipenv
+python-pylint
 python-pytest
 python-pytz
 python-requests-html
 python-unidecode
 python-utils
+python2-magic-wormhole
 ranger
+redpen
 redshift-minimal
 ripgrep
 rrdtool
@@ -121,8 +122,8 @@ rustup
 rxvt-unicode-patched
 samba
 sc-im
-screenfetch
 scrot
+shellcheck
 simple-mtpfs
 syncthing
 syslinux
@@ -145,7 +146,6 @@ unzip
 urlscan
 vim-pathogen
 vnstat
-w3m
 wget
 wireless_tools
 wmctrl

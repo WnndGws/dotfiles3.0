@@ -256,8 +256,8 @@ let g:ale_lint_on_save = 1
 let g:ale_linters_explicit = 1
 let g:ale_list_vertical = 1
 
-let g:ale_linters = {'latex': ['redpen', 'chktex'], 'python': ['pylint'], 'sh': ['shellcheck']}
-let g:ale_fixers = {'latex': ['redpen', 'chktex'], 'python': ['yapf'], 'sh': ['shellcheck']}
+let g:ale_linters = {'latex': ['redpen', 'chktex'], 'python': ['pylint'], 'zsh': ['shellcheck']}
+let g:ale_fixers = {'latex': ['redpen', 'chktex'], 'python': ['yapf'], 'zsh': ['shellcheck']}
 
 "------------------------"
 " EMMET

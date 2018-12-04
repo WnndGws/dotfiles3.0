@@ -255,6 +255,7 @@ alias dd='sudo dd status=progress conv=fsync'
 
 alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
 alias dmd='dm desktop'
+alias dml='dm laptop'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
