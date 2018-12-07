@@ -11,7 +11,6 @@
 .config/mpv/:desktop,laptop
 .config/neofetch/:desktop,laptop
 .config/neomutt/:desktop,laptop
-.config/newsboat/config:desktop,laptop
 .config/pymodoro/:desktop,laptop
 .config/ranger/:desktop,laptop
 .config/rtv/:desktop,laptop
@@ -29,6 +28,8 @@
 .config/i3/:laptop
 .config/installed_packages/:desktop
 .config/installed_packages/:laptop
+.config/newsboat/config:desktop
+.config/newsboat/config:laptop
 .config/polybar/:desktop
 .config/polybar/:laptop
 .oh-my-zsh/:desktop
