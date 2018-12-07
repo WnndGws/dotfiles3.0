@@ -105,7 +105,7 @@ font-1 = CodeNewRoman Nerd Font:pixelsize=11;1
 
 modules-left =
 #modules-center = date nextevent pomodoro redshift pkg memory cpu temperature pavolume weather wlan_essid wlan battery-shell
-modules-center = date pomodoro redshift pkg memory cpu temperature pavolume weather wlan_essid wlan battery-shell
+modules-center = date pomodoro redshift pkg memory cpu pavolume weather wlan_essid wlan battery-shell
 modules-right =
 separator = |
 

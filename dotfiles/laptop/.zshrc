@@ -250,6 +250,10 @@ alias ccm='cammu'
 alias cx="chmod +x"
 #Change mode of file
 
+alias cpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
+alias mem="ps axch -o cmd,%mem --sort=-%mem | head"
+#Show me whats using CPU or memory
+
 alias dd='sudo dd status=progress conv=fsync'
 #alwas dd with same flags
 
