@@ -37,6 +37,7 @@ fetchpkg
 firefox
 freeglut
 fzf
+gallery-dl
 gcalcli
 git
 glu
@@ -151,6 +152,7 @@ trash-cli
 ttf-anonymous-pro
 ttf-dejavu
 ttf-font-awesome
+tumbld-git
 udiskie
 udiskie-dmenu-git
 unclutter

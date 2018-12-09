@@ -244,6 +244,10 @@ alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 |
 alias ccm='cammu'
 #Extract urls itiot sends me
 
+alias cpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
+alias mem="ps axch -o cmd,%mem --sort=-%mem | head"
+#Outputs system stats
+
 alias cx="chmod +x"
 #Change mode of file
 
