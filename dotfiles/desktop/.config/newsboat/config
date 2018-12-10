@@ -19,7 +19,7 @@ show-read-articles yes
 ignore-mode "display"
 download-timeout 120
 
-feedlist-format     "%30t %-12u (%T)"
+feedlist-format     "%90t %-12u (%T)"
 articlelist-format  "%30i %D   %?T?|%-17T|  ?%t"
 
 bind-key o open-in-browser-and-mark-read
