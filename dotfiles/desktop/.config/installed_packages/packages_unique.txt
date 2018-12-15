@@ -2,7 +2,6 @@ alsa-utils
 aria2
 asciidoc
 aur-auto-vote-git
-awesome-terminal-fonts
 bat
 bc
 beamercolorthemesolarized
@@ -10,6 +9,7 @@ biber
 bind-tools
 buku
 ca-certificates
+castnow-git
 celt
 centerim
 chromium
@@ -37,7 +37,6 @@ fetchpkg
 firefox
 freeglut
 fzf
-gallery-dl
 gcalcli
 git
 glu
@@ -48,7 +47,6 @@ gvfs
 gvfs-mtp
 gvfs-smb
 gvim
-haxor-news
 htop
 hyperfine
 i3-gaps
@@ -59,6 +57,8 @@ insync
 ipython
 jsoncpp
 kitty
+kodi
+kodi-addon-embyrepo
 latexrun
 lftp
 libmad
@@ -69,7 +69,6 @@ linux-lts-headers
 massren
 megatools
 mesa
-mosh
 mpv
 ncdu
 neofetch
@@ -89,7 +88,6 @@ os-prober
 p7zip
 pacman-utils
 pavucontrol
-picard
 pikaur
 pkgconf
 polybar
@@ -149,10 +147,7 @@ texlive-pictures
 texlive-pstricks
 texlive-science
 trash-cli
-ttf-anonymous-pro
 ttf-dejavu
-ttf-font-awesome
-tumbld-git
 udiskie
 udiskie-dmenu-git
 unclutter

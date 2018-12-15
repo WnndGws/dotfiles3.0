@@ -252,6 +252,7 @@ exec --no-startup-id exec xrdb -merge ~/.Xresources
 #bindsym $mod+ctrl+w
 
 #bindsym $mod+ctrl+e
+bindsym $mod+e exec --no-startup-id kodi
 
 #bindsym $mod+ctrl+r
 
