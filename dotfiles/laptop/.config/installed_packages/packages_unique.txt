@@ -38,6 +38,7 @@ fetchpkg
 firefox
 freeglut
 fzf
+gcalcli
 git
 glu
 goobook-git
