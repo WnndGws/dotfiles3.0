@@ -264,7 +264,7 @@ alias du="ncdu --color dark -rr -x"
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
-alias gi="cat $HOME/Git/dotfiles2.0/.files/gitignores.txt >> .gitignore"
+alias gi="curl https://www.gitignore.io/api/vim,tex,linux,latex,python > .gitignore && echo '*.pdf' >> .gitignore"
 #Create a gitignore file
 
 alias git_push_all="~/Git/OneOffCodes/Shell/gitPushAll.sh"

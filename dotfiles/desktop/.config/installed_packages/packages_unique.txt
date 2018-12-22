@@ -2,6 +2,7 @@ alsa-utils
 aria2
 asciidoc
 aur-auto-vote-git
+awesome-terminal-fonts
 bat
 bc
 beamercolorthemesolarized
@@ -34,6 +35,7 @@ fd
 feh
 fetchmirrors
 fetchpkg
+filezilla
 firefox
 freeglut
 fzf
@@ -60,7 +62,8 @@ kitty
 kodi
 kodi-addon-embyrepo
 latexrun
-lftp
+lib32-gnutls
+lib32-libldap
 libmad
 libpurple
 lidarr
@@ -102,6 +105,7 @@ python
 python-cookies
 python-dateutil
 python-dnspython
+python-fake-useragent
 python-fontawesome
 python-google-api-python-client
 python-grip
@@ -112,6 +116,7 @@ python-oauth2client
 python-pillow
 python-pip
 python-pipenv
+python-pychromecast
 python-pylint
 python-pytest
 python-pytz
@@ -156,6 +161,8 @@ urlscan
 vim-pathogen
 vnstat
 wget
+wine
+winetricks
 wireless_tools
 wmctrl
 wmfocus
