@@ -332,7 +332,7 @@ alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Per
 alias nf="neofetch"
 #Neofetch
 
-alias nm='offlineimap -o && offlineimap -u quiet & neomutt && killall -9 offlineimap'
+alias nm='offlineimap -c ~/.offlineimaprc -o && offlineimap -c ~/.offlineimaprc -u quiet & neomutt && killall -9 offlineimap'
 #Saves typing
 
 alias open="xdg-open"
@@ -368,9 +368,10 @@ alias rm='trash -riv'
 alias rsync="rsync -vrhP"
 #I always use rsync with these flags
 
-alias sab_ssh_tun='ssh -L 8080:localhost:8080 gouws.com.au -N'
-alias sonar_ssh_tun='ssh -L 8081:localhost:8081 gouws.com.au -N'
-alias torrent_ssh_tun='ssh -L 8082:localhost:8082 gouws.com.au -N'
+alias sab_ssh_tun='ssh -L 8080:localhost:8080 220.253.244.60 -N'
+alias sonarr_ssh_tun='ssh -L 8081:localhost:8081 220.253.244.60 -N'
+alias radarr_ssh_tun='ssh -L 8082:localhost:8082 220.253.244.60 -N'
+alias lidarr_ssh_tun='ssh -L 8083:localhost:8083 220.253.244.60 -N'
 #Create ssh tunnels to my localhosts
 
 alias scim="sc-im"

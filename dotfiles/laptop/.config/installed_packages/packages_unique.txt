@@ -62,6 +62,8 @@ jsoncpp
 kitty
 latexrun
 lftp
+lib32-gnutls
+lib32-libldap
 libmad
 linux-headers
 massren
@@ -126,6 +128,7 @@ sc-im
 scrot
 shellcheck
 simple-mtpfs
+speedread-git
 syncthing
 syslinux
 tealdeer-git
@@ -148,6 +151,7 @@ urlscan
 vim-pathogen
 vnstat
 wget
+wine
 wireless_tools
 wmctrl
 wpa_actiond

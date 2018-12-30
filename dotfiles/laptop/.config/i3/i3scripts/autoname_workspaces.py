@@ -61,7 +61,7 @@ WINDOW_ICONS = {
     'kodi': '',
     'steam': '',
     'pdf': '',
-    'neomutt': '',
+    'offlineimap': '',
     'spotify': '',
     'keepassxc': '',
     'firefox': '',
