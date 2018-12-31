@@ -150,6 +150,7 @@ unzip
 urlscan
 vim-pathogen
 vnstat
+w3m
 wget
 wine
 wireless_tools

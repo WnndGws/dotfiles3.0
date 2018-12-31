@@ -13,7 +13,8 @@ export XDG_DATA_HOME=$HOME'/.local/share'
 
 export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+#export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='fd --type f'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
@@ -474,6 +475,12 @@ unset fasd_cache
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
 #FZF
 
 eval "$(_MYMAN_COMPLETE=source_zsh myman)"
