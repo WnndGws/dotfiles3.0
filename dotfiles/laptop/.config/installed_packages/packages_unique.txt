@@ -67,7 +67,6 @@ lib32-libldap
 libmad
 linux-headers
 massren
-mosh
 mpv
 ncdu
 neofetch
@@ -103,6 +102,7 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
+python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow
@@ -114,7 +114,6 @@ python-pytz
 python-requests-html
 python-unidecode
 python-utils
-python2-magic-wormhole
 ranger
 redpen
 redshift-minimal
