@@ -111,6 +111,7 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
+python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow
@@ -123,7 +124,6 @@ python-pytz
 python-requests-html
 python-unidecode
 python-utils
-python2-magic-wormhole
 python2-spake2
 radarr
 ranger
@@ -151,6 +151,7 @@ texlive-latexextra
 texlive-pictures
 texlive-pstricks
 texlive-science
+tmux
 trash-cli
 ttf-dejavu
 udiskie
@@ -160,6 +161,7 @@ unzip
 urlscan
 vim-pathogen
 vnstat
+w3m
 wget
 wine
 winetricks

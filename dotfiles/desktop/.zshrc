@@ -331,7 +331,7 @@ alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Per
 alias nf="neofetch"
 #Neofetch
 
-alias nm='offlineimap -o && offlineimap -u quiet & neomutt && killall -9 offlineimap'
+alias nm='offlineimap -c ~/.offlineimaprc -o && offlineimap -c ~/.offlineimaprc -u quiet & neomutt && killall -9 offlineimap'
 #Saves typing
 
 alias open="xdg-open"

@@ -21,3 +21,7 @@ notmuch tag -inbox +trash -- 'from:".*@daveyrealestate.com.au" date:"2017-01-01.
 notmuch tag -inbox +trash -- 'from:".*@.*stackcommerce.com" date:"2017-01-01..today" tag:inbox'
 notmuch tag -inbox +trash -- 'from:".*@scottscheapflights.com" date:"2017-01-01..yesterday" tag:inbox'
 notmuch tag -inbox +trash -- 'from:"store-news@amazon.com" date:"2017-01-01..today" tag:inbox'
+notmuch tag -inbox +trash -- 'from:"noreply@getpocket.com" date:"2017-01-01..today" tag:inbox'
+notmuch tag -inbox +trash -- 'from:"tytnetwork@tytnetwork.com" date:"2017-01-01..today" tag:inbox'
+notmuch tag -inbox +trash -- 'from:"info@stackskills.com" date:"2017-01-01..today" tag:inbox'
+notmuch tag -inbox +trash -- 'from:"learn@codecademy.com" date:"2017-01-01..today" tag:inbox'
