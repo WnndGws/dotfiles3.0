@@ -61,7 +61,7 @@ WINDOW_ICONS = {
     'kodi': '',
     'steam': '',
     'pdf': '',
-    'neomutt': '',
+    'offlineimap': '',
     'spotify': '',
     'keepassxc': '',
     'firefox': '',
@@ -69,7 +69,9 @@ WINDOW_ICONS = {
     'aria2c': '',
     'libre': '',
     'discord': '',
-    'screenshots': ''
+    'screenshots': '',
+    'Hearthstone': '',
+    'Blizzard': ''
 }
 
 # This icon is used for any application not in the list above
