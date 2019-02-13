@@ -1,7 +1,6 @@
 alsa-utils
 android-tools
 aria2
-asciidoc
 aur-auto-vote-git
 awesome-terminal-fonts
 bat
@@ -11,10 +10,9 @@ biber
 bind-tools
 buku
 ca-certificates
-castnow-git
 celt
 centerim
-chromium
+cmatrix
 cmus
 cower
 cpupower
@@ -44,7 +42,6 @@ gcalcli
 git
 glu
 goobook-git
-gparted
 grub
 gvfs
 gvfs-mtp
@@ -73,6 +70,7 @@ linux-lts-headers
 massren
 megatools
 mesa
+minergate
 mpv
 ncdu
 neofetch
@@ -100,7 +98,6 @@ pulseaudio-alsa
 purple-facebook
 purple-hangouts-hg
 purple-plugin-pack
-pygtk
 pymodoro-git
 python
 python-cookies
@@ -143,7 +140,6 @@ signal-desktop-bin
 simple-mtpfs
 sonarr
 speedread-git
-syncthing
 tealdeer-git
 testdisk
 texlive-bibtexextra
@@ -162,12 +158,13 @@ unclutter
 unzip
 urlscan
 vim-pathogen
+virtualbox
 vnstat
 w3m
 wget
 wine
-winetricks
 wireless_tools
+wireshark-cli
 wmctrl
 wmfocus
 wpa_actiond

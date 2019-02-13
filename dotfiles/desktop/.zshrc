@@ -389,7 +389,7 @@ alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
 #Sleep until a certain time
 
 alias sleeptonight='sudo rtcwake -m mem --date $(date -d tomorrow +%Y%m%d020000); shutdown_in 5:30:00'
-alias st='sleeptonight'
+#alias st='sleeptonight'
 #Wake up at 2am, then shutdown at 730am
 
 alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
@@ -448,7 +448,7 @@ alias youtube-ul="~/Git/OneOffCodes/Shell/youtubeUL.sh"
 alias ytul="youtube-ul"
 #Uploads files to youtube
 
-alias ytdl="youtube-dl"
+alias ytdl="youtube-dl --add-metadata"
 #Youtube Upload
 
 alias zsh_time='time "zsh -i -c exit"'

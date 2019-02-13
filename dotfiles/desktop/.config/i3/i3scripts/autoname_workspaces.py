@@ -54,6 +54,7 @@ WINDOW_ICONS = {
     'youtube-viewer': '',
     'mpv': '',
     'centerim5': '',
+    'Signal': '',
     'newsboat': '',
     'rtv': '',
     'rainbowstream': '',
