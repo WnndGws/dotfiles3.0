@@ -14,6 +14,7 @@ export XDG_DATA_HOME=$HOME'/.local/share'
 export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='-i --border --ansi'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
@@ -284,6 +285,9 @@ alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt.sh"
 alias hn="haxor-news"
 #Saves typing
 
+alias hib24="sudo rtcwake --mode mem --seconds 86400; i3lock --color=000000 --ignore-empty-password --show-failed-attempts"
+#Hibernate for 24 hrs
+
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 #Always open ipython with vim mappings
 
@@ -324,6 +328,9 @@ alias mount_phone='simple-mtpfs --device 1 /mnt/Nexus6p'
 alias mp='mount_phone'
 alias unmount_phone='fusermount -u /mnt/Nexus6p'
 #Allows me to mtp mount and unmount phone easily
+
+alias vs='mpv --ytdl-raw-options=buffer-size=128M --cache=128000 --cache-pause-wait=30 --cache-pause-initial=yes --demuxer-readahead-secs=60 --demuxer-seekable-cache=yes --force-seekable --'
+#Give a big enough cache for fast internet streaming of a url
 
 alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
 #Saves typing

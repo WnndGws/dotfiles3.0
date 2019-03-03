@@ -14,7 +14,6 @@ celt
 centerim
 cmatrix
 cmus
-cower
 cpupower
 devtools
 dmenu2
@@ -67,6 +66,7 @@ libpurple
 lidarr
 linux-lts
 linux-lts-headers
+magic-wormhole
 massren
 megatools
 mesa
@@ -109,7 +109,6 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
-python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow
@@ -140,6 +139,7 @@ signal-desktop-bin
 simple-mtpfs
 sonarr
 speedread-git
+surf
 tealdeer-git
 testdisk
 texlive-bibtexextra
