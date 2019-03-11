@@ -89,6 +89,7 @@ openvpn
 os-prober
 p7zip
 pacman-utils
+parallel
 pavucontrol
 pikaur
 pkgconf
@@ -119,6 +120,9 @@ python-pylint
 python-pytest
 python-pytz
 python-requests-html
+python-sh
+python-slugify
+python-toml
 python-unidecode
 python-utils
 python2-spake2
@@ -142,6 +146,7 @@ speedread-git
 surf
 tealdeer-git
 testdisk
+tetherback
 texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
@@ -176,7 +181,6 @@ xf86-video-ati
 xorg-bdftopcf
 xorg-iceauth
 xorg-luit
-xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
 xorg-sessreg

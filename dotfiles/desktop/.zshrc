@@ -329,7 +329,7 @@ alias mp='mount_phone'
 alias unmount_phone='fusermount -u /mnt/Nexus6p'
 #Allows me to mtp mount and unmount phone easily
 
-alias vs='mpv --ytdl-raw-options=buffer-size=128M --cache=128000 --cache-pause-wait=30 --cache-pause-initial=yes --demuxer-readahead-secs=60 --demuxer-seekable-cache=yes --force-seekable --'
+alias vs='mpv --cache=128000 --cache-pause-wait=30 --cache-pause-initial=yes --demuxer-readahead-secs=60 --demuxer-seekable-cache=yes --force-seekable --'
 #Give a big enough cache for fast internet streaming of a url
 
 alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
