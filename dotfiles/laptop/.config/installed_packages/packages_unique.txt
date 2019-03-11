@@ -15,7 +15,6 @@ celt
 centerim
 chromium
 cmus
-cower
 cpupower
 devtools
 displaylink
@@ -66,6 +65,7 @@ lib32-gnutls
 lib32-libldap
 libmad
 linux-headers
+magic-wormhole
 massren
 mpv
 ncdu
@@ -102,7 +102,6 @@ python-google-api-python-client
 python-grip
 python-hypothesis
 python-i3-py
-python-magic-wormhole
 python-nltk
 python-oauth2client
 python-pillow
@@ -126,6 +125,7 @@ samba
 sc-im
 scrot
 shellcheck
+signal-desktop-bin
 simple-mtpfs
 speedread-git
 syncthing
