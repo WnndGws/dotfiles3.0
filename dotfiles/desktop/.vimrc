@@ -324,32 +324,32 @@ let g:polyglot_disabled = ['latex']
 
 " Vimtex mappings
 
-let g:livepreview_previewer = 'zathura'
+"let g:livepreview_previewer = 'zathura'
 
-nnoremap <leader>vtc :VimtexCompile
-nnoremap <leader>vtr :VimtexReload
-nnoremap <leader>vtv :VimtexView
-" Vimtex mappings
+"nnoremap <leader>vtc :VimtexCompile
+"nnoremap <leader>vtr :VimtexReload
+"nnoremap <leader>vtv :VimtexView
+"" Vimtex mappings
 
-" Compile on initialization, cleanup on quit
-augroup vimtex_event_1
-  au!
-  au User VimtexEventQuit     call vimtex#compiler#clean(0)
-  "au User VimtexEventInitPost call vimtex#compiler#compile()
-augroup END
+"" Compile on initialization, cleanup on quit
+"augroup vimtex_event_1
+  "au!
+  "au User VimtexEventQuit     call vimtex#compiler#clean(0)
+  ""au User VimtexEventInitPost call vimtex#compiler#compile()
+"augroup END
 
-" Close viewers on quit
-function! CloseViewers()
-  if executable('xdotool') && exists('b:vimtex')
-      \ && exists('b:vimtex.viewer') && b:vimtex.viewer.xwin_id > 0
-    call system('xdotool windowclose '. b:vimtex.viewer.xwin_id)
-  endif
-endfunction
+"" Close viewers on quit
+"function! CloseViewers()
+  "if executable('xdotool') && exists('b:vimtex')
+      ""\ && exists('b:vimtex.viewer') && b:vimtex.viewer.xwin_id > 0
+    "call system('xdotool windowclose '. b:vimtex.viewer.xwin_id)
+  "endif
+"endfunction
 
-augroup vimtex_event_2
-  au!
-  au User VimtexEventQuit call CloseViewers()
-augroup END
+"augroup vimtex_event_2
+  "au!
+  "au User VimtexEventQuit call CloseViewers()
+"augroup END
 
 "------------------------"
 " NEOCOMPLETE
