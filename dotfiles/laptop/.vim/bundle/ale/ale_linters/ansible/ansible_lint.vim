@@ -1,0 +1,1 @@
+../../../../../../desktop/.vim/bundle/ale/ale_linters/ansible/ansible_lint.vim

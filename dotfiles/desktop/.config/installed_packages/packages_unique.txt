@@ -56,8 +56,6 @@ insync
 ipython
 jsoncpp
 kitty
-kodi
-kodi-addon-embyrepo
 latexrun
 lib32-gnutls
 lib32-libldap
@@ -91,8 +89,11 @@ p7zip
 pacman-utils
 parallel
 pavucontrol
+picard
 pikaur
 pkgconf
+plex-media-player
+plex-media-server-plexpass
 polybar
 pulseaudio
 pulseaudio-alsa
@@ -142,7 +143,10 @@ shellcheck
 signal-desktop-bin
 simple-mtpfs
 sonarr
+soundcloud-dl-git
 speedread-git
+steam
+steam-native-runtime
 surf
 tealdeer-git
 testdisk
@@ -163,11 +167,11 @@ unclutter
 unzip
 urlscan
 vim-pathogen
-virtualbox
 vnstat
 w3m
 wget
 wine
+winetricks
 wireless_tools
 wireshark-cli
 wmctrl

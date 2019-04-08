@@ -1,0 +1,1 @@
+../../../../../../desktop/.vim/bundle/ale/autoload/ale/pattern_options.vim

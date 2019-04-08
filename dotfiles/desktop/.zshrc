@@ -265,6 +265,9 @@ alias du="ncdu --color dark -rr -x"
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
+alias flac2mp3='parallel ffmpeg -i {} -qscale:a 0 {.}.mp3 ::: ./*.flac'
+#Convert flac to mp3
+
 alias gi="curl https://www.gitignore.io/api/vim,tex,linux,latex,python > .gitignore && echo '*.pdf' >> .gitignore"
 #Create a gitignore file
 
@@ -287,6 +290,9 @@ alias hn="haxor-news"
 
 alias hib24="sudo rtcwake --mode mem --seconds 86400; i3lock --color=000000 --ignore-empty-password --show-failed-attempts"
 #Hibernate for 24 hrs
+
+alias hs="wine .wine/drive_c/Program\ Files\ \(x86\)/Battle.net/Battle.net\ Launcher.exe"
+#Launch Battle.net
 
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 #Always open ipython with vim mappings

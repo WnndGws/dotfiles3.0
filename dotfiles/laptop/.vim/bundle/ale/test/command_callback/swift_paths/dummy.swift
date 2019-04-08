@@ -1,0 +1,1 @@
+../../../../../../../desktop/.vim/bundle/ale/test/command_callback/swift_paths/dummy.swift

@@ -1,0 +1,1 @@
+../../../../../../../desktop/.vim/bundle/ale/test/command_callback/ruby_paths/dummy.rb
