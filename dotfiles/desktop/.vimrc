@@ -425,7 +425,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 " ----------------------"
 " VIM-PENCIL
-autocmd FileType * call pencil#init({'wrap': 'soft'})
+"autocmd FileType * call pencil#init({'wrap': 'soft'})
 
 " ----------------------"
 " INC-SEARCH

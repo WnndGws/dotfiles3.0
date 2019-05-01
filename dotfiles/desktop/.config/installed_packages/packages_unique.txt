@@ -12,6 +12,7 @@ buku
 ca-certificates
 celt
 centerim
+clyrics
 cmatrix
 cmus
 cpupower
@@ -23,7 +24,6 @@ dpkg
 dtrx
 efibootmgr
 ell
-emby-server
 entr
 exa
 exercism-cli
@@ -33,6 +33,7 @@ fd
 feh
 fetchmirrors
 fetchpkg
+ffsend
 filezilla
 firefox
 freeglut
@@ -46,7 +47,6 @@ gvfs
 gvfs-mtp
 gvfs-smb
 gvim
-htop
 hyperfine
 i3-gaps
 i3ipc-python
@@ -89,12 +89,12 @@ p7zip
 pacman-utils
 parallel
 pavucontrol
-picard
 pikaur
 pkgconf
 plex-media-player
 plex-media-server-plexpass
 polybar
+prettyping
 pulseaudio
 pulseaudio-alsa
 purple-facebook
@@ -147,6 +147,7 @@ soundcloud-dl-git
 speedread-git
 steam
 steam-native-runtime
+stig
 surf
 tealdeer-git
 testdisk
@@ -159,6 +160,7 @@ texlive-pictures
 texlive-pstricks
 texlive-science
 tmux
+transmission-cli
 trash-cli
 ttf-dejavu
 udiskie
@@ -167,7 +169,6 @@ unclutter
 unzip
 urlscan
 vim-pathogen
-vnstat
 w3m
 wget
 wine

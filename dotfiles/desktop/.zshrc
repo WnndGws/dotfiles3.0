@@ -165,21 +165,39 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 plugins=(
- django\
- zsh-completions\
- safe-paste\
- history-substring-search\
- fzf-zsh\
- zsh-autosuggestions\
+ #fzf-zsh\
+ #zsh-interactive-zsh
+ adb\
  archlinux\
- pip\
- python\
- zsh-syntax-highlighting\
- auto-ls\
+ colored-man-pages\
+ colorize\
+ command-not-found\
+ common-aliases\
+ dircycle\
+ fasd\
+ fd\
+ fzf\
+ git-prompt\
+ git\
  globalias\
- zsh-interactive-zsh
+ gnu-utils\
+ gpg-agent\
+ history-substring-search\
+ man\
+ pip\
+ pylint\
+ python\
+ ripgrep\
+ rsync\
+ ssh-agent\
+ sudo\
+ systemd\
+ vi-mode\
+ vim-interaction\
+ zsh-navigation-tools\
+ zsh_reload
 )
-#Plugins can be found in ~/.oh-my-zsh/plugins/*
+#plugins can be found in ~/.oh-my-zsh/plugins/*
 #Plugins can be found in ~/.oh-my-zsh/custom/plugins/* (NB. extension must be ".plugin.zsh")
 
 bindkey "^[[A" history-substring-search-up
@@ -221,12 +239,6 @@ alias attach_monitor_right='xrandr --output LVDS-1 --primary --mode 1366x768 --p
 alias bing_wallpaper="$HOME/Git/OneOffCodes/Python/wallpaper_maker/wallpaper_maker.py change_wallpaper --bing --quote-file $HOME/Git/OneOffCodes/Python/wallpaperMaker/quotes.txt"
 #Set my bing wallpaper
 
-alias bluesink='$HOME/Git/OneOffCodes/Expects/bluetooth_connect_ticpods.exp && pactl set-card-profile bluez_card.00_11_B1_01_BE_1E a2dp_sink'
-#Attaches and sets bluetooth headphones as sink out
-
-alias bluetooth_nexus='$HOME/Git/OneOffCodes/Expects/bluetooth_connect_nexus6p.exp'
-#Connect to phone bluetooth
-
 alias calcadd='~/Git/OneOffCodes/Python/calcadd/calcadd.py'
 #Add to my calendar
 
@@ -237,13 +249,6 @@ alias clean_latex="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*
 alias compile_latex='fd -e tex --max-depth 1 | entr -c -d latexrun -Wall /_'
 alias cl='compile_latex'
 #Compile and open latex
-
-alias cm="centerim5"
-#Saves typing
-
-alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 | urlscan -cn | uniq | tail | urlscan -c"
-alias ccm='cammu'
-#Extract urls itiot sends me
 
 alias cpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
 alias mem="ps axch -o cmd,%mem --sort=-%mem | head"
@@ -297,17 +302,8 @@ alias hs="wine .wine/drive_c/Program\ Files\ \(x86\)/Battle.net/Battle.net\ Laun
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 #Always open ipython with vim mappings
 
-alias largest_files="~/Git/OneOffCodes/Shell/largestFiles.sh"
-#Lists the 10 largest files in a given dir
-
-alias largest_folders="~/Git/OneOffCodes/Shell/largestFolders.sh"
-#Lists the 10 largest folders in a given dir
-
 alias latex_shortcuts="cat $HOME/.vimrc | rg 'autocmd FileType tex inoremap.*' | cut -d';' -f2"
 #Prints tha latex shortcuts I have in my vimrc
-
-alias lg='vim "+Gist -l"'
-#Lists Gists
 
 alias lock="~/Git/OneOffCodes/Shell/lock.sh"
 #Locks PC and mutes
@@ -321,9 +317,6 @@ alias ll='exa --all --color always --color-scale --long'
 alias ls='exa --color always --color-scale'
 #Colours in ls
 
-alias md2pdf='$HOME/Git/OneOffCodes/Shell/md2pdf.sh'
-#Use my own script using pandoc
-
 alias mm='myman'
 #Uses vimman instead of normal man
 
@@ -334,9 +327,6 @@ alias mount_phone='simple-mtpfs --device 1 /mnt/Nexus6p'
 alias mp='mount_phone'
 alias unmount_phone='fusermount -u /mnt/Nexus6p'
 #Allows me to mtp mount and unmount phone easily
-
-alias vs='mpv --cache=128000 --cache-pause-wait=30 --cache-pause-initial=yes --demuxer-readahead-secs=60 --demuxer-seekable-cache=yes --force-seekable --'
-#Give a big enough cache for fast internet streaming of a url
 
 alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
 #Saves typing
@@ -395,7 +385,7 @@ alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn.sh"
 alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn.sh 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
-convert_to_480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
+convert480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
 #Convert a video to 576p
 
 alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
@@ -404,9 +394,6 @@ alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
 alias sleeptonight='sudo rtcwake -m mem --date $(date -d tomorrow +%Y%m%d020000); shutdown_in 5:30:00'
 #alias st='sleeptonight'
 #Wake up at 2am, then shutdown at 730am
-
-alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
-#Always load profile
 
 alias ss="sudo systemctl"
 alias sss="sudo systemctl status"
@@ -426,11 +413,8 @@ alias pare='pikaur -R'
 alias pin='pikaur -S --noconfirm'
 #Trizen install
 
-alias ping='~/Git/OneOffCodes/Shell/prettyping --nolegend'
+alias ping='prettyping --nolegend'
 #Use prettyping
-
-alias torrent='~/Git/OneOffCodes/Shell/seed_single_torrent.sh'
-#Use aria2c to download a specified torrent
 
 alias time='hyperfine'
 #Use hyperfine to time commands
@@ -443,7 +427,7 @@ alias udm="udiskie-mount -a"
 udum() {for folder in /run/media/wynand/*; do udiskie-umount --detach $folder ; done}
 #Udiskie
 
-alias un:pw="cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 8 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1; cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 32 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1"
+alias unpw="cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 8 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1; cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 32 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1"
 #Echo out a 8 char un and 32 char pw
 
 alias v='fasd -f -e vim' 
@@ -453,9 +437,6 @@ alias c='fasd_cd -d -i'
 alias vd="_ systemctl stop --now openvpn.service"
 alias vu="_ systemctl restart --now openvpn.service"
 #Aliases for VPN up or down
-
-alias ww="cd $HOME/Git/WnndGws.github.io; fd . -e md -x pandoc -s -f markdown -t html5 -o '{/.}.html' '{/.}.md' -c pandoc.css -c zenburn.css"
-#WynWiki's my markdown files to html
 
 alias youtube-ul="~/Git/OneOffCodes/Shell/youtubeUL.sh"
 alias ytul="youtube-ul"
