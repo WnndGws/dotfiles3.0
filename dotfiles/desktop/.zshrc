@@ -29,7 +29,7 @@ export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
 export RTV_URLVIEWER=/usr/bin/urlscan
 #Export RTV
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Shell:$PATH
 #Path includes path to all scripts i want to run natively
 
 GPG_TTY=$(tty)
@@ -172,7 +172,7 @@ plugins=(
  colored-man-pages\
  colorize\
  command-not-found\
- common-aliases\
+ #common-aliases\
  dircycle\
  fasd\
  fd\
@@ -194,6 +194,8 @@ plugins=(
  systemd\
  vi-mode\
  vim-interaction\
+ zsh-autosuggestions\
+ zsh-completions\
  zsh-navigation-tools\
  zsh_reload
 )

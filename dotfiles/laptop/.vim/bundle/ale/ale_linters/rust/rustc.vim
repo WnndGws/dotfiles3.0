@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/ale_linters/rust/rustc.vim

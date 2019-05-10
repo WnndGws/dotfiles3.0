@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/ale_linters/proto/protoc_gen_lint.vim

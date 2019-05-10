@@ -40,7 +40,8 @@ bind-key t toggle-show-read-feeds
 macro f set browser "$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh %u" ; open-in-browser ; set browser $HOME/Git/OneOffCodes/Shell/openWith.sh
 #macro f set browser "firefox %u" ; open-in-browser ; set browser $HOME/Git/OneOffCodes/Shell/openWith.sh
 macro d set browser "urxvtc -e youtube-dl %u"; open-in-browser ; set browser $HOME/Git/OneOffCodes/Shell/openWith.sh
-macro p set browser "$HOME/Git/OneOffCodes/Shell/openWith_noImages.sh"; open-in-browser ; set browser "$HOME/Git/OneOffCodes/Shell/openWith.sh"
+#macro p set browser "$HOME/Git/OneOffCodes/Shell/openWith_noImages.sh"; open-in-browser ; set browser "$HOME/Git/OneOffCodes/Shell/openWith.sh"
+macro p mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read ; mark-feed-read
 
 color background          white   default
 color listnormal          magenta   default
@@ -63,7 +64,7 @@ define-filter "04_Linus" "unread_count > 0 and tags # \"07_Linux\""
 define-filter "05_Videos" "unread_count > 0 and ( tags # \"09_Youtube\" or tags # \"10_TWIT\" or tags # \"11_Education\" or tags # \"12_AnimatedEducation\" )"
 
 # filters
-ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoLrcjPV5PbUrUyXq5mjc_A" "title !~ \"SF\""
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoLrcjPV5PbUrUyXq5mjc_A" "title !~ \"Giants\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCpdXIv0o46znhDWZH03fF4w" "title !~ \"Eagles\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDOGExGCsrrt_RrGDgLuMww" "title !~ \"Rebel\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoh_z6QB0AGB1oxWufvbDUg" "title !~ \"Warriors|Sixers|Lakers\" or title !~ \"Full Game\""

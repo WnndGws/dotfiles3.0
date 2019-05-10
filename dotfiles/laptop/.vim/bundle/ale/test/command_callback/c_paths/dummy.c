@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/ale/test/command_callback/c_paths/dummy.c

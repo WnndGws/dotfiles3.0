@@ -1,1 +1,0 @@
-../../../../../../../../../desktop/.vim/bundle/ale/test/command_callback/php_paths/project-without-phpcbf/foo/test.php

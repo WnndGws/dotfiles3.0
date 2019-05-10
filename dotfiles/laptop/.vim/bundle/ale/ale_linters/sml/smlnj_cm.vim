@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/ale_linters/sml/smlnj_cm.vim

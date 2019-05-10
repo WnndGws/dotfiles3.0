@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/ale_linters/help/alex.vim

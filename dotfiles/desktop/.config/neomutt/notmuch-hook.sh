@@ -25,3 +25,4 @@ notmuch tag -inbox +trash -- 'from:"noreply@getpocket.com" date:"2017-01-01..tod
 notmuch tag -inbox +trash -- 'from:"tytnetwork@tytnetwork.com" date:"2017-01-01..today" tag:inbox'
 notmuch tag -inbox +trash -- 'from:"info@stackskills.com" date:"2017-01-01..today" tag:inbox'
 notmuch tag -inbox +trash -- 'from:"learn@codecademy.com" date:"2017-01-01..today" tag:inbox'
+notmuch tag -inbox +trash -- 'from:"*@twitter.com" date:"2017-01-01..today" tag:inbox'

@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/ale/test/scala_fixtures/valid_sbt_project/Main.scala

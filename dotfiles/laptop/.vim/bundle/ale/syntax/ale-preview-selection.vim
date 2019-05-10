@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/ale/syntax/ale-preview-selection.vim

@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/test/rust_files/testfile.rs

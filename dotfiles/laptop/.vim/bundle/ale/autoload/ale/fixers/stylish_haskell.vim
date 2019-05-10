@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/ale/autoload/ale/fixers/stylish_haskell.vim
