@@ -12,8 +12,6 @@ biber
 bind-tools
 brightnessctl
 celt
-centerim
-chromium
 cmus
 cpupower
 devtools
@@ -34,6 +32,7 @@ fd
 feh
 fetchmirrors
 fetchpkg
+ffsend
 firefox
 freeglut
 fzf
@@ -45,11 +44,8 @@ gvfs
 gvfs-mtp
 gvfs-smb
 gvim
-haxor-news
-htop
 hyperfine
 i3-gaps
-i3blocks
 i3ipc-python
 i3lock
 ibam
@@ -60,11 +56,11 @@ ipython
 jsoncpp
 kitty
 latexrun
-lftp
 lib32-gnutls
 lib32-libldap
 libmad
 linux-headers
+lostfiles
 magic-wormhole
 massren
 mpv
@@ -84,15 +80,14 @@ openssh
 openvpn
 p7zip
 pacman-utils
+parallel
 pavucontrol
 pikaur
 pkgconf
 polybar
+prettyping
 pulseaudio
 pulseaudio-alsa
-purple-facebook
-purple-hangouts-hg
-purple-plugin-pack
 pymodoro-git
 python
 python-dateutil
@@ -119,7 +114,6 @@ redshift-minimal
 ripgrep
 rrdtool
 rtv
-rustup
 rxvt-unicode-patched
 samba
 sc-im
@@ -128,6 +122,8 @@ shellcheck
 signal-desktop-bin
 simple-mtpfs
 speedread-git
+steam
+surf
 syncthing
 syslinux
 tealdeer-git
@@ -147,8 +143,8 @@ udiskie
 unclutter
 unzip
 urlscan
+vim-ale
 vim-pathogen
-vnstat
 w3m
 wget
 wine
@@ -194,6 +190,7 @@ xprintidle
 xsel
 xtrlock
 youtube-dl
+zathura-cb
 zathura-pdf-mupdf
 zsh
 zsh-syntax-highlighting
