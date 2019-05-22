@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 case "$1" in
     --checking)
@@ -17,7 +17,7 @@ case "$1" in
 esac
 
 
-if [[ "$check" != "0" ]]
+if [ "$check" != "0" ]
 then
     echo "$pac %{F#5b5b5b}%{F-} $aur"
     #echo "$pac  $aur  "

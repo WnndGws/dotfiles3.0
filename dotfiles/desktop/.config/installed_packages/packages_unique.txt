@@ -14,6 +14,7 @@ clyrics
 cmatrix
 cmus
 cpupower
+dash
 devtools
 dmenu2
 dotgit
@@ -68,6 +69,7 @@ megatools
 mesa
 mpv
 ncdu
+ncspot-git
 neofetch
 neomutt
 nerd-fonts-complete-mono-glyphs
@@ -138,6 +140,7 @@ signal-desktop-bin
 simple-mtpfs
 sonarr
 speedread-git
+st-luke-git
 steam
 steam-native-runtime
 stig

@@ -58,9 +58,6 @@ exec --no-startup-id xset r rate 500 50
 #exec --no-startup-id $HOME/Git/OneOffCodes/Expects/bluetooth_connect_nexus6p.exp
 # Connect my phone if it is available
 
-#exec --no-startup-id exec urxvtd --quiet --fork
-# Starts urxvt daemon
-
 exec --no-startup-id exec unclutter -jitter 10 -idle 2
 # Unclutter removes the mouse cursor when its not being used
 
