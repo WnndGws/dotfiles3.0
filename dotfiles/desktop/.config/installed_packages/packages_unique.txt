@@ -22,7 +22,6 @@ downgrade
 dpkg
 dtrx
 efibootmgr
-ell
 entr
 exa
 exercism-cli
@@ -67,6 +66,7 @@ magic-wormhole
 massren
 megatools
 mesa
+mlocate
 mpv
 ncdu
 ncspot-git

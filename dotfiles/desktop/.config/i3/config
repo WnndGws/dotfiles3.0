@@ -70,7 +70,7 @@ exec_always --no-startup-id exec ~/Git/OneOffCodes/Python/wallpaper_maker/wallpa
 exec --no-startup-id exec redshift -b 1.0:0.7 -l -33:117 -t 5500:2700
 # Starts redshift
 
-exec --no-startup-id exec ~/Git/OneOffCodes/Shell/seed_my_torrents.sh
+exec --no-startup-id exec ~/Git/OneOffCodes/Shell/seed_my_torrents
 # Seed all my torrents
 
 #. ---------------------------- #
@@ -85,7 +85,7 @@ bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+Tab exec --no-startup-id kitty
 
 # kill focused window
-bindsym $mod+q exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Quit?' "i3-msg kill"
+bindsym $mod+q exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Quit?' "i3-msg kill"
 
 # change focus
 bindsym $mod+h focus left
@@ -307,7 +307,7 @@ bindsym $mod+x exec --no-startup-id wine $HOME/.wine/drive_c/Program\ Files\ \(x
 #bindsym $mod+Shift+x
 #bindsym $mod+ctrl+c
 
-bindsym $mod+c exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_clipboard_management.sh
+bindsym $mod+c exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_clipboard_management
 # Copies the content of PRIMARY buffer to clipboard so I can paste outside urxvt
 #bindsym $mod+ctrl+c
 
@@ -317,7 +317,7 @@ bindsym $mod+c exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_clipboard_mana
 
 #bindsym $mod+b
 bindsym $mod+Shift+b exec --no-startup-id xtrlock
-bindsym $mod+ctrl+b exec --no-startup-id kitty --class lock -e ~/Git/OneOffCodes/Shell/lock.sh
+bindsym $mod+ctrl+b exec --no-startup-id kitty --class lock -e ~/Git/OneOffCodes/Shell/lock
 assign [class="lock"] number 10
 
 bindsym $mod+n exec --no-startup-id wmfocus

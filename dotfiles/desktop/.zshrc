@@ -11,10 +11,10 @@ export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
 #Sets all my XDG paths
 
-export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
+export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
-export FZF_DEFAULT_OPTS='-i --border --ansi'
+#export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='-i --border'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
@@ -25,11 +25,11 @@ export MAILCAPS="$XDG_CONFIG_HOME"/mailcap/mailcap
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 
-export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
+export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export RTV_URLVIEWER=/usr/bin/urlscan
 #Export RTV
 
-export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Shell:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python:$HOME/Git/OneOffCodes/Shell:$PATH
 #Path includes path to all scripts i want to run natively
 
 GPG_TTY=$(tty)
@@ -244,7 +244,11 @@ alias bing_wallpaper="$HOME/Git/OneOffCodes/Python/wallpaper_maker/wallpaper_mak
 alias calcadd='~/Git/OneOffCodes/Python/calcadd/calcadd.py'
 #Add to my calendar
 
-alias clean_latex="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
+alias cf=". cf"
+#Run cf in current process instead of subshell
+
+alias latex_clean="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
+alias lc='latex_clean'
 #Remove lint latex files
 
 #alias compile_latex='latexmk -xelatex -pvc -cd -quiet'
@@ -262,7 +266,7 @@ alias cx="chmod +x"
 alias dd='sudo dd status=progress conv=fsync'
 #alwas dd with same flags
 
-alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
+alias dm='~/Git/OneOffCodes/Shell/dotmake'
 alias dmd='dm desktop'
 #Saves typing
 
@@ -272,14 +276,17 @@ alias du="ncdu --color dark -rr -x"
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
+alias fif="findinfile"
+# using ripgrep combined with preview
+
 alias flac2mp3='parallel ffmpeg -i {} -qscale:a 0 {.}.mp3 ::: ./*.flac'
 #Convert flac to mp3
 
 alias gi="curl https://www.gitignore.io/api/vim,tex,linux,latex,python > .gitignore && echo '*.pdf' >> .gitignore"
 #Create a gitignore file
 
-alias git_push_all="~/Git/OneOffCodes/Shell/gitPushAll.sh"
-alias gtpa="~/Git/OneOffCodes/Shell/gitPushAll.sh"
+alias git_push_all="~/Git/OneOffCodes/Shell/gitPushAll"
+alias gtpa="~/Git/OneOffCodes/Shell/gitPushAll"
 #Use script to push everything in all my repos
 
 alias git_push='git add -p . && git commit -aS && git pull && git push'
@@ -289,7 +296,7 @@ alias gtp='git add -p . && git commit -aS && git pull && git push'
 alias gif_make='$HOME/Git/OneOffCodes/Python/gifmaker/gifmaker.py make_gif'
 #Make webms from videos
 
-alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt.sh"
+alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt"
 #GPG encrypt a file to the recipient and myself
 
 alias hn="haxor-news"
@@ -307,7 +314,7 @@ alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 alias latex_shortcuts="cat $HOME/.vimrc | rg 'autocmd FileType tex inoremap.*' | cut -d';' -f2"
 #Prints tha latex shortcuts I have in my vimrc
 
-alias lock="~/Git/OneOffCodes/Shell/lock.sh"
+alias lock="~/Git/OneOffCodes/Shell/lock"
 #Locks PC and mutes
 
 alias lsa='exa --all --color always --color-scale'
@@ -348,22 +355,22 @@ alias po='paorph'
 alias porm='paorph | xargs -I{} pikaur -R --noconfirm {}; paorph | xargs -I{} pikaur -R --noconfirm {}; paorph | xargs -I{} pikaur -R --noconfirm {}'
 #Pacaur orphans
 
-alias pdf2ocr="~/Git/OneOffCodes/Shell/ocr_pdf.sh"
+alias pdf2ocr="~/Git/OneOffCodes/Shell/ocr_pdf"
 #Convert a pdf to tiff for tesseract and OCR it
 
-alias play_DCAU="~/Git/OneOffCodes/Shell/playlistPlay.sh ~/wynZFS/Media/WatchOrders/DCAU.order"
+alias play_DCAU="~/Git/OneOffCodes/Shell/playlistPlay ~/wynZFS/Media/WatchOrders/DCAU.order"
 #Plays the next episode in the DCAU that I am up to
 
-alias playlist_play="~/Git/OneOffCodes/Shell/playlistPlay.sh"
+alias playlist_play="~/Git/OneOffCodes/Shell/playlistPlay"
 #Use to play .order files so can watch overlapping shows in correct order. Searches and plays 1st line in a file. If multiples found presents them. Offers choice whether want to move played file to bottom
 #Relys on custom 'lsgrep' function
 
-alias pytest='~/Git/OneOffCodes/Shell/pytest.sh'
+alias pytest='~/Git/OneOffCodes/Shell/pytest'
 #Watch my coding against the test
 
-alias rcp="~/Git/OneOffCodes/Shell/rcp.sh"
+alias rcp="~/Git/OneOffCodes/Shell/rcp"
 #Uses rsync to copy, allows me to be able to copy using wildcards
-alias rmv="~/Git/OneOffCodes/Shell/rmv.sh"
+alias rmv="~/Git/OneOffCodes/Shell/rmv"
 #Uses rsync to move, allows me to be able to move using wildcards
 
 alias rm='trash -riv'
@@ -380,17 +387,17 @@ alias torrent_ssh_tun='ssh -L 8082:localhost:8082 gouws.com.au -N'
 alias scim="sc-im"
 #saves typing
 
-alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt.sh"
+alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn.sh"
+alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn.sh 0:05\""
+alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
 convert480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
 #Convert a video to 576p
 
-alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
+alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until"
 #Sleep until a certain time
 
 alias sleeptonight='sudo rtcwake -m mem --date $(date -d tomorrow +%Y%m%d020000); shutdown_in 5:30:00'
@@ -432,7 +439,7 @@ udum() {for folder in /run/media/wynand/*; do udiskie-umount --detach $folder ; 
 alias unpw="cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 8 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1; cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 32 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1"
 #Echo out a 8 char un and 32 char pw
 
-alias v='fasd -f -e vim' 
+alias v='vimfind' 
 alias c='fasd_cd -d -i' 
 #Quick opening files with vim
 
@@ -440,7 +447,7 @@ alias vd="_ systemctl stop --now openvpn.service"
 alias vu="_ systemctl restart --now openvpn.service"
 #Aliases for VPN up or down
 
-alias youtube-ul="~/Git/OneOffCodes/Shell/youtubeUL.sh"
+alias youtube-ul="~/Git/OneOffCodes/Shell/youtubeUL"
 alias ytul="youtube-ul"
 #Uploads files to youtube
 

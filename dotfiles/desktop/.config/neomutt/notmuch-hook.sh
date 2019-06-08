@@ -33,3 +33,4 @@ notmuch tag -inbox +trash -- 'from:"donotreply@mailings.ticketmaster.com.au" dat
 notmuch tag -inbox +trash -- 'from:"store-news@vip.dicksmith.com.au" date:"2017-01-01..today" tag:inbox'
 notmuch tag -inbox +trash -- 'from:"no-reply@email.thetileapp.com" date:"2017-01-01..today" tag:inbox'
 notmuch tag -inbox +trash -- 'from:"messages-noreply@linkedin.com" date:"2017-01-01..today" tag:inbox'
+notmuch tag -inbox +trash -- 'from:"whattowatch@mail.getvideostream.com" date:"2017-01-01..today" tag:inbox'
