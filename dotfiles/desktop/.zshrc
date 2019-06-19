@@ -230,7 +230,7 @@ alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild -
 alias add="archdatedisorder"
 #Update command
 
-alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"; sudo updatedb'
 alias ad="archdate"
 #Update command
 
@@ -349,6 +349,9 @@ alias nm='offlineimap -c ~/.offlineimaprc -o && offlineimap -c ~/.offlineimaprc 
 alias open="xdg-open"
 alias o='fasd -a -e xdg-open' 
 #Quick opening files with xdg-open
+
+alias pg="prettyping --nolegend -c 5 google.com"
+#Quick ping google.com
 
 alias paorph='pacman --query --unrequired --deps --quiet'
 alias po='paorph'

@@ -19,7 +19,8 @@ smart_gaps on
 # >>>> EXTERNAL STARTUPS <<<< #
 #. -------------------------- #
 
-exec --no-startup-id xmodmap -e "clear lock"; xmodmap -e "keysym Caps_Lock = Escape"
+#exec --no-startup-id xmodmap -e "clear lock"; xmodmap -e "keysym Caps_Lock = Escape"
+exec --no-startup-id xmodmap -e "clear lock"; xmodmap -e "keycode 66 = Escape"
 # Makes Caps an Escape
 
 exec --no-startup-id xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"
@@ -81,7 +82,9 @@ exec --no-startup-id exec ~/Git/OneOffCodes/Shell/seed_my_torrents
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+Return exec --no-startup-id kitty
+#bindsym $mod+Tab exec --no-startup-id kitty
 bindsym $mod+Tab exec --no-startup-id kitty
 
 # kill focused window
@@ -275,7 +278,8 @@ bindsym $mod+i exec --no-startup-id signal-desktop
 #bindsym $mod+ctrl+o
 
 #bindsym $mod+Shift+p
-bindsym $mod+Shift+Return exec --no-startup-id kitty -e ranger
+#bindsym $mod+Shift+Return exec --no-startup-id kitty -e ranger
+bindsym $mod+Shift+Return exec --no-startup-id kitty-e ranger
 #bindsym $mod+ctrl+p
 
 #bindsym $mod+Shift+a
@@ -317,7 +321,7 @@ bindsym $mod+c exec --no-startup-id ~/Git/OneOffCodes/Shell/dmenu_clipboard_mana
 
 #bindsym $mod+b
 bindsym $mod+Shift+b exec --no-startup-id xtrlock
-bindsym $mod+ctrl+b exec --no-startup-id kitty --class lock -e ~/Git/OneOffCodes/Shell/lock
+bindsym $mod+ctrl+b exec --no-startup-id kitty--class lock -e ~/Git/OneOffCodes/Shell/lock
 assign [class="lock"] number 10
 
 bindsym $mod+n exec --no-startup-id wmfocus
@@ -329,7 +333,7 @@ bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 #bindsym $mod+Shift+m
 #bindsym $mod+ctrl+m
 
-bindsym Print exec --no-startup-id "kitty --class screenshots -e ~/Git/OneOffCodes/Python/Screenshots/screenshots.py"
+bindsym Print exec --no-startup-id "kitty--class screenshots -e ~/Git/OneOffCodes/Python/Screenshots/screenshots.py"
 assign [class="screenshots"] number 9
 
 bindsym $mod+bracketright exec --no-startup-id ~/.config/i3/i3scripts/set_all_volume_up.sh

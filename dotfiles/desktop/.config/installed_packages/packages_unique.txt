@@ -54,7 +54,7 @@ insync
 ipython
 jsoncpp
 kitty
-latexrun
+latexrun-git
 lib32-gnutls
 lib32-libldap
 libmad
@@ -64,6 +64,7 @@ linux-lts-headers
 lostfiles
 magic-wormhole
 massren
+md2pdf
 megatools
 mesa
 mlocate
@@ -76,6 +77,7 @@ nerd-fonts-complete-mono-glyphs
 nethogs
 newsboat
 nim
+noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 offlineimap
@@ -158,6 +160,10 @@ tmux
 transmission-cli
 trash-cli
 ttf-dejavu
+ttf-emojione
+ttf-inconsolata
+ttf-linux-libertine
+ttf-symbola
 udiskie
 udiskie-dmenu-git
 unclutter
@@ -170,6 +176,7 @@ weechat
 wget
 wine
 winetricks
+wireguard-dkms
 wireless_tools
 wmctrl
 wmfocus
