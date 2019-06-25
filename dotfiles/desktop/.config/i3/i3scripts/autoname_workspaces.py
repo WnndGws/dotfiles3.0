@@ -55,6 +55,7 @@ WINDOW_ICONS = {
     'mpv': '',
     'centerim5': '',
     'Signal': '',
+    'signal': '',
     'newsboat': '',
     'rtv': '',
     'rainbowstream': '',

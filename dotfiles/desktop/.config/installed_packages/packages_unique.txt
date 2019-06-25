@@ -1,6 +1,4 @@
-alacritty
 alsa-utils
-android-tools
 aria2
 aur-auto-vote-git
 awesome-terminal-fonts
@@ -12,10 +10,8 @@ bind-tools
 ca-certificates
 celt
 clyrics
-cmatrix
 cmus
 cpupower
-dash
 devtools
 dmenu2
 dotgit
@@ -97,6 +93,7 @@ plex-media-player
 plex-media-server-plexpass
 polybar
 prettyping
+protontricks
 pulseaudio
 pulseaudio-alsa
 pymodoro-git

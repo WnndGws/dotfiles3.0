@@ -276,6 +276,9 @@ alias du="ncdu --color dark -rr -x"
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
+alias fd="fd --hidden --ignore-case --follow --show-errors --max-depth <++> '<regex>' <path> --exec '<command>'"
+#Alias fd for me
+
 alias fif="findinfile"
 # using ripgrep combined with preview
 
@@ -375,6 +378,9 @@ alias rcp="~/Git/OneOffCodes/Shell/rcp"
 #Uses rsync to copy, allows me to be able to copy using wildcards
 alias rmv="~/Git/OneOffCodes/Shell/rmv"
 #Uses rsync to move, allows me to be able to move using wildcards
+
+alias resetcaps='xmodmap -e "clear lock"; xmodmap -e "keycode 66 = Escape"; xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"; xmodmap -pke > ~/.Xmodmap'
+#Sometimes Capslock loses its escape-ability
 
 alias rm='trash -riv'
 #Prompt when removing files, force recursive
