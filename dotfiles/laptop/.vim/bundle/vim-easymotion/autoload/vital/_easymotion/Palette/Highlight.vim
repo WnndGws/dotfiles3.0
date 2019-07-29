@@ -1,0 +1,1 @@
+../../../../../../../../desktop/.vim/bundle/vim-easymotion/autoload/vital/_easymotion/Palette/Highlight.vim

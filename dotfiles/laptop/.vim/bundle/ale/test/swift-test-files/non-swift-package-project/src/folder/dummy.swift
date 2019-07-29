@@ -1,0 +1,1 @@
+../../../../../../../../../desktop/.vim/bundle/ale/test/swift-test-files/non-swift-package-project/src/folder/dummy.swift

@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/rainbow/autoload/rainbow.vim

@@ -1,0 +1,1 @@
+../../../../../../desktop/.vim/bundle/nerdtree/lib/nerdtree/opener.vim

@@ -1,1 +1,0 @@
-../../../desktop/.config/neomutt/notmuch-hook.sh

@@ -1,0 +1,1 @@
+../../../../../../../desktop/.vim/bundle/ale/test/prettier-test-files/with_config/testfile.js

@@ -1,0 +1,1 @@
+../../../../../../../../desktop/.vim/bundle/vimtex/autoload/vimtex/complete/tools/symbols-parse-json.py

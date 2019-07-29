@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/vimtex/ftplugin/bib.vim

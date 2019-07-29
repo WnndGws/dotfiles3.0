@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/vim-polyglot/spec/loading_spec.rb

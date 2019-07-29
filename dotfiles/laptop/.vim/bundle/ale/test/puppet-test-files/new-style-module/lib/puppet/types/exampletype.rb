@@ -1,0 +1,1 @@
+../../../../../../../../../../desktop/.vim/bundle/ale/test/puppet-test-files/new-style-module/lib/puppet/types/exampletype.rb

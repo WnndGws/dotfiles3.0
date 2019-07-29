@@ -1,0 +1,1 @@
+../../../../../../../desktop/.vim/bundle/ale/autoload/ale/fixers/prettier_standard.vim

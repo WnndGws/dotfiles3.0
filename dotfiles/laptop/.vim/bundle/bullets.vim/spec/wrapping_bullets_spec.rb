@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/bullets.vim/spec/wrapping_bullets_spec.rb

@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/vim-polyglot/syntax/ansible_hosts.vim

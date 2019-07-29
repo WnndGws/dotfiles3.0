@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/vim-easymotion/t/compare_movements_spec.vim

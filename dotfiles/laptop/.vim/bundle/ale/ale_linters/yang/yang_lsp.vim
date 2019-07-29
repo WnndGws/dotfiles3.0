@@ -1,0 +1,1 @@
+../../../../../../desktop/.vim/bundle/ale/ale_linters/yang/yang_lsp.vim

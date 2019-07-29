@@ -1,0 +1,1 @@
+../../../../../../desktop/.vim/bundle/vim-polyglot/after/ftplugin/idris.vim

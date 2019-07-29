@@ -1,0 +1,1 @@
+../../../../../../desktop/.vim/bundle/jedi-vim/test/vspec/goto.vim

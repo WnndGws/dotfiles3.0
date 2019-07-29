@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/vim-polyglot/ftplugin/rst.vim

@@ -1,0 +1,1 @@
+../../../../../../../../desktop/.vim/bundle/incsearch.vim/autoload/vital/_incsearch/Vim/Guard.vim

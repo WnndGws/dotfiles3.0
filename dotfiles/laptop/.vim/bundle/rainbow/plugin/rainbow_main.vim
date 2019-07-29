@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/rainbow/plugin/rainbow_main.vim

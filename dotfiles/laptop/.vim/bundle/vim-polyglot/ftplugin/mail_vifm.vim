@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/vim-polyglot/ftplugin/mail_vifm.vim

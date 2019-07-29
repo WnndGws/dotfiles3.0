@@ -1,0 +1,1 @@
+../../../../../../../desktop/.vim/bundle/jedi-vim/after/ftplugin/python/jedi.vim

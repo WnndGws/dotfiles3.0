@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/nerdtree/nerdtree_plugin/vcs.vim

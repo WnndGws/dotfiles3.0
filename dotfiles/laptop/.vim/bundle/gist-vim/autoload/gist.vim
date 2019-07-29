@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/gist-vim/autoload/gist.vim

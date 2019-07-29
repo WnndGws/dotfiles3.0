@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/bullets.vim/spec/renumber_bullets_spec.rb

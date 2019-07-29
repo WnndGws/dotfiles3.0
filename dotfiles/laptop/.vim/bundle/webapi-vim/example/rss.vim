@@ -1,0 +1,1 @@
+../../../../../desktop/.vim/bundle/webapi-vim/example/rss.vim

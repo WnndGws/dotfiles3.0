@@ -1,0 +1,1 @@
+../../../../../../../../desktop/.vim/bundle/ale/test/ruby_fixtures/valid_ruby_app3/lib/file.rb
