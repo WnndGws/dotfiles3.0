@@ -45,7 +45,6 @@ linux-firmware
 linux-lts
 linux-lts-headers
 lostfiles
-lsd
 massren
 md2pdf
 mesa
