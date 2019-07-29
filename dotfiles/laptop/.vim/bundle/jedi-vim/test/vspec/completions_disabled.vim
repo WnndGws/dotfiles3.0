@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/jedi-vim/test/vspec/completions_disabled.vim

@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/ale/test/command_callback/elixir_paths/mix_project/mix.exs

@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/nerdtree/autoload/nerdtree.vim

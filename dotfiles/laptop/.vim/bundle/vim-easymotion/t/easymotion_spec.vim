@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-easymotion/t/easymotion_spec.vim

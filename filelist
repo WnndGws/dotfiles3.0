@@ -17,7 +17,8 @@
 #.config/offlineimap/:desktop,laptop
 .passwords.asc:desktop,laptop
 .scimrc:desktop,laptop
-.vim/:desktop,laptop
+.vim/templates:desktop,laptop
+.vim/vimplugins.sh:desktop,laptop
 .vimrc:desktop,laptop
 
 ## Seperate Computers

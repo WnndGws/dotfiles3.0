@@ -1,1 +1,0 @@
-../../../../../../../../../../desktop/.vim/bundle/ale/test/gradle-test-files/settings-gradle-project/src/main/kotlin/dummy.kt

@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/neocomplete.vim/autoload/neocomplete/context_filetype.vim

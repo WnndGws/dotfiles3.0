@@ -1,1 +1,0 @@
-../../../../desktop/.vim/bundle/gist-vim/README.md

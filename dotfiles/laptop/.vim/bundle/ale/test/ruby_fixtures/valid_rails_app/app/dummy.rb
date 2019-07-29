@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/ale/test/ruby_fixtures/valid_rails_app/app/dummy.rb

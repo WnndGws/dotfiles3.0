@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/test/compile_database_perf/test.sh

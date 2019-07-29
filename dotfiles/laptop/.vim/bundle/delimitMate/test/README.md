@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/delimitMate/test/README.md

@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-snippets/plugin/vimsnippets.vim

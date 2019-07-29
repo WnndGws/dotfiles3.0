@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/test/prettier-test-files/testfile.ts

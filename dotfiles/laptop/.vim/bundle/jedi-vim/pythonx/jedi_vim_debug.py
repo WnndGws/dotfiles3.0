@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/jedi-vim/pythonx/jedi_vim_debug.py

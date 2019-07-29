@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/vim-polyglot/after/indent/jsx.vim

@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/ale/test/puppet-test-files/old-style-module/manifests/init.pp

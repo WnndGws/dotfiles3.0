@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/test/kotlin_files/testfile.kt

@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/jedi-vim/after/syntax/python.vim

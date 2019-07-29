@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/vimtex/autoload/vimtex/doc.vim

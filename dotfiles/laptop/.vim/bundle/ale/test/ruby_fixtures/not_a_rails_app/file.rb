@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/ale/test/ruby_fixtures/not_a_rails_app/file.rb

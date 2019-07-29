@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-easymotion/t/operator_pending_spec.vim

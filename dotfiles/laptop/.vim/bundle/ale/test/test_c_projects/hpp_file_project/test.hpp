@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/ale/test/test_c_projects/hpp_file_project/test.hpp

@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/ale/test/command_callback/tsserver_paths/src/file1.ts

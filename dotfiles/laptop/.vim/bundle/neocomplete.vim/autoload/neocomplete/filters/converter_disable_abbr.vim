@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/neocomplete.vim/autoload/neocomplete/filters/converter_disable_abbr.vim

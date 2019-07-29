@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/ale/test/command_callback/puppet_paths/dummy.pp

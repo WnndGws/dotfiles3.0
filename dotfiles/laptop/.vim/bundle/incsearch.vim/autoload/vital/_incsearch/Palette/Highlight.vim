@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/incsearch.vim/autoload/vital/_incsearch/Palette/Highlight.vim

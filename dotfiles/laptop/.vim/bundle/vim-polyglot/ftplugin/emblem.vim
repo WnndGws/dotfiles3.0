@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-polyglot/ftplugin/emblem.vim

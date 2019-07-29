@@ -1,1 +1,0 @@
-../../../../../../../../../../desktop/.vim/bundle/ale/test/command_callback/python_paths/no_virtualenv/subdir/foo/__init__.py

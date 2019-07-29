@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/test/python/test_deoplete_source.py

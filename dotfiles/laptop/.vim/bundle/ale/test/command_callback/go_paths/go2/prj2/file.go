@@ -1,1 +1,0 @@
-../../../../../../../../../desktop/.vim/bundle/ale/test/command_callback/go_paths/go2/prj2/file.go

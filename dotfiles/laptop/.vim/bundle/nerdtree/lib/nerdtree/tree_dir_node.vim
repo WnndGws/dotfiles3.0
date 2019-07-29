@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim

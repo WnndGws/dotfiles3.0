@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/ale/test/phpcs-test-files/project-with-phpcs/foo/test.php

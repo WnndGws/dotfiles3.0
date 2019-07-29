@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/vimtex/after/ftplugin/tex.vim

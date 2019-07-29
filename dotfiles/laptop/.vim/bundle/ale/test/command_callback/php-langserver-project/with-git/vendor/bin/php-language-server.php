@@ -1,1 +1,0 @@
-../../../../../../../../../../desktop/.vim/bundle/ale/test/command_callback/php-langserver-project/with-git/vendor/bin/php-language-server.php

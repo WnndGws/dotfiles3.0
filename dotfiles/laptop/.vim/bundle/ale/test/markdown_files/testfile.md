@@ -1,1 +1,0 @@
-../../../../../../desktop/.vim/bundle/ale/test/markdown_files/testfile.md

@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/bullets.vim/spec/spec_helper.rb

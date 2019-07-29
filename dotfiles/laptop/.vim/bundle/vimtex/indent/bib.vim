@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vimtex/indent/bib.vim

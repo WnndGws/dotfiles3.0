@@ -1,1 +1,0 @@
-../../../../desktop/.vim/bundle/vim-table-mode/CHANGELOG.md

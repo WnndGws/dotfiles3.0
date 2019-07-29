@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-polyglot/compiler/cargo.vim

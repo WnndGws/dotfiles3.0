@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/vim-easymotion/autoload/vital/_easymotion/Prelude.vim

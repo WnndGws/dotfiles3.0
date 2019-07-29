@@ -1,1 +1,0 @@
-../../../../../../../desktop/.vim/bundle/vim-table-mode/t/fixtures/table/sample_realign_unicode_before.txt

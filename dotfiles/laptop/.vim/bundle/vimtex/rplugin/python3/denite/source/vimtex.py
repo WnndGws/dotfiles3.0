@@ -1,1 +1,0 @@
-../../../../../../../../desktop/.vim/bundle/vimtex/rplugin/python3/denite/source/vimtex.py

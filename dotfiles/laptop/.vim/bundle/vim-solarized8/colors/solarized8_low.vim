@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-solarized8/colors/solarized8_low.vim

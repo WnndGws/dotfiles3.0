@@ -1,1 +1,0 @@
-../../../../../desktop/.vim/bundle/vim-snippets/pythonx/javascript_snippets.py
