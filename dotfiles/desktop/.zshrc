@@ -167,7 +167,7 @@ fi
 plugins=(
  #fzf-zsh\
  #zsh-interactive-zsh
- adb\
+ #adb\
  archlinux\
  colored-man-pages\
  colorize\
@@ -276,7 +276,7 @@ alias du="ncdu --color dark -rr -x"
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
-alias fd="fd --hidden --ignore-case --follow --show-errors --max-depth <++> '<regex>' <path> --exec '<command>'"
+alias fd="/bin/fd --hidden --ignore-case --follow --show-errors --max-depth <++> '<regex>' <path> --exec '<command>'"
 #Alias fd for me
 
 alias fif="findinfile"
@@ -302,16 +302,13 @@ alias gif_make='$HOME/Git/OneOffCodes/Python/gifmaker/gifmaker.py make_gif'
 alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt"
 #GPG encrypt a file to the recipient and myself
 
-alias hn="haxor-news"
-#Saves typing
-
 alias hib24="sudo rtcwake --mode mem --seconds 86400; i3lock --color=000000 --ignore-empty-password --show-failed-attempts"
 #Hibernate for 24 hrs
 
 alias hs="wine .wine/drive_c/Program\ Files\ \(x86\)/Battle.net/Battle.net\ Launcher.exe"
 #Launch Battle.net
 
-alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
+alias ipython="/usr/bin/ipython --TerminalInteractiveShell.editing_mode=vi"
 #Always open ipython with vim mappings
 
 alias latex_shortcuts="cat $HOME/.vimrc | rg 'autocmd FileType tex inoremap.*' | cut -d';' -f2"
@@ -335,18 +332,13 @@ alias mm='myman'
 alias mkdir='mkdir -p'
 #Create parent folders if doesnt exists
 
-alias mount_phone='simple-mtpfs --device 1 /mnt/Nexus6p'
-alias mp='mount_phone'
-alias unmount_phone='fusermount -u /mnt/Nexus6p'
-#Allows me to mtp mount and unmount phone easily
-
 alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
 #Saves typing
 
 alias nf="neofetch"
 #Neofetch
 
-alias nm='offlineimap -c ~/.offlineimaprc -o && offlineimap -c ~/.offlineimaprc -u quiet & neomutt && killall -9 offlineimap'
+alias nm='mailsync; neomutt'
 #Saves typing
 
 alias open="xdg-open"
@@ -374,18 +366,13 @@ alias playlist_play="~/Git/OneOffCodes/Shell/playlistPlay"
 alias pytest='~/Git/OneOffCodes/Shell/pytest'
 #Watch my coding against the test
 
-alias rcp="~/Git/OneOffCodes/Shell/rcp"
-#Uses rsync to copy, allows me to be able to copy using wildcards
-alias rmv="~/Git/OneOffCodes/Shell/rmv"
-#Uses rsync to move, allows me to be able to move using wildcards
-
 alias resetcaps='xmodmap -e "clear lock"; xmodmap -e "keycode 66 = Escape"; xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"; xmodmap -pke > ~/.Xmodmap'
 #Sometimes Capslock loses its escape-ability
 
 alias rm='trash -riv'
 #Prompt when removing files, force recursive
 
-alias rsync="rsync -vrhP"
+alias rs="rsync --verbose --recursive --update --human-readable --partial --progress"
 #I always use rsync with these flags
 
 alias sab_ssh_tun='ssh -L 8080:localhost:8080 gouws.com.au -N'
