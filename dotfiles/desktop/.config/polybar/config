@@ -322,7 +322,7 @@ click-right = exec ~/.config/polybar/startRedshift.sh
 [module/nextevent]
 type = custom/script
 interval = 300
-exec = timeout 60s ~/Git/OneOffCodes/Python/next_event/next_event.py --allday-events
+exec = timeout 60s ~/Git/OneOffCodes/Python/next_event/next_event_2.py
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 format-underline = ${colors.background-alt}
 

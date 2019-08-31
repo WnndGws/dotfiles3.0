@@ -78,6 +78,7 @@ python-click
 python-fontawesome
 python-i3-py
 python-pillow
+python-pytest
 python-pytz
 python-requests-html
 python-unidecode
