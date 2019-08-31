@@ -165,17 +165,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 plugins=(
- #fzf-zsh\
- #zsh-interactive-zsh
- #adb\
- archlinux\
- colored-man-pages\
- colorize\
- command-not-found\
- #common-aliases\
- dircycle\
- fasd\
- fd\
  fzf\
  git-prompt\
  git\
@@ -183,8 +172,6 @@ plugins=(
  gnu-utils\
  gpg-agent\
  history-substring-search\
- man\
- pip\
  pylint\
  python\
  ripgrep\
@@ -201,6 +188,28 @@ plugins=(
 )
 #plugins can be found in ~/.oh-my-zsh/plugins/*
 #Plugins can be found in ~/.oh-my-zsh/custom/plugins/* (NB. extension must be ".plugin.zsh")
+
+#auto-ls
+function chpwd() {
+    emulate -L zsh
+    exa --color always --color-scale
+}
+
+#command-not-found
+# Arch Linux command-not-found support, you must have package pkgfile installed
+[[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
+[[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
+
+#fasd shortcuts
+fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
+if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+fasd --init auto >| "$fasd_cache"
+fi
+source "$fasd_cache"
+unset fasd_cache
+alias v='f -e "$EDITOR"'
+alias o='a -e $BROWSER'
+alias j='zz'
 
 bindkey "^[[A" history-substring-search-up
 #Search through history with arrow keys

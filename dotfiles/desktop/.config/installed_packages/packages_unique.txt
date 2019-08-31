@@ -67,6 +67,7 @@ pass
 pavucontrol
 pikaur
 pkgconf
+pkgfile
 plex-media-server-plexpass
 polybar
 protontricks
