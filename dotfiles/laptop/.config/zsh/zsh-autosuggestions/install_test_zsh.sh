@@ -1,0 +1,1 @@
+../../../../desktop/.config/zsh/zsh-autosuggestions/install_test_zsh.sh

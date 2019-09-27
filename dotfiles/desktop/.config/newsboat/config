@@ -12,12 +12,13 @@ reload-threads 5
 external-url-viewer "urlscan"
 browser $HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 cleanup-on-quit	no
-delete-read-articles-on-quit yes 
+delete-read-articles-on-quit yes
 mark-as-read-on-hover no
 show-read-feeds no
 show-read-articles yes
 ignore-mode "display"
-download-timeout 120
+download-timeout 240
+max-items 0
 
 feedlist-format     "%90t %-12u (%T)"
 articlelist-format  "%30i %D   %?T?|%-17T|  ?%t"
@@ -57,11 +58,11 @@ highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
 
 # filters list
-define-filter "01_Newstube" "unread_count > 0 and tags # \"04_Newstube\""
-define-filter "02_Text" "unread_count > 0 and ( tags # \"02_Tech\" or tags # \"03_Ideas\" )"
-define-filter "03_Sport" "unread_count > 0 and ( tags # \"06_NFL\" or tags # \"06_Rugby\" or tags # \"06_Cricket\" or tags # \"06_Soccer\" or tags # \"06_Highlights\" or tags # \"06_Torrents\" )"
-define-filter "04_Linus" "unread_count > 0 and tags # \"07_Linux\""
-define-filter "05_Videos" "unread_count > 0 and ( tags # \"09_Youtube\" or tags # \"10_TWIT\" or tags # \"11_Education\" or tags # \"12_AnimatedEducation\" )"
+#define-filter "01_Newstube" "unread_count > 0 and tags # \"04_Newstube\""
+#define-filter "02_Text" "unread_count > 0 and ( tags # \"02_Tech\" or tags # \"03_Ideas\" )"
+#define-filter "03_Sport" "unread_count > 0 and ( tags # \"06_NFL\" or tags # \"06_Rugby\" or tags # \"06_Cricket\" or tags # \"06_Soccer\" or tags # \"06_Highlights\" or tags # \"06_Torrents\" )"
+#define-filter "04_Linus" "unread_count > 0 and tags # \"07_Linux\""
+#define-filter "05_Videos" "unread_count > 0 and ( tags # \"09_Youtube\" or tags # \"10_TWIT\" or tags # \"11_Education\" or tags # \"12_AnimatedEducation\" )"
 
 # filters
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCoLrcjPV5PbUrUyXq5mjc_A" "title !~ \"Giants\""
@@ -72,7 +73,9 @@ ignore-article "http://feeds.lifehacker.com.au/LifehackerAustralia" "age >= 1"
 ignore-article "https://theconversation.com/au/articles.atom" "age >= 1"
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA" "title !~ \"Savage\""
 ignore-article "https://sportscult.org/rss2.php" "title !~ \"NFL\" and title !~ \"Boxing\""
-ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"2019\" or title =~ \"49\""
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"Week\" or title =~ \"49\""
+always-download "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg"
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDVYQ4Zhbm3S2dlz7P1GBDg" "title !~ \"Week\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCkBY0aHJP9BwjZLDYxAQrKg" "title !~ \"\\|\""
 ignore-article "https://old.reddit.com/user/nathanwpyle/.rss" " title =~ \"/u/nathanwpyle on\""
 ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UC-3jIAlnQmbbVMV6gR7K8aQ" "age >= 2"

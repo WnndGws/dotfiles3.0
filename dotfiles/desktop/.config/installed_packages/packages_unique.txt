@@ -1,5 +1,4 @@
 alsa-utils
-android-tools
 aria2
 aur-auto-vote-git
 awesome-terminal-fonts
@@ -16,9 +15,9 @@ dtrx
 entr
 exa
 fasd
-fcron
 fd
 feh
+fff
 ffsend
 firefox
 fzf
@@ -57,6 +56,7 @@ msmtp
 ncdu
 neomutt
 nerd-fonts-complete-mono-glyphs
+nethogs
 newsboat
 oh-my-zsh-git
 openntpd
@@ -68,6 +68,7 @@ pavucontrol
 pikaur
 pkgconf
 pkgfile
+pkgtop
 plex-media-server-plexpass
 polybar
 protontricks
@@ -77,6 +78,7 @@ pymodoro-git
 python
 python-click
 python-fontawesome
+python-humanize
 python-i3-py
 python-pillow
 python-pytest
@@ -84,7 +86,6 @@ python-pytz
 python-requests-html
 python-unidecode
 radarr
-ranger
 redshift-minimal
 ripgrep
 rsync
@@ -93,10 +94,10 @@ sabnzbd
 sc-im
 screenfetch
 scrot
-shellcheck
 signal-desktop-bin
 sonarr
 speedread-git
+starship
 steam
 steam-native-runtime
 stig
@@ -169,7 +170,6 @@ xorg-xwininfo
 xorg-xwud
 xterm
 yapf
-yay
 youtube-dl
 zathura
 zathura-pdf-mupdf

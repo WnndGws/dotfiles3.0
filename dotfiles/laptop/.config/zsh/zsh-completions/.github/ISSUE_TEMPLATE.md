@@ -1,0 +1,1 @@
+../../../../../desktop/.config/zsh/zsh-completions/.github/ISSUE_TEMPLATE.md

@@ -279,7 +279,7 @@ bindsym $mod+i exec --no-startup-id signal-desktop
 
 #bindsym $mod+Shift+p
 #bindsym $mod+Shift+Return exec --no-startup-id kitty -e ranger
-bindsym $mod+Shift+Return exec --no-startup-id kitty -e ranger
+bindsym $mod+Shift+Return exec --no-startup-id kitty -e zsh -ci fff
 #bindsym $mod+ctrl+p
 
 #bindsym $mod+Shift+a

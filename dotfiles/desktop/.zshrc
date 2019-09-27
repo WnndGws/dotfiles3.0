@@ -13,7 +13,7 @@ export XDG_DATA_HOME=$HOME'/.local/share'
 
 export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-#export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='-i --border'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
@@ -25,9 +25,28 @@ export MAILCAPS="$XDG_CONFIG_HOME"/mailcap/mailcap
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 
-export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
-export RTV_URLVIEWER=/usr/bin/urlscan
-#Export RTV
+export FFF_OPENER=$BROWSER
+export FFF_KEY_SEARCH="/"
+# Directory color [0-9]
+export FFF_COL1=0
+# Status color [0-9]
+export FFF_COL2=7
+# Selection color [0-9] (copied/moved files)
+export FFF_COL3=3
+# Cursor color [0-9]
+export FFF_COL4=6
+# Favourites (Bookmarks) (keys 1-9) (dir or file)
+export FFF_FAV1=~
+export FFF_FAV2=~/GoogleDrive
+export FFF_FAV3=~/Git
+export FFF_FAV4=/home/wynand/wynZFS/Media/TV
+export FFF_FAV5=
+export FFF_FAV6=
+export FFF_FAV7=
+export FFF_FAV8=
+export FFF_FAV9=
+export FFF_TRASH=~/.local/share/Trash
+#Export fff
 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python:$HOME/Git/OneOffCodes/Shell:$PATH
 #Path includes path to all scripts i want to run natively
@@ -83,6 +102,9 @@ setopt MENU_COMPLETE
 bindkey -v
 #Explicitly sets keys to vim mode
 
+export KEYTIMEOUT=1
+#By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered. This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
+
 zstyle :compinstall filename '~/.zshrc'
 #Load completions from this file since they are handled by oh-my-zsh
 
@@ -106,11 +128,6 @@ fi
 [[ $- != *i* ]] && return
 #If not running interactively, don't do anything
 
-PS1='[%n@%M %d]$ '
-
-CDPATH=.:..:~:~/Git
-#When type cd it will look for folder in cwd, parent, home, or git
-
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0  ]]; then
       BUFFER="fg"
@@ -124,14 +141,15 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #When ctrl-z out of vim can ctrl-z back in
 
-set RANGER_LOAD_DEFAULT_RC false
-#Dont want to load deafult AND mine, only mine
-
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 #Enable 'v' in normal mode to edit command line
 #Edit commands by pressing v when in normal mode
+
+#Set shell theme
+eval "$(starship init zsh)"
+
 #. --------------------------- #
 # >>>>> END USER SETTINGS <<<<<#
 #. --------------------------- #
@@ -144,9 +162,6 @@ ZSH=/usr/share/oh-my-zsh
 
 ZSH_CUSTOM=~/.oh-my-zsh/custom
 #Custom path for oh-my-zsh
-
-ZSH_THEME="spaceship"
-#Name of theme, can be "random"
 
 CASE_SENSITIVE="false"
 #Case sensitive completions are different commands
@@ -165,13 +180,9 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 plugins=(
- fzf\
- git-prompt\
- git\
  globalias\
  gnu-utils\
  gpg-agent\
- history-substring-search\
  pylint\
  python\
  ripgrep\
@@ -181,25 +192,24 @@ plugins=(
  systemd\
  vi-mode\
  vim-interaction\
- zsh-autosuggestions\
- zsh-completions\
  zsh-navigation-tools\
  zsh_reload
 )
 #plugins can be found in ~/.oh-my-zsh/plugins/*
 #Plugins can be found in ~/.oh-my-zsh/custom/plugins/* (NB. extension must be ".plugin.zsh")
 
+#---------------------------------------------------------------------------
 #auto-ls
 function chpwd() {
     emulate -L zsh
     exa --color always --color-scale
 }
-
+#---------------------------------------------------------------------------
 #command-not-found
 # Arch Linux command-not-found support, you must have package pkgfile installed
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 [[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
-
+#---------------------------------------------------------------------------
 #fasd shortcuts
 fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
 if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
@@ -210,24 +220,41 @@ unset fasd_cache
 alias v='f -e "$EDITOR"'
 alias o='a -e $BROWSER'
 alias j='zz'
-
+#---------------------------------------------------------------------------
+#fzf
+fzf_base="/usr/share/fzf"
+fzf_shell="${fzf_base}"
+# Auto-completion
+if [[ ! "$DISABLE_FZF_AUTO_COMPLETION" == "true" ]]; then
+    [[ $- == *i* ]] && source "${fzf_shell}/completion.zsh" 2> /dev/null
+fi
+# Key bindings
+if [[ ! "$DISABLE_FZF_KEY_BINDINGS" == "true" ]]; then
+    source "${fzf_shell}/key-bindings.zsh"
+fi
+unset fzf_base fzf_shell dir fzfdirs
+#---------------------------------------------------------------------------
+#auto-suggestions
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#---------------------------------------------------------------------------
+#syntax highlighting
+source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#---------------------------------------------------------------------------
+#autocompletions
+fpath=($HOME/.config/zsh/zsh-completions/src $fpath)
+#---------------------------------------------------------------------------
+#history substring search
+source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "^[[A" history-substring-search-up
+bindkey -M vicmd 'k' history-substring-search-up
 #Search through history with arrow keys
-
 bindkey "^[[B" history-substring-search-down
+bindkey -M vicmd 'j' history-substring-search-down
 #Search through history with arrow keys
+#---------------------------------------------------------------------------
 
 source $ZSH/oh-my-zsh.sh
 #Source oh-my-zsh for settings to take effect
-
-spaceship_vi_mode_enable
-#Explicitly enable vi mode
-
-export KEYTIMEOUT=1
-#By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered. This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
-
-bindkey "^[^M" autosuggest-accept
-#Let me enter without needing to complete
 
 #. ----------------------------------#
 # >>>>> END OH MY ZSH SETTINGS <<<<< #
@@ -425,7 +452,9 @@ alias p='pikaur -Ss'
 alias pare='pikaur -R'
 #Remove package using pacman
 alias pin='pikaur -S --noconfirm'
-#Trizen install
+#Pikaur install
+alias pq='pikaur -Qi | rg -B3 -A3'
+#Pikaur Query
 
 alias ping='prettyping --nolegend'
 #Use prettyping

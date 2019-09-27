@@ -1,0 +1,1 @@
+../../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/integrations/vi_mode_spec.rb
