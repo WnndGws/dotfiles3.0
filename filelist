@@ -10,6 +10,7 @@
 #.config/neomutt/:desktop,laptop
 .config/pymodoro/:desktop,laptop
 .config/ranger/:desktop,laptop
+.config/stig/:desktop,laptop
 .config/zathura/:desktop,laptop
 .config/zsh/:desktop,laptop
 .mailboxes:desktop,laptop
