@@ -87,7 +87,7 @@ zstyle ':completion:*' expand prefix suffix
 #. ------------------- #
 # >>>>> SETTINGS <<<<< #
 #. ------------------- #
-HISTFILE=~/.config/zsh/histfile
+HISTFILE=~/.cache/zsh/histfile
 #Lines configured by zsh-newuser-install
 
 HISTSIZE=100000
