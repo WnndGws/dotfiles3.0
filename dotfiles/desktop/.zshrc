@@ -1,20 +1,20 @@
 #. ------------------ #
 # >>>>> EXPORTS <<<<< #
 #. ------------------ #
+#Set shell theme
+eval "$(starship init zsh)"
+
+# Sets environment variables
+export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export EDITOR=/usr/bin/vim
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
 export VISUAL=/usr/bin/vim
-#Sets environment variables
 
+# Sets all my XDG paths
 export XDG_CACHE_HOME=$HOME'/.cache'
 export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
-#Sets all my XDG paths
-
-export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
-export FZF_DEFAULT_OPTS='-i --border'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
@@ -25,17 +25,18 @@ export MAILCAPS="$XDG_CONFIG_HOME"/mailcap/mailcap
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 
+# Export FFF Settings
 export FFF_OPENER=$BROWSER
 export FFF_KEY_SEARCH="/"
-# Directory color [0-9]
+## Directory color [0-9]
 export FFF_COL1=0
-# Status color [0-9]
+## Status color [0-9]
 export FFF_COL2=7
-# Selection color [0-9] (copied/moved files)
+## Selection color [0-9] (copied/moved files)
 export FFF_COL3=3
-# Cursor color [0-9]
+## Cursor color [0-9]
 export FFF_COL4=6
-# Favourites (Bookmarks) (keys 1-9) (dir or file)
+## Favourites (Bookmarks) (keys 1-9) (dir or file)
 export FFF_FAV1=~
 export FFF_FAV2=~/GoogleDrive
 export FFF_FAV3=~/Git
@@ -46,20 +47,40 @@ export FFF_FAV7=
 export FFF_FAV8=
 export FFF_FAV9=
 export FFF_TRASH=~/.local/share/Trash
-#Export fff
 
+# Set Shell Variables
 export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python:$HOME/Git/OneOffCodes/Shell:$PATH
-#Path includes path to all scripts i want to run natively
-
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='-i --border'
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ ! -e ~/.ssh/agentsock ]; then
-    eval $(ssh-agent -a ~/.ssh/agentsock)
-    ssh-add
+# Only input SSH password once a session
+#if [ ! -e ~/.ssh/agentsock ]; then
+    #eval $(ssh-agent -a ~/.ssh/agentsock)
+    #ssh-add
+#else
+    #export SSH_AUTH_SOCK=~/.ssh/agentsock
+#fi
+
+# Enables zsh autocompletions of commands
+#autocompletions
+fpath=($HOME/.config/zsh/zsh-completions/src $fpath)
+zstyle :compinstall filename '$HOME/.zshrc'
+autoload -Uz compinit
+##Checking the cached zcompdump can be slow making zsh startup slow
+##Check only once an hour
+if [[ -a $HOME/.zcompdump(#qN.mh+1) ]]; then
+    compinit
 else
-    export SSH_AUTH_SOCK=~/.ssh/agentsock
+    compinit -C
 fi
+##Case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+
+##Partial completion suggestions
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
 #. ---------------------- #
 # >>>>> END EXPORTS <<<<< #
 #. ---------------------- #
@@ -74,6 +95,9 @@ HISTSIZE=100000
 
 SAVEHIST=100000
 #Save 1000 items in history
+
+setopt AUTO_CD
+#Allows me to just type a directory
 
 setopt EXTENDED_HISTORY
 #Write the history file in the ":start:elapsed;command" format
@@ -105,19 +129,6 @@ bindkey -v
 export KEYTIMEOUT=1
 #By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered. This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
 
-zstyle :compinstall filename '~/.zshrc'
-#Load completions from this file since they are handled by oh-my-zsh
-
-autoload -Uz compinit
-
-#Checking the cached zcompdump can be slow making zsh startup slow
-#Check only once an hour
-if [[ -a $HOME/.zcompdump(#qN.mh+1) ]]; then
-    compinit
-else
-    compinit -C
-fi
-#Enables zsh autocompletions of commands
 #. ---------------------- #
 # >>>>> END SETTINGS <<<<<#
 #. ---------------------- #
@@ -128,6 +139,10 @@ fi
 [[ $- != *i* ]] && return
 #If not running interactively, don't do anything
 
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#fancy-ctrl-z
+#When ctrl-z out of vim can ctrl-z back in
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0  ]]; then
       BUFFER="fg"
@@ -139,65 +154,20 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
-#When ctrl-z out of vim can ctrl-z back in
-
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#Enable 'v' in normal mode to edit command line
+#Edit commands by pressing spacebar when in normal mode
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
-#Enable 'v' in normal mode to edit command line
-#Edit commands by pressing v when in normal mode
-
-#Set shell theme
-eval "$(starship init zsh)"
-
-#. --------------------------- #
-# >>>>> END USER SETTINGS <<<<<#
-#. --------------------------- #
-
-#. ----------------------------- #
-# >>>>> OH MY ZSH SETTINGS <<<<< #
-#. ----------------------------- #
-ZSH=/usr/share/oh-my-zsh
-#Path to your oh-my-zsh installation.
-
-ZSH_CUSTOM=~/.oh-my-zsh/custom
-#Custom path for oh-my-zsh
-
-CASE_SENSITIVE="false"
-#Case sensitive completions are different commands
-
-ENABLE_CORRECTION="false"
-#Don't autocorrect
-
-COMPLETION_WAITING_DOTS="true"
-#Display red dots while waiting for completions
-
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh-cache
-#Set cache location, create if doesn't exist
-
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-    mkdir $ZSH_CACHE_DIR
-fi
-
-plugins=(
- globalias\
- gnu-utils\
- gpg-agent\
- pylint\
- python\
- ripgrep\
- rsync\
- ssh-agent\
- sudo\
- systemd\
- vi-mode\
- vim-interaction\
- zsh-navigation-tools\
- zsh_reload
-)
-#plugins can be found in ~/.oh-my-zsh/plugins/*
-#Plugins can be found in ~/.oh-my-zsh/custom/plugins/* (NB. extension must be ".plugin.zsh")
-
+bindkey -M vicmd " " edit-command-line
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#magic-url
+# Quotes pasted urls automatically
+autoload -Uz bracketed-paste-url-magic
+zle -N bracketed-paste bracketed-paste-url-magic
+#---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #auto-ls
 function chpwd() {
@@ -205,21 +175,19 @@ function chpwd() {
     exa --color always --color-scale
 }
 #---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
 #command-not-found
 # Arch Linux command-not-found support, you must have package pkgfile installed
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 [[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 #---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
 #fasd shortcuts
-fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
-if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
-fasd --init auto >| "$fasd_cache"
-fi
-source "$fasd_cache"
-unset fasd_cache
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
 alias v='f -e "$EDITOR"'
 alias o='a -e $BROWSER'
 alias j='zz'
+#---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #fzf
 fzf_base="/usr/share/fzf"
@@ -234,14 +202,15 @@ if [[ ! "$DISABLE_FZF_KEY_BINDINGS" == "true" ]]; then
 fi
 unset fzf_base fzf_shell dir fzfdirs
 #---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
 #auto-suggestions
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #syntax highlighting
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #---------------------------------------------------------------------------
-#autocompletions
-fpath=($HOME/.config/zsh/zsh-completions/src $fpath)
+#---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #history substring search
 source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -252,10 +221,113 @@ bindkey "^[[B" history-substring-search-down
 bindkey -M vicmd 'j' history-substring-search-down
 #Search through history with arrow keys
 #---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#globalias
+globalias() {
+   zle _expand_alias
+   zle expand-word
+   zle self-insert
+}
+zle -N globalias
+# space expands all aliases, including global
+bindkey -M viins " " globalias
+# control-space to make a normal space
+bindkey -M viins "^ " magic-space
+# normal space during searches
+bindkey -M isearch " " magic-space
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+# Enable gpg-agent if it is not running
+AGENT_SOCK=$(gpgconf --list-dirs | grep agent-socket | cut -d : -f 2)
+if [[ ! -S $AGENT_SOCK ]]; then
+  gpg-agent --daemon --use-standard-socket &>/dev/null
+fi
+export GPG_TTY=$TTY
+# Set SSH to use gpg-agent if it's enabled
+GNUPGCONFIG="${GNUPGHOME:-"$HOME/.gnupg"}/gpg-agent.conf"
+if [[ -r $GNUPGCONFIG ]] && command grep -q enable-ssh-support "$GNUPGCONFIG"; then
+  export SSH_AUTH_SOCK="$AGENT_SOCK.ssh"
+  unset SSH_AGENT_PID
+fi
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#starts automatically ssh-agent to set up and load whichever credentials you want for ssh connections.
+typeset _agent_forwarding _ssh_env_cache
+function _start_agent() {
+	local lifetime
+	zstyle -s :omz:plugins:ssh-agent lifetime lifetime
 
-source $ZSH/oh-my-zsh.sh
-#Source oh-my-zsh for settings to take effect
+	# start ssh-agent and setup environment
+	echo Starting ssh-agent...
+	ssh-agent -s ${lifetime:+-t} ${lifetime} | sed 's/^echo/#echo/' >! $_ssh_env_cache
+	chmod 600 $_ssh_env_cache
+	. $_ssh_env_cache > /dev/null
+}
+function _add_identities() {
+	local id line sig lines
+	local -a identities loaded_sigs loaded_ids not_loaded
+	zstyle -a :omz:plugins:ssh-agent identities identities
 
+	# check for .ssh folder presence
+	if [[ ! -d $HOME/.ssh ]]; then
+		return
+	fi
+
+	# add default keys if no identities were set up via zstyle
+	# this is to mimic the call to ssh-add with no identities
+	if [[ ${#identities} -eq 0 ]]; then
+		# key list found on `ssh-add` man page's DESCRIPTION section
+		for id in id_rsa id_dsa id_ecdsa id_ed25519 identity; do
+			# check if file exists
+			[[ -f "$HOME/.ssh/$id" ]] && identities+=$id
+		done
+	fi
+
+	# get list of loaded identities' signatures and filenames
+	if lines=$(ssh-add -l); then
+		for line in ${(f)lines}; do
+			loaded_sigs+=${${(z)line}[2]}
+			loaded_ids+=${${(z)line}[3]}
+		done
+	fi
+
+	# add identities if not already loaded
+	for id in $identities; do
+		# check for filename match, otherwise try for signature match
+		if [[ ${loaded_ids[(I)$HOME/.ssh/$id]} -le 0 ]]; then
+			sig="$(ssh-keygen -lf "$HOME/.ssh/$id" | awk '{print $2}')"
+			[[ ${loaded_sigs[(I)$sig]} -le 0 ]] && not_loaded+="$HOME/.ssh/$id"
+		fi
+	done
+
+	[[ -n "$not_loaded" ]] && ssh-add ${^not_loaded}
+}
+# Get the filename to store/lookup the environment from
+_ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
+# test if agent-forwarding is enabled
+zstyle -b :omz:plugins:ssh-agent agent-forwarding _agent_forwarding
+if [[ $_agent_forwarding == "yes" && -n "$SSH_AUTH_SOCK" ]]; then
+	# Add a nifty symlink for screen/tmux if agent forwarding
+	[[ -L $SSH_AUTH_SOCK ]] || ln -sf "$SSH_AUTH_SOCK" /tmp/ssh-agent-$USER-screen
+elif [[ -f "$_ssh_env_cache" ]]; then
+	# Source SSH settings, if applicable
+	. $_ssh_env_cache > /dev/null
+	if [[ $USER == "root" ]]; then
+		FILTER="ax"
+	else
+		FILTER="x"
+	fi
+	ps $FILTER | grep ssh-agent | grep -q $SSH_AGENT_PID || {
+		_start_agent
+	}
+else
+	_start_agent
+fi
+_add_identities
+# tidy up after ourselves
+unset _agent_forwarding _ssh_env_cache
+unfunction _start_agent _add_identities
+#---------------------------------------------------------------------------
 #. ----------------------------------#
 # >>>>> END OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------------#
@@ -266,7 +338,7 @@ alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild -
 alias add="archdatedisorder"
 #Update command
 
-alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"; sudo updatedb'
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"; sudo updatedb; tldr --update'
 alias ad="archdate"
 #Update command
 
@@ -362,14 +434,17 @@ alias ll='exa --all --color always --color-scale --long'
 alias ls='exa --color always --color-scale'
 #Colours in ls
 
+alias md='/usr/bin/mkdir -p'
+#Speed up making dirs
+
 alias mm='myman'
 #Uses vimman instead of normal man
 
 alias mkdir='mkdir -p'
 #Create parent folders if doesnt exists
 
-alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
-#Saves typing
+alias nb="kitty --class newsboat --detach -e zsh -ci 'killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file /home/wynand/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'; exit"
+#Saves typing, sets class of terminal instead of default
 
 alias nf="neofetch"
 #Neofetch

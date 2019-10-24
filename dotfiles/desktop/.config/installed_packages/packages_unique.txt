@@ -2,10 +2,12 @@ alsa-utils
 aria2
 aur-auto-vote-git
 awesome-terminal-fonts
+base
 bat
 bc
 beamercolorthemesolarized
 biber
+clyrics
 cmus
 cpupower
 dialog
@@ -58,10 +60,10 @@ neomutt
 nerd-fonts-complete-mono-glyphs
 nethogs
 newsboat
-oh-my-zsh-git
 openntpd
 openssh
 p7zip
+pacman-contrib
 parallel
 pass
 pavucontrol
@@ -79,7 +81,6 @@ python
 python-click
 python-fontawesome
 python-humanize
-python-i3-py
 python-pillow
 python-pytest
 python-pytz
@@ -175,4 +176,3 @@ zathura
 zathura-pdf-mupdf
 zfs-dkms
 zsh
-zsh-syntax-highlighting

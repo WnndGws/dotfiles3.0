@@ -5,7 +5,7 @@
 .config/latexmk/:desktop,laptop
 #.config/mailcap/:desktop,laptop
 .config/mpv/:desktop,laptop
-.config/mutt/:desktop,laptop
+#.config/mutt/:desktop,laptop
 .config/neofetch/:desktop,laptop
 #.config/neomutt/:desktop,laptop
 .config/pymodoro/:desktop,laptop
@@ -30,8 +30,8 @@
 .config/newsboat/config:laptop
 .config/polybar/:desktop
 .config/polybar/:laptop
-.oh-my-zsh/:desktop
-.oh-my-zsh/:laptop
+#.oh-my-zsh/:desktop
+#.oh-my-zsh/:laptop
 .screenlayout:desktop
 .xinitrc:desktop
 .xinitrc:laptop

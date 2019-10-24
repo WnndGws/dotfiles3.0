@@ -43,7 +43,7 @@ from util import *
 #   http://fortawesome.github.io/Font-Awesome/icons/
 #
 # If you're not sure what the WM_CLASS is for your application, you can use
-# xprop (https://linux.die.net/man/1/xprop). Run `xprop | grep WM_CLASS`
+# xprop (https://linux.die.net/man/1/xprop). Run `xprop | grep WM_NAME`
 # then click on the application you want to inspect.
 WINDOW_ICONS = {
     'cmus': '',
@@ -53,7 +53,6 @@ WINDOW_ICONS = {
     'vim': '',
     'youtube-viewer': '',
     'mpv': '',
-    'centerim5': '',
     'Signal': '',
     'signal': '',
     'newsboat': '',
@@ -82,7 +81,7 @@ DEFAULT_ICON = ''
 
 def icon_for_window(window):
     # Try all window classes and use the first one we have an icon for
-    classes = xprop(window.window, 'WM_NAME')
+    classes = xprop(window.window, 'WM_CLASS')
     if classes != None and len(classes) > 0:
         for cls in classes:
             cls = cls.lower()  # case-insensitive matching
