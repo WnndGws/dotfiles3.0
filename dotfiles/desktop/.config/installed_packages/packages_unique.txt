@@ -1,6 +1,7 @@
 alsa-utils
 aria2
 aur-auto-vote-git
+autotiling
 awesome-terminal-fonts
 base
 bat
@@ -30,10 +31,10 @@ gparted
 gvfs
 gvfs-mtp
 gvfs-smb
+headphones
 hyperfine
 i3-gaps
 i3blocks
-i3ipc-python-git
 i3lock
 i3status
 imagemagick
@@ -56,9 +57,9 @@ mlocate
 mpv
 msmtp
 ncdu
+neofetch
 neomutt
 nerd-fonts-complete-mono-glyphs
-nethogs
 newsboat
 openntpd
 openssh
@@ -73,7 +74,6 @@ pkgfile
 pkgtop
 plex-media-server-plexpass
 polybar
-protontricks
 pulseaudio
 pulseaudio-alsa
 pymodoro-git
@@ -81,6 +81,7 @@ python
 python-click
 python-fontawesome
 python-humanize
+python-i3ipc
 python-pillow
 python-pytest
 python-pytz
@@ -89,6 +90,7 @@ python-unidecode
 radarr
 redshift-minimal
 ripgrep
+rmlint
 rsync
 rtl8821au-dkms-git
 sabnzbd
@@ -176,3 +178,7 @@ zathura
 zathura-pdf-mupdf
 zfs-dkms
 zsh
+zsh-autosuggestions
+zsh-completions
+zsh-history-substring-search
+zsh-syntax-highlighting

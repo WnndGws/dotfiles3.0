@@ -65,7 +65,8 @@ export GPG_TTY
 
 # Enables zsh autocompletions of commands
 #autocompletions
-fpath=($HOME/.config/zsh/zsh-completions/src $fpath)
+#fpath=($HOME/.config/zsh/zsh-completions/src $fpath)
+## Dont need if have aur package zsh-completions installed
 zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 ##Checking the cached zcompdump can be slow making zsh startup slow
@@ -81,6 +82,17 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 ##Partial completion suggestions
 zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
+
+#Double TAB gives menu
+zstyle ':completion:*' menu select
+
+#Move in menu with vim keys
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
 #. ---------------------- #
 # >>>>> END EXPORTS <<<<< #
 #. ---------------------- #
@@ -204,16 +216,20 @@ unset fzf_base fzf_shell dir fzfdirs
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #auto-suggestions
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#Make sure have AUR package installed
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #syntax highlighting
-source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#Make sure have AUR package installed
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #history substring search
-source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+#source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+## dont need if have aur zsh-history-substring-search installed
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "^[[A" history-substring-search-up
 bindkey -M vicmd 'k' history-substring-search-up
 #Search through history with arrow keys
