@@ -217,12 +217,13 @@ unset fzf_base fzf_shell dir fzfdirs
 #---------------------------------------------------------------------------
 #auto-suggestions
 #Make sure have AUR package installed
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+#bindkey '^z' autosuggest-accept
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #syntax highlighting
 #Make sure have AUR package installed
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------

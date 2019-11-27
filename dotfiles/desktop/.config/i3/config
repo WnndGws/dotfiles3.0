@@ -39,7 +39,8 @@ exec_always --no-startup-id ~/.config/i3/i3scripts/autoname_workspaces.py
 exec --no-startup-id newsboat --execute=reload && newsboat --vacuum
  # updates newsboat cache when i3 starts, so its ready to use when i open it
 
-exec --no-startup-id insync-headless start
+exec --no-startup-id insync start
+#exec --no-startup-id insync hide
 # Start insync
 
 #exec --no-startup-id synclient PalmDetect=1

@@ -95,7 +95,6 @@ rsync
 rtl8821au-dkms-git
 sabnzbd
 sc-im
-screenfetch
 scrot
 signal-desktop-bin
 sonarr
