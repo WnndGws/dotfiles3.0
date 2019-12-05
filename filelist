@@ -17,6 +17,7 @@
 .notmuch-config:desktop,laptop
 #.config/offlineimap/:desktop,laptop
 .passwords.asc:desktop,laptop
+.config/starship.toml:desktop,laptop
 .scimrc:desktop,laptop
 .vim/templates:desktop,laptop
 .vim/vimplugins.sh:desktop,laptop

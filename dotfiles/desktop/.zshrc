@@ -535,6 +535,9 @@ alias sse="sudo systemctl enable"
 alias ssd="sudo systemctl disable"
 #Saves typing
 
+surf() { /usr/bin/surf $1 & disown > /dev/null; exit }
+#Opens surf site and doesnt need terminal
+
 alias sv='sudo vim'
 alias svim='sudo vim'
 #Saves typing
