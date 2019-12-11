@@ -1,0 +1,49 @@
+[{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "sway/window": {
+        "max-length": 50
+    }
+},
+{
+    "layer": "top",
+    "position": "bottom",
+    "modules-center": ["custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "clock"],
+    "clock": {
+        "format": "{:%a %d/%m %H:%M}"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "盛"],
+        "states": {
+            "high": 50,
+            "low": 25,
+            "dark": 0
+        }
+    },
+    "custom/spacer": {
+        "format": " | "
+    },
+    "custom/battery": {
+        "format": "{icon} {percentage}% ({})",
+        "return-type": "json",
+        "exec": "/home/wynand/.config/waybar/custom_battery.sh",
+        "interval": 30,
+        "format-icons": ["", "", "", "", ""]
+    },
+    "cpu": {
+        "interval": 3,
+        "format": "﬙ {usage}%",
+        "states": {
+            "high": 50,
+            "normal": 25,
+            "low": 0
+        }
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {percentage}%"
+    }
+}]

@@ -1,20 +1,20 @@
 #. ------------------ #
 # >>>>> EXPORTS <<<<< #
 #. ------------------ #
+#Set shell theme
+eval "$(starship init zsh)"
+
+# Sets environment variables
+export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export EDITOR=/usr/bin/vim
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
 export VISUAL=/usr/bin/vim
-#Sets environment variables
 
+# Sets all my XDG paths
 export XDG_CACHE_HOME=$HOME'/.cache'
 export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
-#Sets all my XDG paths
-
-export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-#export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
-export FZF_DEFAULT_COMMAND='fd --type f'
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
@@ -25,29 +25,81 @@ export MAILCAPS="$XDG_CONFIG_HOME"/mailcap/mailcap
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 
-export RTV_BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt.sh
-export RTV_URLVIEWER=/usr/bin/urlscan
-#Export RTV
+# Export FFF Settings
+export FFF_OPENER=$BROWSER
+export FFF_KEY_SEARCH="/"
+## Directory color [0-9]
+export FFF_COL1=0
+## Status color [0-9]
+export FFF_COL2=7
+## Selection color [0-9] (copied/moved files)
+export FFF_COL3=3
+## Cursor color [0-9]
+export FFF_COL4=6
+## Favourites (Bookmarks) (keys 1-9) (dir or file)
+export FFF_FAV1=~
+export FFF_FAV2=~/GoogleDrive
+export FFF_FAV3=~/Git
+export FFF_FAV4=/home/wynand/wynZFS/Media/TV
+export FFF_FAV5=
+export FFF_FAV6=
+export FFF_FAV7=
+export FFF_FAV8=
+export FFF_FAV9=
+export FFF_TRASH=~/.local/share/Trash
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-#Path includes path to all scripts i want to run natively
-
+# Set Shell Variables
+export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python:$HOME/Git/OneOffCodes/Shell:$PATH
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='-i --border'
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ ! -e ~/.ssh/agentsock ]; then
-    eval $(ssh-agent -a ~/.ssh/agentsock)
-    ssh-add
+# Only input SSH password once a session
+#if [ ! -e ~/.ssh/agentsock ]; then
+    #eval $(ssh-agent -a ~/.ssh/agentsock)
+    #ssh-add
+#else
+    #export SSH_AUTH_SOCK=~/.ssh/agentsock
+#fi
+
+# Enables zsh autocompletions of commands
+#autocompletions
+#fpath=($HOME/.config/zsh/zsh-completions/src $fpath)
+## Dont need if have aur package zsh-completions installed
+zstyle :compinstall filename '$HOME/.zshrc'
+autoload -Uz compinit
+##Checking the cached zcompdump can be slow making zsh startup slow
+##Check only once an hour
+if [[ -a $HOME/.zcompdump(#qN.mh+1) ]]; then
+    compinit
 else
-    export SSH_AUTH_SOCK=~/.ssh/agentsock
+    compinit -C
 fi
+##Case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+
+##Partial completion suggestions
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
+
+#Double TAB gives menu
+zstyle ':completion:*' menu select
+
+#Move in menu with vim keys
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
 #. ---------------------- #
 # >>>>> END EXPORTS <<<<< #
 #. ---------------------- #
 #. ------------------- #
 # >>>>> SETTINGS <<<<< #
 #. ------------------- #
-HISTFILE=~/.config/zsh/histfile
+HISTFILE=~/.cache/zsh/histfile
 #Lines configured by zsh-newuser-install
 
 HISTSIZE=100000
@@ -55,6 +107,9 @@ HISTSIZE=100000
 
 SAVEHIST=100000
 #Save 1000 items in history
+
+setopt AUTO_CD
+#Allows me to just type a directory
 
 setopt EXTENDED_HISTORY
 #Write the history file in the ":start:elapsed;command" format
@@ -83,19 +138,9 @@ setopt MENU_COMPLETE
 bindkey -v
 #Explicitly sets keys to vim mode
 
-zstyle :compinstall filename '~/.zshrc'
-#Load completions from this file since they are handled by oh-my-zsh
+export KEYTIMEOUT=1
+#By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered. This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
 
-autoload -Uz compinit
-
-#Checking the cached zcompdump can be slow making zsh startup slow
-#Check only once an hour
-if [[ -a $HOME/.zcompdump(#qN.mh+1) ]]; then
-    compinit
-else
-    compinit -C
-fi
-#Enables zsh autocompletions of commands
 #. ---------------------- #
 # >>>>> END SETTINGS <<<<<#
 #. ---------------------- #
@@ -106,11 +151,10 @@ fi
 [[ $- != *i* ]] && return
 #If not running interactively, don't do anything
 
-PS1='[%n@%M %d]$ '
-
-CDPATH=.:..:~:~/Git
-#When type cd it will look for folder in cwd, parent, home, or git
-
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#fancy-ctrl-z
+#When ctrl-z out of vim can ctrl-z back in
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0  ]]; then
       BUFFER="fg"
@@ -122,95 +166,195 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
-#When ctrl-z out of vim can ctrl-z back in
-
-set RANGER_LOAD_DEFAULT_RC false
-#Dont want to load deafult AND mine, only mine
-
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#Enable 'v' in normal mode to edit command line
+#Edit commands by pressing spacebar when in normal mode
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
-#Enable 'v' in normal mode to edit command line
-#Edit commands by pressing v when in normal mode
-#. --------------------------- #
-# >>>>> END USER SETTINGS <<<<<#
-#. --------------------------- #
-
-#. ----------------------------- #
-# >>>>> OH MY ZSH SETTINGS <<<<< #
-#. ----------------------------- #
-ZSH=/usr/share/oh-my-zsh
-#Path to your oh-my-zsh installation.
-
-ZSH_CUSTOM=~/.oh-my-zsh/custom
-#Custom path for oh-my-zsh
-
-ZSH_THEME="spaceship"
-#Name of theme, can be "random"
-
-CASE_SENSITIVE="false"
-#Case sensitive completions are different commands
-
-ENABLE_CORRECTION="false"
-#Don't autocorrect
-
-COMPLETION_WAITING_DOTS="true"
-#Display red dots while waiting for completions
-
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh-cache
-#Set cache location, create if doesn't exist
-
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-    mkdir $ZSH_CACHE_DIR
+bindkey -M vicmd " " edit-command-line
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#magic-url
+# Quotes pasted urls automatically
+autoload -Uz bracketed-paste-url-magic
+zle -N bracketed-paste bracketed-paste-url-magic
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#auto-ls
+function chpwd() {
+    emulate -L zsh
+    exa --color always --color-scale
+}
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#find-the-command
+#make sure to run pacman -Fy and systemctl enable pacman-files.timer
+source /usr/share/doc/find-the-command/ftc.zsh
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#fasd shortcuts
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
+alias v='f -e "$EDITOR"'
+alias o='a -e $BROWSER'
+alias j='zz'
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#fzf
+fzf_base="/usr/share/fzf"
+fzf_shell="${fzf_base}"
+# Auto-completion
+if [[ ! "$DISABLE_FZF_AUTO_COMPLETION" == "true" ]]; then
+    [[ $- == *i* ]] && source "${fzf_shell}/completion.zsh" 2> /dev/null
 fi
-
-plugins=(
- django\
- zsh-completions\
- safe-paste\
- history-substring-search\
- fzf-zsh\
- zsh-autosuggestions\
- archlinux\
- pip\
- python\
- zsh-syntax-highlighting\
- auto-ls\
- globalias\
- zsh-interactive-zsh
-)
-#Plugins can be found in ~/.oh-my-zsh/plugins/*
-#Plugins can be found in ~/.oh-my-zsh/custom/plugins/* (NB. extension must be ".plugin.zsh")
-
+# Key bindings
+if [[ ! "$DISABLE_FZF_KEY_BINDINGS" == "true" ]]; then
+    source "${fzf_shell}/key-bindings.zsh"
+fi
+unset fzf_base fzf_shell dir fzfdirs
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#auto-suggestions
+#Make sure have AUR package installed
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+#bindkey '^z' autosuggest-accept
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#syntax highlighting
+#Make sure have AUR package installed
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#history substring search
+#source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+## dont need if have aur zsh-history-substring-search installed
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "^[[A" history-substring-search-up
+bindkey -M vicmd 'k' history-substring-search-up
 #Search through history with arrow keys
-
 bindkey "^[[B" history-substring-search-down
+bindkey -M vicmd 'j' history-substring-search-down
 #Search through history with arrow keys
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#globalias
+globalias() {
+   zle _expand_alias
+   zle expand-word
+   zle self-insert
+}
+zle -N globalias
+# space expands all aliases, including global
+bindkey -M viins " " globalias
+# control-space to make a normal space
+bindkey -M viins "^ " magic-space
+# normal space during searches
+bindkey -M isearch " " magic-space
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+# Enable gpg-agent if it is not running
+AGENT_SOCK=$(gpgconf --list-dirs | grep agent-socket | cut -d : -f 2)
+if [[ ! -S $AGENT_SOCK ]]; then
+  gpg-agent --daemon --use-standard-socket &>/dev/null
+fi
+export GPG_TTY=$TTY
+# Set SSH to use gpg-agent if it's enabled
+GNUPGCONFIG="${GNUPGHOME:-"$HOME/.gnupg"}/gpg-agent.conf"
+if [[ -r $GNUPGCONFIG ]] && command grep -q enable-ssh-support "$GNUPGCONFIG"; then
+  export SSH_AUTH_SOCK="$AGENT_SOCK.ssh"
+  unset SSH_AGENT_PID
+fi
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#starts automatically ssh-agent to set up and load whichever credentials you want for ssh connections.
+typeset _agent_forwarding _ssh_env_cache
+function _start_agent() {
+	local lifetime
+	zstyle -s :omz:plugins:ssh-agent lifetime lifetime
 
-source $ZSH/oh-my-zsh.sh
-#Source oh-my-zsh for settings to take effect
+	# start ssh-agent and setup environment
+	echo Starting ssh-agent...
+	ssh-agent -s ${lifetime:+-t} ${lifetime} | sed 's/^echo/#echo/' >! $_ssh_env_cache
+	chmod 600 $_ssh_env_cache
+	. $_ssh_env_cache > /dev/null
+}
+function _add_identities() {
+	local id line sig lines
+	local -a identities loaded_sigs loaded_ids not_loaded
+	zstyle -a :omz:plugins:ssh-agent identities identities
 
-spaceship_vi_mode_enable
-#Explicitly enable vi mode
+	# check for .ssh folder presence
+	if [[ ! -d $HOME/.ssh ]]; then
+		return
+	fi
 
-export KEYTIMEOUT=1
-#By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered. This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
+	# add default keys if no identities were set up via zstyle
+	# this is to mimic the call to ssh-add with no identities
+	if [[ ${#identities} -eq 0 ]]; then
+		# key list found on `ssh-add` man page's DESCRIPTION section
+		for id in id_rsa id_dsa id_ecdsa id_ed25519 identity; do
+			# check if file exists
+			[[ -f "$HOME/.ssh/$id" ]] && identities+=$id
+		done
+	fi
 
-bindkey "^[^M" autosuggest-accept
-#Let me enter without needing to complete
+	# get list of loaded identities' signatures and filenames
+	if lines=$(ssh-add -l); then
+		for line in ${(f)lines}; do
+			loaded_sigs+=${${(z)line}[2]}
+			loaded_ids+=${${(z)line}[3]}
+		done
+	fi
 
+	# add identities if not already loaded
+	for id in $identities; do
+		# check for filename match, otherwise try for signature match
+		if [[ ${loaded_ids[(I)$HOME/.ssh/$id]} -le 0 ]]; then
+			sig="$(ssh-keygen -lf "$HOME/.ssh/$id" | awk '{print $2}')"
+			[[ ${loaded_sigs[(I)$sig]} -le 0 ]] && not_loaded+="$HOME/.ssh/$id"
+		fi
+	done
+
+	[[ -n "$not_loaded" ]] && ssh-add ${^not_loaded}
+}
+# Get the filename to store/lookup the environment from
+_ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
+# test if agent-forwarding is enabled
+zstyle -b :omz:plugins:ssh-agent agent-forwarding _agent_forwarding
+if [[ $_agent_forwarding == "yes" && -n "$SSH_AUTH_SOCK" ]]; then
+	# Add a nifty symlink for screen/tmux if agent forwarding
+	[[ -L $SSH_AUTH_SOCK ]] || ln -sf "$SSH_AUTH_SOCK" /tmp/ssh-agent-$USER-screen
+elif [[ -f "$_ssh_env_cache" ]]; then
+	# Source SSH settings, if applicable
+	. $_ssh_env_cache > /dev/null
+	if [[ $USER == "root" ]]; then
+		FILTER="ax"
+	else
+		FILTER="x"
+	fi
+	ps $FILTER | grep ssh-agent | grep -q $SSH_AGENT_PID || {
+		_start_agent
+	}
+else
+	_start_agent
+fi
+_add_identities
+# tidy up after ourselves
+unset _agent_forwarding _ssh_env_cache
+unfunction _start_agent _add_identities
+#---------------------------------------------------------------------------
 #. ----------------------------------#
 # >>>>> END OH MY ZSH SETTINGS <<<<< #
 #. ----------------------------------#
 #. ------------------ #
 # >>>>> ALIASES <<<<< #
 #. ------------------ #
-alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild --needed; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
 alias add="archdatedisorder"
 #Update command
 
-alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"'
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; sudo updatedb; tldr --update'
 alias ad="archdate"
 #Update command
 
@@ -221,19 +365,14 @@ alias attach_monitor_right='xrandr --output LVDS-1 --primary --mode 1366x768 --p
 alias bing_wallpaper="$HOME/Git/OneOffCodes/Python/wallpaper_maker/wallpaper_maker.py change_wallpaper --bing --quote-file $HOME/Git/OneOffCodes/Python/wallpaperMaker/quotes.txt"
 #Set my bing wallpaper
 
-alias bluesink='$HOME/Git/OneOffCodes/Expects/bluetooth_connect_ticpods.exp && pactl set-card-profile bluez_card.00_11_B1_01_BE_1E a2dp_sink'
-#Attaches and sets bluetooth headphones as sink out
+alias calcadd='~/Git/OneOffCodes/Python/calcadd/calcadd.py'
+#Add to my calendar
 
-alias bluetooth_nexus='$HOME/Git/OneOffCodes/Expects/bluetooth_connect_nexus6p.exp'
-#Connect to phone bluetooth
+alias cf=". cf"
+#Run cf in current process instead of subshell
 
-alias calc="gcalcli --monday --detail_length --refresh calw"
-#Outputs google calendar
-
-alias calcadd="gcalcli add --calendar 'Personal Calendar'"
-#Add events to calendar
-
-alias clean_latex="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
+alias latex_clean="find ./ -type f \( -name '*.aux' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.xml' -o -name '*.gz' -o -name '*.xdv' \) | xargs -I{} rm -f {} && latexmk -c"
+alias lc='latex_clean'
 #Remove lint latex files
 
 #alias compile_latex='latexmk -xelatex -pvc -cd -quiet'
@@ -241,25 +380,17 @@ alias compile_latex='fd -e tex --max-depth 1 | entr -c -d latexrun -Wall /_'
 alias cl='compile_latex'
 #Compile and open latex
 
-alias cm="centerim5"
-#Saves typing
-
-alias cammu="bat .centerim5/clogs/Hangouts/wynandgouwswg/104062054821796402056 | urlscan -cn | uniq | tail | urlscan -c"
-alias ccm='cammu'
-#Extract urls itiot sends me
+alias cpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
+alias mem="ps axch -o cmd,%mem --sort=-%mem | head"
+#Outputs system stats
 
 alias cx="chmod +x"
 #Change mode of file
 
-alias cpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
-alias mem="ps axch -o cmd,%mem --sort=-%mem | head"
-#Show me whats using CPU or memory
-
 alias dd='sudo dd status=progress conv=fsync'
 #alwas dd with same flags
 
-alias dm='~/Git/OneOffCodes/Shell/dotmake.sh'
-alias dmd='dm desktop'
+alias dm='~/Git/OneOffCodes/Shell/dotmake'
 alias dml='dm laptop'
 #Saves typing
 
@@ -269,11 +400,20 @@ alias du="ncdu --color dark -rr -x"
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
-alias gi="cat $HOME/Git/dotfiles2.0/.files/gitignores.txt >> .gitignore"
+alias fd="/bin/fd --hidden --ignore-case --follow --show-errors --max-depth <++> '<regex>' <path> --exec '<command>'"
+#Alias fd for me
+
+alias fif="findinfile"
+# using ripgrep combined with preview
+
+alias flac2mp3='parallel ffmpeg -i {} -qscale:a 0 {.}.mp3 ::: ./*.flac'
+#Convert flac to mp3
+
+alias gi="curl https://www.gitignore.io/api/vim,tex,linux,latex,python > .gitignore && echo '*.pdf' >> .gitignore"
 #Create a gitignore file
 
-alias git_push_all="~/Git/OneOffCodes/Shell/gitPushAll.sh"
-alias gtpa="~/Git/OneOffCodes/Shell/gitPushAll.sh"
+alias git_push_all="~/Git/OneOffCodes/Shell/gitPushAll"
+alias gtpa="~/Git/OneOffCodes/Shell/gitPushAll"
 #Use script to push everything in all my repos
 
 alias git_push='git add -p . && git commit -aS && git pull && git push'
@@ -283,25 +423,22 @@ alias gtp='git add -p . && git commit -aS && git pull && git push'
 alias gif_make='$HOME/Git/OneOffCodes/Python/gifmaker/gifmaker.py make_gif'
 #Make webms from videos
 
-alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt.sh"
+alias gpg_encrypt="~/Git/OneOffCodes/Shell/gpgEncrypt"
 #GPG encrypt a file to the recipient and myself
 
-alias hn="haxor-news"
-#Saves typing
+alias hib24="sudo rtcwake --mode mem --seconds 86400; i3lock --color=000000 --ignore-empty-password --show-failed-attempts"
+#Hibernate for 24 hrs
 
-alias largest_files="~/Git/OneOffCodes/Shell/largestFiles.sh"
-#Lists the 10 largest files in a given dir
+alias hs="wine .wine/drive_c/Program\ Files\ \(x86\)/Battle.net/Battle.net\ Launcher.exe"
+#Launch Battle.net
 
-alias largest_folders="~/Git/OneOffCodes/Shell/largestFolders.sh"
-#Lists the 10 largest folders in a given dir
+alias ipython="/usr/bin/ipython --TerminalInteractiveShell.editing_mode=vi"
+#Always open ipython with vim mappings
 
 alias latex_shortcuts="cat $HOME/.vimrc | rg 'autocmd FileType tex inoremap.*' | cut -d';' -f2"
 #Prints tha latex shortcuts I have in my vimrc
 
-alias lg='vim "+Gist -l"'
-#Lists Gists
-
-alias lock="~/Git/OneOffCodes/Shell/lock.sh"
+alias lock="~/Git/OneOffCodes/Shell/lock"
 #Locks PC and mutes
 
 alias lsa='exa --all --color always --color-scale'
@@ -313,8 +450,8 @@ alias ll='exa --all --color always --color-scale --long'
 alias ls='exa --color always --color-scale'
 #Colours in ls
 
-alias md2pdf='$HOME/Git/OneOffCodes/Shell/md2pdf.sh'
-#Use my own script using pandoc
+alias md='/usr/bin/mkdir -p'
+#Speed up making dirs
 
 alias mm='myman'
 #Uses vimman instead of normal man
@@ -322,81 +459,73 @@ alias mm='myman'
 alias mkdir='mkdir -p'
 #Create parent folders if doesnt exists
 
-alias mount_phone='simple-mtpfs --device 1 /mnt/Nexus6p'
-alias mp='mount_phone'
-alias unmount_phone='fusermount -u /mnt/Nexus6p'
-#Allows me to mtp mount and unmount phone easily
-
-alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
-#Saves typing
+alias nb="kitty --class newsboat --detach -e zsh -ci 'killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file /home/wynand/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'; exit"
+#Saves typing, sets class of terminal instead of default
 
 alias nf="neofetch"
 #Neofetch
 
-alias nm='offlineimap -c ~/.offlineimaprc -o && offlineimap -c ~/.offlineimaprc -u quiet & neomutt && killall -9 offlineimap'
+alias nm='mailsync; neomutt'
 #Saves typing
 
 alias open="xdg-open"
 alias o='fasd -a -e xdg-open' 
 #Quick opening files with xdg-open
 
+alias pg="prettyping --nolegend -c 5 google.com"
+#Quick ping google.com
+
 alias paorph='pacman --query --unrequired --deps --quiet'
 alias po='paorph'
 alias porm='paorph | xargs -I{} pikaur -R --noconfirm {}; paorph | xargs -I{} pikaur -R --noconfirm {}; paorph | xargs -I{} pikaur -R --noconfirm {}'
 #Pacaur orphans
 
-alias pdf2ocr="~/Git/OneOffCodes/Shell/ocr_pdf.sh"
+alias pdf2ocr="~/Git/OneOffCodes/Shell/ocr_pdf"
 #Convert a pdf to tiff for tesseract and OCR it
 
-alias play_DCAU="~/Git/OneOffCodes/Shell/playlistPlay.sh ~/wynZFS/Media/WatchOrders/DCAU.order"
+alias play_DCAU="~/Git/OneOffCodes/Shell/playlistPlay ~/wynZFS/Media/WatchOrders/DCAU.order"
 #Plays the next episode in the DCAU that I am up to
 
-alias playlist_play="~/Git/OneOffCodes/Shell/playlistPlay.sh"
+alias playlist_play="~/Git/OneOffCodes/Shell/playlistPlay"
 #Use to play .order files so can watch overlapping shows in correct order. Searches and plays 1st line in a file. If multiples found presents them. Offers choice whether want to move played file to bottom
 #Relys on custom 'lsgrep' function
 
-alias pytest='~/Git/OneOffCodes/Shell/pytest.sh'
+alias pytest='~/Git/OneOffCodes/Shell/pytest'
 #Watch my coding against the test
 
-alias rcp="~/Git/OneOffCodes/Shell/rcp.sh"
-#Uses rsync to copy, allows me to be able to copy using wildcards
-alias rmv="~/Git/OneOffCodes/Shell/rmv.sh"
-#Uses rsync to move, allows me to be able to move using wildcards
+alias resetcaps='xmodmap -e "clear lock"; xmodmap -e "keycode 66 = Escape"; xmodmap -e "clear shift"; xmodmap -e "keycode 62 = Meta_L"; xmodmap -pke > ~/.Xmodmap'
+#Sometimes Capslock loses its escape-ability
 
 alias rm='trash -riv'
 #Prompt when removing files, force recursive
 
-alias rsync="rsync -vrhP"
+alias rs="rsync --verbose --recursive --update --human-readable --partial --progress"
 #I always use rsync with these flags
 
-alias sab_ssh_tun='ssh -L 8080:localhost:8080 220.253.244.60 -N'
-alias sonarr_ssh_tun='ssh -L 8081:localhost:8081 220.253.244.60 -N'
-alias radarr_ssh_tun='ssh -L 8082:localhost:8082 220.253.244.60 -N'
-alias lidarr_ssh_tun='ssh -L 8083:localhost:8083 220.253.244.60 -N'
+alias sab_ssh_tun='ssh -L 8080:localhost:8080 gouws.com.au -N'
+alias sonar_ssh_tun='ssh -L 8081:localhost:8081 gouws.com.au -N'
+alias torrent_ssh_tun='ssh -L 8082:localhost:8082 gouws.com.au -N'
 #Create ssh tunnels to my localhosts
 
 alias scim="sc-im"
 #saves typing
 
-alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt.sh"
+alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn.sh"
+alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt.sh 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn.sh 0:05\""
+alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
-convert_to_480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
+convert480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
 #Convert a video to 576p
 
-alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until.sh"
+alias sleep_until="~/Git/OneOffCodes/Shell/sleep_until"
 #Sleep until a certain time
 
 alias sleeptonight='sudo rtcwake -m mem --date $(date -d tomorrow +%Y%m%d020000); shutdown_in 5:30:00'
-alias st='sleeptonight'
+#alias st='sleeptonight'
 #Wake up at 2am, then shutdown at 730am
-
-alias slic3r="slic3r.pl --load ~/.config/slic3r/printrbor.ini"
-#Always load profile
 
 alias ss="sudo systemctl"
 alias sss="sudo systemctl status"
@@ -414,13 +543,12 @@ alias p='pikaur -Ss'
 alias pare='pikaur -R'
 #Remove package using pacman
 alias pin='pikaur -S --noconfirm'
-#Trizen install
+#Pikaur install
+alias pq='pikaur -Qi | rg -B3 -A3'
+#Pikaur Query
 
-alias ping='~/Git/OneOffCodes/Shell/prettyping --nolegend'
+alias ping='prettyping --nolegend'
 #Use prettyping
-
-alias torrent='~/Git/OneOffCodes/Shell/seed_single_torrent.sh'
-#Use aria2c to download a specified torrent
 
 alias time='hyperfine'
 #Use hyperfine to time commands
@@ -430,13 +558,13 @@ alias tpon='synclient "TouchpadOff"=0'
 #Turns touchpad off and on
 
 alias udm="udiskie-mount -a"
-alias udum="udiskie-umount --detach -a"
+udum() {for folder in /run/media/wynand/*; do udiskie-umount --detach $folder ; done}
 #Udiskie
 
-alias un:pw="cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 8 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1; cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 32 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1"
+alias unpw="cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 8 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1; cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:?=' | fold -w 32 | grep '[!@#$%^&*()_+{}|:?=]' | head -n 1"
 #Echo out a 8 char un and 32 char pw
 
-alias v='fasd -f -e vim' 
+alias v='vimfind' 
 alias c='fasd_cd -d -i' 
 #Quick opening files with vim
 
@@ -444,14 +572,11 @@ alias vd="_ systemctl stop --now openvpn.service"
 alias vu="_ systemctl restart --now openvpn.service"
 #Aliases for VPN up or down
 
-alias ww="cd $HOME/Git/WnndGws.github.io; fd . -e md -x pandoc -s -f markdown -t html5 -o '{/.}.html' '{/.}.md' -c pandoc.css -c zenburn.css"
-#WynWiki's my markdown files to html
-
-alias youtube-ul="~/Git/OneOffCodes/Shell/youtubeUL.sh"
+alias youtube-ul="~/Git/OneOffCodes/Shell/youtubeUL"
 alias ytul="youtube-ul"
 #Uploads files to youtube
 
-alias ytdl="youtube-dl"
+alias ytdl="youtube-dl --add-metadata"
 #Youtube Upload
 
 alias zsh_time='time "zsh -i -c exit"'
@@ -475,12 +600,6 @@ unset fasd_cache
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
 #FZF
 
 eval "$(_MYMAN_COMPLETE=source_zsh myman)"

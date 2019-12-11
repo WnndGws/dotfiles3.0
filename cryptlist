@@ -1,6 +1,6 @@
 .gist-vim:desktop
 .config/git/:desktop,laptop
-.config/polybar_credentials/:desktop,laptop
+.config/polybar_credentials/:desktop
 .config/newsboat/urls:desktop,laptop
 #.config/credentials/:desktop
 

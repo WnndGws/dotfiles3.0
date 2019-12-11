@@ -1,1 +1,0 @@
-../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/line_init_spec.rb

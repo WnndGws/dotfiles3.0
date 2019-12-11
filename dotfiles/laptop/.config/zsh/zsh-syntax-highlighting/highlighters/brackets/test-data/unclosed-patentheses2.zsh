@@ -1,1 +1,0 @@
-../../../../../../../desktop/.config/zsh/zsh-syntax-highlighting/highlighters/brackets/test-data/unclosed-patentheses2.zsh

@@ -1,0 +1,13 @@
+theme = "solarized-dark"
+icons = "awesome"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"
+
+[[block]]
+block = "battery"
+driver = "sysfs"
+interval = 360
+format = "{percentage}% {time}"

@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-syntax-highlighting/docs/highlighters/pattern.md

@@ -1,1 +1,0 @@
-../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/kill_ring_spec.rb
