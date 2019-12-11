@@ -1,4 +1,4 @@
-
+" ------------------------------ "
 " >>>>> PRECURSOR SETTINGS <<<<< "
 " ------------------------------ "
 
@@ -244,7 +244,31 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 " ----------------------- "
 " >>>>> VIM PLUGINS <<<<< "
 " ----------------------- "
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/w0rp/ale.git' "linter
+Plug 'https://github.com/dkarter/bullets.vim' "plugins for automated bullet lists
+Plug 'https://github.com/Raimondi/delimitMate.git' "autocomplete brackets etc.
+Plug 'https://github.com/junegunn/fzf.vim.git' "fuzzyfind
+Plug 'https://github.com/mattn/gist-vim.git' "gists in vim
+Plug 'https://github.com/Yggdroot/indentLine.git' "better indenting
+Plug 'https://github.com/haya14busa/incsearch.vim.git' "improved incrimental searching
+Plug 'https://github.com/davidhalter/jedi-vim.git' "autocomplete
+Plug 'https://github.com/luochen1990/rainbow.git' "rainbow parentheses
+Plug 'https://github.com/wellle/targets.vim.git' "better targeting
+Plug 'https://github.com/chiedo/vim-case-convert.git' "convert between cases
+Plug 'https://github.com/altercation/vim-colors-solarized.git' "vim colours solarized
+Plug 'https://github.com/easymotion/vim-easymotion.git' "easymotion
+Plug 'https://github.com/terryma/vim-expand-region.git' "expand region
+Plug 'https://github.com/jamessan/vim-gnupg.git' "gnupg
+Plug 'https://github.com/jez/vim-superman.git' "use man pages
+Plug 'https://github.com/reedes/vim-pencil.git' "pencil
+Plug 'https://github.com/sheerun/vim-polyglot.git' "language pack
+Plug 'https://github.com/lervag/vimtex.git' "use latex
+Plug 'https://github.com/dhruvasagar/vim-table-mode.git' "tables in vim
+Plug 'https://github.com/mattn/webapi-vim.git' "webapi for vim
+Plug 'https://github.com/lifepillar/vim-solarized8.git' "colours
+Plug 'https://github.com/shime/vim-livedown.git' "need for md preview
+call plug#end()
 
 "------------------------"
 " ALE
@@ -269,14 +293,6 @@ vmap <Leader>hc <c-y>/
 " https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL
 
 "------------------------"
-" NERDTREE
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Close nerdtree if it is the only window left
-
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-" Toggle nerdtree using leader nt
-
-"------------------------"
 " GISTS
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
@@ -290,17 +306,6 @@ nnoremap <Leader>g :Gist
 
 "------------------------"
 " PYTHON MUMBOJUMBO
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
-"python with virtualenv support
-"Allows you complete me to find the venv packages
-
 let python_highlight_all=1
 
 autocmd BufWrite *.py :call DeleteTrailingWS()
@@ -436,13 +441,6 @@ map g/ <Plug>(incsearch-stay)
 " ----------------------"
 " RAINBOW
  let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
-
-" ----------------------"
-" ULTISNIPS
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsListSnippets = "<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " ----------------------"
 " VIM-MARKDOWN
