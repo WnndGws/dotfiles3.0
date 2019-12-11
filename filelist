@@ -7,7 +7,6 @@
 #.config/mutt/:desktop,laptop
 .config/neofetch/:desktop,laptop
 #.config/neomutt/:desktop,laptop
-.config/pymodoro/:desktop,laptop
 #.config/ranger/:desktop,laptop
 .config/stig/:desktop,laptop
 .config/zathura/:desktop,laptop
@@ -23,18 +22,18 @@
 .vimrc:desktop,laptop
 
 ## Seperate Computers
-.config/feh/:desktop
-.config/i3/:desktop
-.config/sway/:laptop
-.config/installed_packages/:desktop
-.config/installed_packages/:laptop
+.config/feh:desktop
+.config/i3:desktop
+.config/sway:laptop
+.config/installed_packages:desktop
+.config/installed_packages:laptop
 .config/light:laptop
 .config/newsboat/config:desktop
 .config/newsboat/config:laptop
-.config/polybar/:desktop
-.config/polybar/:laptop
-.config/waybar/:laptop
-.config/workstyle/:laptop
+.config/polybar:desktop
+.config/pymodoro:desktop
+.config/waybar:laptop
+.config/workstyle:laptop
 #.oh-my-zsh/:desktop
 #.oh-my-zsh/:laptop
 .screenlayout:desktop

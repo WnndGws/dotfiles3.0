@@ -92,6 +92,31 @@ window#waybar.hidden {
     border-bottom: 2px solid #C4A000;
 }
 
-#memory.low {
-    border-bottom: 2px solid #4E9A06;
+#custom-next_event {
+    border-bottom: 2px solid #555753;
 }
+
+#custom-weather {
+    border-bottom: 2px solid #555753;
+}
+
+#custom-pkg {
+    border-bottom: 2px solid #555753;
+}
+
+#clock {
+    border-bottom: 2px solid #555753;
+}
+
+#pulseaudio {
+    border-bottom: 2px solid #3465A4;
+}
+
+#pulseaudio.muted {
+    border-bottom: 2px solid #555753;
+}
+
+#network {
+    border-bottom: 2px solid #555753;
+}
+

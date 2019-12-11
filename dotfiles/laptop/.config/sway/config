@@ -237,11 +237,11 @@ bindsym $mod+escape workspace back_and_forth
 #bindsym $mod+shift+p
 #bindsym $mod+control+p
 
-#bindsym $mod+[
+bindsym $mod+bracketleft exec "~/.config/waybar/vol_down.sh"
 #bindsym $mod+shift+[
 #bindsym $mod+control+[
 
-#bindsym $mod+]
+bindsym $mod+bracketright exec "~/.config/waybar/vol_up.sh"
 #bindsym $mod+shift+]
 #bindsym $mod+control+]
 
@@ -317,7 +317,8 @@ bindsym $mod+f exec MOZ_ENABLE_WAYLAND=1 firefox
 #bindsym $mod+shift+n
 #bindsym $mod+control+n
 
-#bindsym $mod+m
+bindsym $mod+m exec pactl set-sink-mute 0 toggle
+# the zero is the sink number
 #bindsym $mod+shift+m
 #bindsym $mod+control+m
 

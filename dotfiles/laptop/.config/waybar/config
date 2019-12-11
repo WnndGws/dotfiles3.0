@@ -2,18 +2,28 @@
     "layer": "top",
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-right": ["custom/next_event", "custom/spacer", "clock"],
     "sway/window": {
         "max-length": 50
+    },
+    "clock": {
+        "format": "{:%a %d/%m %H:%M }"
+    },
+    "custom/next_event": {
+        "exec": "~/.config/waybar/next_event.py",
+        "exec-if": "ping -q -w 2 -c 1 176.34.135.167 > /dev/null",
+        "format": "{}",
+        "interval": 300,
+        "max-length": 40
+    },
+    "custom/spacer": {
+        "format": " | "
     }
 },
 {
     "layer": "top",
     "position": "bottom",
-    "modules-center": ["custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "clock"],
-    "clock": {
-        "format": "{:%a %d/%m %H:%M}"
-    },
+    "modules-center": ["custom/weather", "custom/spacer", "custom/pkg", "custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "pulseaudio", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "network"],
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "盛"],
@@ -44,6 +54,32 @@
     },
     "memory": {
         "interval": 30,
-        "format": " {percentage}%"
+        "format": " {percentage}%",
+        "states": {
+            "high": 50,
+            "normal": 25,
+            "low": 0
+        }
+    },
+    "custom/pkg": {
+        "exec": "~/.config/waybar/pkg.sh --checking",
+        "format": "{}",
+        "interval": 600
+    },
+    "custom/weather": {
+        "exec": "~/.config/waybar/weather.py",
+        "exec-if": "ping -q -w 2 -c 1 176.34.135.167 > /dev/null",
+        "format": "{}",
+        "interval": 300,
+        "max-length": 40
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "直 {essid}:{ipaddr} |  {bandwidthUpBits}  {bandwidthDownBits}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": ["", "墳", ""],
+        "format-muted": " {volume}%"
     }
 }]
