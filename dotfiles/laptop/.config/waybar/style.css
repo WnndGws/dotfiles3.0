@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: "SauceCodePro Nerd Font";
-    font-size: 16px;
+    font-size: 15px;
     min-height: 0;
 }
 
@@ -90,6 +90,10 @@ window#waybar.hidden {
 
 #memory.normal {
     border-bottom: 2px solid #C4A000;
+}
+
+#memory.low {
+    border-bottom: 2px solid #4E9A06;
 }
 
 #custom-next_event {

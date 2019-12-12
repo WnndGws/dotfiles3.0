@@ -1,5 +1,5 @@
 [{
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": ["custom/next_event", "custom/spacer", "clock"],
@@ -45,7 +45,7 @@
     },
     "cpu": {
         "interval": 3,
-        "format": "﬙ {usage}%",
+        "format": " {usage}%",
         "states": {
             "high": 50,
             "normal": 25,
@@ -70,12 +70,12 @@
         "exec": "~/.config/waybar/weather.py",
         "exec-if": "ping -q -w 2 -c 1 176.34.135.167 > /dev/null",
         "format": "{}",
-        "interval": 300,
-        "max-length": 40
+        "interval": 300
     },
     "network": {
         "interface": "wlp2s0",
-        "format": "直 {essid}:{ipaddr} |  {bandwidthUpBits}  {bandwidthDownBits}"
+        "format": "直 {ipaddr} |  {bandwidthUpBits}  {bandwidthDownBits}",
+        "interval": 3
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
