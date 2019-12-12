@@ -28,8 +28,8 @@
 .config/installed_packages:desktop
 .config/installed_packages:laptop
 .config/light:laptop
-.config/newsboat/config:desktop
-.config/newsboat/config:laptop
+.config/newsboat/config:desktop,laptop
+#.config/newsboat/config:laptop
 .config/polybar:desktop
 .config/pymodoro:desktop
 .config/waybar:laptop
