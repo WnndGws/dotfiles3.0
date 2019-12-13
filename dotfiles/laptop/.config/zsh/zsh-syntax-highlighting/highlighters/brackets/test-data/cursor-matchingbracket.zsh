@@ -1,1 +1,0 @@
-../../../../../../../desktop/.config/zsh/zsh-syntax-highlighting/highlighters/brackets/test-data/cursor-matchingbracket.zsh

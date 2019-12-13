@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-autosuggestions/src/strategies/match_prev_cmd.zsh

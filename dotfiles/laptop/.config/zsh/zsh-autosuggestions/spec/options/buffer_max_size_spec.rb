@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/options/buffer_max_size_spec.rb

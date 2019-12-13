@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/widgets/disable_spec.rb

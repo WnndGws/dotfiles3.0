@@ -1,1 +1,0 @@
-../../../../desktop/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh

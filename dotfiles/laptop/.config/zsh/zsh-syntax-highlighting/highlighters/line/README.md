@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-syntax-highlighting/highlighters/line/README.md

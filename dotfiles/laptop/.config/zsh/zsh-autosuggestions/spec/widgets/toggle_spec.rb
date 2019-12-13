@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/widgets/toggle_spec.rb

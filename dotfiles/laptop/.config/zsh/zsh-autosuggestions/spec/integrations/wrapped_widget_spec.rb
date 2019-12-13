@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-autosuggestions/spec/integrations/wrapped_widget_spec.rb

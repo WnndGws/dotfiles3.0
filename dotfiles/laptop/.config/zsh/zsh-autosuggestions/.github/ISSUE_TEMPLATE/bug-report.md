@@ -1,1 +1,0 @@
-../../../../../../desktop/.config/zsh/zsh-autosuggestions/.github/ISSUE_TEMPLATE/bug-report.md
