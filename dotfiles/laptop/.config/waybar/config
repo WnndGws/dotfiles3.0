@@ -45,7 +45,7 @@
     },
     "cpu": {
         "interval": 3,
-        "format": " {usage}%",
+        "format": " {usage:2}%",
         "states": {
             "high": 50,
             "normal": 25,
@@ -74,7 +74,7 @@
     },
     "network": {
         "interface": "wlp2s0",
-        "format": "直 {ipaddr} |  {bandwidthUpBits}  {bandwidthDownBits}",
+        "format": "直 {ipaddr} |  {bandwidthDownBits:5}",
         "interval": 3
     },
     "pulseaudio": {

@@ -5,7 +5,7 @@
 eval "$(starship init zsh)"
 
 # Sets environment variables
-export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
+export BROWSER=$HOME/Git/OneOffCodes/Shell/bemenu_openwith_prompt
 export EDITOR=/usr/bin/vim
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
 export VISUAL=/usr/bin/vim
@@ -514,7 +514,7 @@ alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
 alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
+alias shutdown="~/Git/OneOffCodes/Shell/bemenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
 convert480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
