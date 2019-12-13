@@ -1,0 +1,1 @@
+../../../../../../../desktop/.config/zsh/zsh-syntax-highlighting/highlighters/pattern/test-data/rm-rf.zsh

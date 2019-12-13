@@ -1,0 +1,1 @@
+../../../../desktop/.config/zsh/zsh-completions/zsh-completions.plugin.zsh

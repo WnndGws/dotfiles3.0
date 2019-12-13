@@ -1,0 +1,1 @@
+../../../../../../../desktop/.config/zsh/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch1.zsh
