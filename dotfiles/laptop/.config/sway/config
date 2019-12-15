@@ -93,8 +93,8 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-bindsym $mod+b splith
-bindsym $mod+v splitv
+#bindsym $mod+b splith
+#bindsym $mod+v splitv
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
@@ -312,7 +312,7 @@ bindsym $mod+f exec MOZ_ENABLE_WAYLAND=1 firefox
 #bindsym $mod+shift+v
 #bindsym $mod+control+v
 
-#bindsym $mod+b SET TO splitv
+bindsym $mod+b exec swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000
 #bindsym $mod+shift+b
 #bindsym $mod+control+b
 
