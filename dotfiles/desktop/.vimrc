@@ -277,7 +277,7 @@ Plug 'https://github.com/SirVer/ultisnips' "Ultisnips is the completion engine t
 Plug 'https://github.com/honza/vim-snippets' "Read by ultisnips for completions
 "Need YouCompleteMe for a nice popup interface for ultisnips
 "Install vim-youcompleteme-git from aur
-Plug 'https://github.com/ervandew/supertab' "Need SuperTab to allow YouCompleteMe selection to expand
+"Plug 'https://github.com/ervandew/supertab' "Need SuperTab to allow YouCompleteMe selection to expand
 call plug#end()
 
 "------------------------"
@@ -462,7 +462,8 @@ nmap <Leader>md :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && mupdf /tmp/vim
 
 " ----------------------"
 " ULTISNIPS
-" make YCM compatible with UltiSnips (using supertab)
+" make YCM compatible with UltiSnips (using supertab)(MAYBE dont need
+" supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', 'j']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'k']
 let g:SuperTabDefaultCompletionType = '<C-n>'
