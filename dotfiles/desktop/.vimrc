@@ -253,7 +253,6 @@ Plug 'https://github.com/junegunn/fzf.vim.git' "fuzzyfind
 Plug 'https://github.com/mattn/gist-vim.git' "gists in vim
 Plug 'https://github.com/Yggdroot/indentLine.git' "better indenting
 Plug 'https://github.com/haya14busa/incsearch.vim.git' "improved incrimental searching
-Plug 'https://github.com/davidhalter/jedi-vim.git' "autocomplete
 Plug 'https://github.com/luochen1990/rainbow.git' "rainbow parentheses
 Plug 'https://github.com/wellle/targets.vim.git' "better targeting
 Plug 'https://github.com/chiedo/vim-case-convert.git' "convert between cases
@@ -264,6 +263,10 @@ Plug 'https://github.com/jamessan/vim-gnupg.git' "gnupg
 Plug 'https://github.com/jez/vim-superman.git' "use man pages
 Plug 'https://github.com/reedes/vim-pencil.git' "pencil
 Plug 'https://github.com/sheerun/vim-polyglot.git' "language pack
+Plug 'https://github.com/chrisbra/csv.vim' "polyglot-csv
+Plug 'https://github.com/LaTeX-Box-Team/LaTeX-Box' "polyglot-latex
+Plug 'https://github.com/vim-python/python-syntax' "polyglot-python
+Plug 'https://github.com/rust-lang/rust.vim' "polyglot-rust
 Plug 'https://github.com/lervag/vimtex.git' "use latex
 Plug 'https://github.com/dhruvasagar/vim-table-mode.git' "tables in vim
 Plug 'https://github.com/mattn/webapi-vim.git' "webapi for vim
@@ -450,3 +453,6 @@ command! -nargs=* RunSilent
       \ | execute ':silent !'.'<args>'
       \ | execute ':redraw!'
 nmap <Leader>md :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && mupdf /tmp/vim-pandoc-out.pdf &<cr>
+
+" ----------------------"
+" VIM-POLYGLOT
