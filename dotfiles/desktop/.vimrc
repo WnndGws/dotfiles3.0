@@ -11,7 +11,7 @@ set nocompatible
 " >>>>> TEMPLATE SETTINGS <<<<< "
 " ----------------------------- "
 
-if has("autocmd")
+if has('autocmd')
   augroup templates
     autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton_docs.tex
     autocmd BufNewFile *.service 0r ~/.vim/templates/skeleton.service
@@ -27,7 +27,7 @@ endif
 autocmd FileType markdown let g:indentLine_enabled=0
 
 "Navigating with guides
-inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+"inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 
 """"LATEX
 autocmd FileType tex inoremap ;em \emph{}<++><Esc>T{i
@@ -81,7 +81,7 @@ set showcmd
 set showmode
 "Show current mode down the bottom
 
-set gcr=a:blinkon0
+set guicursor=a:blinkon0
 "Disable cursor blink
 
 set autoread
@@ -272,6 +272,12 @@ Plug 'https://github.com/dhruvasagar/vim-table-mode.git' "tables in vim
 Plug 'https://github.com/mattn/webapi-vim.git' "webapi for vim
 Plug 'https://github.com/lifepillar/vim-solarized8.git' "colours
 Plug 'https://github.com/shime/vim-livedown.git' "need for md preview
+
+Plug 'https://github.com/SirVer/ultisnips' "Ultisnips is the completion engine that reads vim-snippets
+Plug 'https://github.com/honza/vim-snippets' "Read by ultisnips for completions
+"Need YouCompleteMe for a nice popup interface for ultisnips
+"Install vim-youcompleteme-git from aur
+Plug 'https://github.com/ervandew/supertab' "Need SuperTab to allow YouCompleteMe selection to expand
 call plug#end()
 
 "------------------------"
@@ -284,7 +290,7 @@ let g:ale_lint_on_save = 1
 let g:ale_linters_explicit = 1
 let g:ale_list_vertical = 1
 
-let g:ale_linters = {'latex': ['redpen', 'chktex'], 'python': ['pylint'], 'zsh': ['shellcheck']}
+let g:ale_linters = {'latex': ['redpen', 'chktex'], 'python': ['pylint'], 'vim': ['vint'], 'zsh': ['shellcheck']}
 let g:ale_fixers = {'latex': ['redpen', 'chktex'], 'python': ['yapf'], 'zsh': ['shellcheck']}
 
 "------------------------"
@@ -455,4 +461,13 @@ command! -nargs=* RunSilent
 nmap <Leader>md :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && mupdf /tmp/vim-pandoc-out.pdf &<cr>
 
 " ----------------------"
-" VIM-POLYGLOT
+" ULTISNIPS
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', 'j']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'k']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
