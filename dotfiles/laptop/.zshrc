@@ -6,9 +6,9 @@ eval "$(starship init zsh)"
 
 # Sets environment variables
 export BROWSER=$HOME/Git/OneOffCodes/Shell/bemenu_openwith_prompt
-export EDITOR=/usr/bin/vim
+export EDITOR=vim
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
-export VISUAL=/usr/bin/vim
+export VISUAL=vim
 
 # Sets all my XDG paths
 export XDG_CACHE_HOME=$HOME'/.cache'

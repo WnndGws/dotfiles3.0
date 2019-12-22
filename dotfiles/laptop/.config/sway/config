@@ -10,12 +10,21 @@ set $mod Mod4
 set $term kitty
 # Your preferred terminal emulator
 
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu bemenu-run -i --line-height 30 --fn "SauceCodePro Nerd Font [30]" --tb "#001e25" --tf "#D3D7CF" --fb "#001e25" --ff "#001e25" --nb "#001e25" --nf "#D3D7CF" --hb "#555753" --hf "#029A20" --sb "#555753" --sf "#029A20"
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+
+exec swayidle -w \
+    timeout 30 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 000000'
+
+# This will turn off your displays after 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
 
 # ------------------------ #
 # >>> STARTUP PROGRAMS <<< #
@@ -155,19 +164,8 @@ include /etc/sway/config.d/*
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
