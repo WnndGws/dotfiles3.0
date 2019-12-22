@@ -18,13 +18,6 @@ set $menu bemenu-run -i --line-height 30 --fn "SauceCodePro Nerd Font [30]" --tb
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
-exec swayidle -w \
-    timeout 30 'swaymsg "output * dpms off"' \
-        resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 000000'
-
-# This will turn off your displays after 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 # ------------------------ #
 # >>> STARTUP PROGRAMS <<< #
@@ -34,6 +27,13 @@ exec /home/wynand/.local/share/cargo/bin/workstyle
 
 exec autotiling
 #sets alternating windows
+
+#exec swayidle -w \
+    #timeout 600 'swaymsg "output * dpms off"' \
+        #resume 'swaymsg "output * dpms on"' \
+    #before-sleep 'swaylock -f -c 000000'
+# This will turn off your displays after 60 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
 
 # -------------------------- #
 # >>> MOVEMENT SHORTCUTS <<< #
@@ -310,7 +310,7 @@ bindsym $mod+f exec MOZ_ENABLE_WAYLAND=1 firefox
 #bindsym $mod+shift+v
 #bindsym $mod+control+v
 
-bindsym $mod+b exec swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000
+bindsym $mod+b exec swayidle -w timeout 1 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000' timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on" && killall swayidle'
 #bindsym $mod+shift+b
 #bindsym $mod+control+b
 
