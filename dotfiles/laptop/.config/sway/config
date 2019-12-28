@@ -18,6 +18,20 @@ set $menu bemenu-run -i --line-height 30 --fn "SauceCodePro Nerd Font [30]" --tb
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
+# Set sway colours
+set $bg-colour              #8b8c8d
+set $inactive-bg-colour     #2e3436
+set $text-colour            #d3d7cf
+set $inactive-text-colour   #eeeeec
+set $urgent-colour          #bd2c40
+set $border-colour          #555753
+set $indicator-colour       #729fcf
+
+# class                 border          backgr text    indicator child_border
+client.focused          $border-colour $bg-colour $text-colour $indicator-colour $border-colour
+client.unfocused        $border-colour $inactive-bg-colour $inactive-text-colour $indicator-colour $border-colour
+client.urgent           $border-colour $urgent-colour  $text-colour $indicator-colour $border-colour
+#client.focused_inactive
 
 # ------------------------ #
 # >>> STARTUP PROGRAMS <<< #
@@ -229,7 +243,7 @@ bindsym $mod+escape workspace back_and_forth
 #bindsym $mod+shift+u
 #bindsym $mod+control+u
 
-#bindsym $mod+i
+bindsym $mod+i exec signal-desktop
 #bindsym $mod+shift+i
 #bindsym $mod+control+i
 

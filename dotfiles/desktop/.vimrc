@@ -464,8 +464,8 @@ nmap <Leader>md :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && mupdf /tmp/vim
 " ----------------------"
 " ULTISNIPS
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', 'j']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'k']
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', 'J']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'K']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
