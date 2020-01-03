@@ -327,7 +327,7 @@ bindsym $mod+f exec MOZ_ENABLE_WAYLAND=1 firefox
 #bindsym $mod+shift+v
 #bindsym $mod+control+v
 
-bindsym $mod+b exec swayidle -w timeout 1 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000' timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on" && killall swayidle'
+bindsym $mod+b exec swayidle timeout 1 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000' timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on" && killall swayidle'
 #bindsym $mod+shift+b
 #bindsym $mod+control+b
 
