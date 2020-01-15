@@ -354,7 +354,7 @@ alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild -
 alias add="archdatedisorder"
 #Update command
 
-alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; sudo updatedb; tldr --update'
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; tldr --update'
 alias ad="archdate"
 #Update command
 

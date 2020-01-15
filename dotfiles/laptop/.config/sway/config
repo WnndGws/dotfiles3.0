@@ -42,8 +42,11 @@ exec /home/wynand/.local/share/cargo/bin/workstyle
 exec autotiling
 #sets alternating windows
 
-exec redshift -g 0.80 -l -33:117
+exec redshift -g 0.75 -l -33:117
 #adjusts screen contrast to a better value for me
+
+exec insync start
+#starts insync
 
 #exec swayidle -w \
     #timeout 600 'swaymsg "output * dpms off"' \
@@ -311,7 +314,7 @@ bindsym $mod+f exec MOZ_ENABLE_WAYLAND=1 firefox
 #bindsym $mod+shift+'
 #bindsym $mod+control+'
 
-#bindsym $mod+z
+bindsym $mod+z exec steam-native
 #bindsym $mod+shift+z
 #bindsym $mod+control+z
 
