@@ -247,6 +247,7 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 " ----------------------- "
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/w0rp/ale.git' "linter
+" Install shellcheck, vint, python-pylint from aur
 Plug 'https://github.com/dkarter/bullets.vim' "plugins for automated bullet lists
 Plug 'https://github.com/Raimondi/delimitMate.git' "autocomplete brackets etc.
 Plug 'https://github.com/junegunn/fzf.vim.git' "fuzzyfind
@@ -273,7 +274,7 @@ Plug 'https://github.com/mattn/webapi-vim.git' "webapi for vim
 Plug 'https://github.com/lifepillar/vim-solarized8.git' "colours
 Plug 'https://github.com/shime/vim-livedown.git' "need for md preview
 
-Plug 'https://github.com/SirVer/ultisnips' "Ultisnips is the completion engine that reads vim-snippets
+Plug 'https://github.com/sirver/ultisnips' "Ultisnips is the completion engine that reads vim-snippets
 Plug 'https://github.com/honza/vim-snippets' "Read by ultisnips for completions
 "Need YouCompleteMe for a nice popup interface for ultisnips
 "Install vim-youcompleteme-git from aur
@@ -462,10 +463,8 @@ nmap <Leader>md :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && mupdf /tmp/vim
 
 " ----------------------"
 " ULTISNIPS
-" make YCM compatible with UltiSnips (using supertab)(MAYBE dont need
-" supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', 'j']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'k']
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', 'J']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'K']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger

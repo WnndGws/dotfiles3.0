@@ -10,12 +10,28 @@ set $mod Mod4
 set $term kitty
 # Your preferred terminal emulator
 
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu bemenu-run -i --line-height 30 --fn "SauceCodePro Nerd Font [30]" --tb "#001e25" --tf "#D3D7CF" --fb "#001e25" --ff "#001e25" --nb "#001e25" --nf "#D3D7CF" --hb "#555753" --hf "#029A20" --sb "#555753" --sf "#029A20"
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+
+# Set sway colours
+set $bg-colour              #8b8c8d
+set $inactive-bg-colour     #2e3436
+set $text-colour            #d3d7cf
+set $inactive-text-colour   #eeeeec
+set $urgent-colour          #bd2c40
+set $border-colour          #555753
+set $indicator-colour       #729fcf
+
+# class                 border          backgr text    indicator child_border
+client.focused          $border-colour $bg-colour $text-colour $indicator-colour $border-colour
+client.unfocused        $border-colour $inactive-bg-colour $inactive-text-colour $indicator-colour $border-colour
+client.urgent           $border-colour $urgent-colour  $text-colour $indicator-colour $border-colour
+#client.focused_inactive
 
 # ------------------------ #
 # >>> STARTUP PROGRAMS <<< #
@@ -25,6 +41,16 @@ exec /home/wynand/.local/share/cargo/bin/workstyle
 
 exec autotiling
 #sets alternating windows
+
+exec redshift -g 0.80 -l -33:117
+#adjusts screen contrast to a better value for me
+
+#exec swayidle -w \
+    #timeout 600 'swaymsg "output * dpms off"' \
+        #resume 'swaymsg "output * dpms on"' \
+    #before-sleep 'swaylock -f -c 000000'
+# This will turn off your displays after 60 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
 
 # -------------------------- #
 # >>> MOVEMENT SHORTCUTS <<< #
@@ -155,19 +181,8 @@ include /etc/sway/config.d/*
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
@@ -228,7 +243,7 @@ bindsym $mod+escape workspace back_and_forth
 #bindsym $mod+shift+u
 #bindsym $mod+control+u
 
-#bindsym $mod+i
+bindsym $mod+i exec signal-desktop
 #bindsym $mod+shift+i
 #bindsym $mod+control+i
 
@@ -312,7 +327,7 @@ bindsym $mod+f exec MOZ_ENABLE_WAYLAND=1 firefox
 #bindsym $mod+shift+v
 #bindsym $mod+control+v
 
-bindsym $mod+b exec swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000
+bindsym $mod+b exec swayidle timeout 1 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000' timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on" && killall swayidle'
 #bindsym $mod+shift+b
 #bindsym $mod+control+b
 

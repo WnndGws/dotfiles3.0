@@ -7,7 +7,7 @@ if [ -z "$TIME" ]; then
     TIME=$STATE
 fi
 
-if [ $PERCENT -le 30 ]; then
+if [ $PERCENT -le 30 ] && [ $STATE != 'Charging' ]; then
     STATE='Low'
 fi
 
