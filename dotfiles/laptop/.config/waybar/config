@@ -23,7 +23,7 @@
 {
     "layer": "top",
     "position": "bottom",
-    "modules-center": ["custom/weather", "custom/spacer", "custom/pkg", "custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "pulseaudio", "custom/spacer", "temperature", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "network"],
+    "modules-center": ["custom/weather", "custom/spacer", "custom/pkg", "custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "pulseaudio", "custom/spacer", "temperature", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "network", "custom/spacer", "custom/total_dl"],
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "盛"],
@@ -44,7 +44,7 @@
         "format-icons": ["", "", "", "", ""]
     },
     "temperature":{
-        "thermal-zone": 1,
+        "thermal-zone": 0,
         "critical-threshold": 90,
         "format":  " {temperatureC}°C"
     },
@@ -72,13 +72,13 @@
         "interval": 600
     },
     "custom/weather": {
-        "exec": "~/.config/waybar/weather.py",
+        "exec": "curl --silent 'wttr.in/Perth?format=%c+%t' | sed 's,+,,'",
         "exec-if": "ping -q -w 2 -c 1 176.34.135.167 > /dev/null",
         "format": "{}",
         "interval": 300
     },
     "network": {
-        "interface": "wlp2s0",
+        "interface": "wlo1",
         "format": " {bandwidthDownOctets:5}",
         "interval": 3,
         "format-disconnected": "No Connection!"
@@ -87,5 +87,10 @@
         "format": "{icon} {volume}%",
         "format-icons": ["", "墳", ""],
         "format-muted": " {volume}%"
+    },
+    "custom/total_dl": {
+        "exec": "~/.config/waybar/total_traffic_since_restart",
+        "format": "{}",
+        "interval": 60
     }
 }]
