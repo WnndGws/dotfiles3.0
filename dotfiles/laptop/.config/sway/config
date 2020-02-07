@@ -4,8 +4,8 @@
 font SauceCodePro Nerd Font Regular 11
 #Sets font
 
-set $mod Mod4
-#Logo key. Use Mod1 for Alt.
+set $mod Mod1
+#Alt key. Use Mod4 for Windows.
 
 set $term kitty
 # Your preferred terminal emulator
@@ -204,7 +204,7 @@ include /etc/sway/config.d/*
 # ------------------------------ #
 # >>> KEYBOARD CONFIGURATION <<< #
 # ------------------------------ #
-input "1452:594:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
+input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_options caps:escape
     #Makes capslock escape
     repeat_delay 200
