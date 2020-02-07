@@ -111,6 +111,9 @@ SAVEHIST=100000
 setopt AUTO_CD
 #Allows me to just type a directory
 
+unsetopt BEEP
+#shuts zsh up
+
 setopt EXTENDED_HISTORY
 #Write the history file in the ":start:elapsed;command" format
 
@@ -472,7 +475,7 @@ alias open="xdg-open"
 alias o='fasd -a -e xdg-open' 
 #Quick opening files with xdg-open
 
-alias pg="prettyping --nolegend -c 5 google.com"
+alias pg="while true; do; prettyping --nolegend -c 5 google.com && break; echo 'trying again...'; done"
 #Quick ping google.com
 
 alias paorph='pacman --query --unrequired --deps --quiet'
