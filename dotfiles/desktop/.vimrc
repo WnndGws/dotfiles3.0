@@ -201,6 +201,11 @@ onoremap <expr> <CR> empty(&buftype) ? '}' : '<CR>'
 vnoremap <CR> }
 "Remaps enter to move forward a paragraph
 
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+"using the PRIMARY clipboard * with the y and p commands
 " --------------------------- "
 " >>>>> SWITCH SETTINGS <<<<< "
 " --------------------------- "

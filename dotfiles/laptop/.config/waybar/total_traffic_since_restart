@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+## Used to show how much network I have used, so when I am on a hotspot I dont go too mental
+
+down="$(cat /proc/net/dev | awk '/wlo1/ {print $2}')"
+up="$(cat /proc/net/dev | awk '/wlo1/ {print $10}')"
+
+total=$(echo "($down + $up)/1000000" | bc)
+echo $total" Mib"

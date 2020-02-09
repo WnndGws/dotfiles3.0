@@ -41,7 +41,7 @@
         "return-type": "json",
         "exec": "/home/wynand/.config/waybar/custom_battery.sh",
         "interval": 30,
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""]
     },
     "temperature":{
         "thermal-zone": 0,
@@ -72,7 +72,7 @@
         "interval": 600
     },
     "custom/weather": {
-        "exec": "curl --silent 'wttr.in/Perth?format=%c+%t' | sed 's,+,,'",
+        "exec": "$HOME/.config/waybar/weather.py",
         "exec-if": "ping -q -w 2 -c 1 176.34.135.167 > /dev/null",
         "format": "{}",
         "interval": 300
