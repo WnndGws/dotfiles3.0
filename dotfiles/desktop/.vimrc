@@ -283,7 +283,7 @@ Plug 'https://github.com/sirver/ultisnips' "Ultisnips is the completion engine t
 Plug 'https://github.com/honza/vim-snippets' "Read by ultisnips for completions
 "Need YouCompleteMe for a nice popup interface for ultisnips
 "Install vim-youcompleteme-git from aur
-"Plug 'https://github.com/ervandew/supertab' "Need SuperTab to allow YouCompleteMe selection to expand
+Plug 'https://github.com/ervandew/supertab' "Need SuperTab to allow YouCompleteMe selection to expand
 call plug#end()
 
 "------------------------"
