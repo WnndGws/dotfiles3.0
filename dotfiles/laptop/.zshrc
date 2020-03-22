@@ -25,31 +25,8 @@ export MAILCAPS="$XDG_CONFIG_HOME"/mailcap/mailcap
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 
-# Export FFF Settings
-export FFF_OPENER=$BROWSER
-export FFF_KEY_SEARCH="/"
-## Directory color [0-9]
-export FFF_COL1=0
-## Status color [0-9]
-export FFF_COL2=7
-## Selection color [0-9] (copied/moved files)
-export FFF_COL3=3
-## Cursor color [0-9]
-export FFF_COL4=6
-## Favourites (Bookmarks) (keys 1-9) (dir or file)
-export FFF_FAV1=~
-export FFF_FAV2=~/GoogleDrive
-export FFF_FAV3=~/Git
-export FFF_FAV4=/home/wynand/wynZFS/Media/TV
-export FFF_FAV5=
-export FFF_FAV6=
-export FFF_FAV7=
-export FFF_FAV8=
-export FFF_FAV9=
-export FFF_TRASH=~/.local/share/Trash
-
 # Set Shell Variables
-export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python:$HOME/Git/OneOffCodes/Shell:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/cargo/bin:$HOME/Git/OneOffCodes/Shell:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='-i --border'
 GPG_TTY=$(tty)
