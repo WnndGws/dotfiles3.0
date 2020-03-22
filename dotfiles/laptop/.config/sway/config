@@ -330,7 +330,7 @@ bindsym $mod+z exec steam-native
 #bindsym $mod+shift+v
 #bindsym $mod+control+v
 
-bindsym $mod+b exec swayidle timeout 1 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000' timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on" && killall swayidle'
+bindsym $mod+b exec swayidle timeout 1 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000' resume 'killall swayidle' timeout 15 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 #bindsym $mod+shift+b
 #bindsym $mod+control+b
 
