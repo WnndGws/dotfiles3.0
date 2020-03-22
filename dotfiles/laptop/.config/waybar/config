@@ -23,7 +23,7 @@
 {
     "layer": "top",
     "position": "bottom",
-    "modules-center": ["custom/weather", "custom/spacer", "custom/pkg", "custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "pulseaudio", "custom/spacer", "temperature", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "network", "custom/spacer", "custom/total_dl"],
+    "modules-center": ["custom/weather", "custom/spacer", "custom/corona", "custom/spacer", "custom/pkg", "custom/spacer", "custom/battery", "custom/spacer", "backlight", "custom/spacer", "pulseaudio", "custom/spacer", "temperature", "custom/spacer", "cpu", "custom/spacer", "memory", "custom/spacer", "network", "custom/spacer", "custom/total_dl"],
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "盛"],
@@ -35,6 +35,10 @@
     },
     "custom/spacer": {
         "format": " | "
+    },
+    "custom/corona": {
+        "exec": "/home/wynand/Git/OneOffCodes/Shell/corona",
+        "interval": 7200
     },
     "custom/battery": {
         "format": "{icon} {percentage}% ({})",
