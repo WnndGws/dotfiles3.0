@@ -49,7 +49,7 @@ export FFF_FAV9=
 export FFF_TRASH=~/.local/share/Trash
 
 # Set Shell Variables
-export PATH=$HOME/bin:/usr/local/bin:$HOME/Git/OneOffCodes/Python:$HOME/Git/OneOffCodes/Shell:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/cargo/bin:$HOME/Git/OneOffCodes/Shell:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='-i --border'
 GPG_TTY=$(tty)
