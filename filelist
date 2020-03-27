@@ -1,4 +1,5 @@
 ## Shared
+.config/alacritty:desktop,laptop
 .config/cmus/rc:desktop,laptop
 .config/kitty/:desktop,laptop
 .config/latexmk/:desktop,laptop
