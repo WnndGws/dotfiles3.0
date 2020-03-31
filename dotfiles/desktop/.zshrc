@@ -484,8 +484,11 @@ alias porm='paorph | xargs -I{} pikaur -R --noconfirm {}; paorph | xargs -I{} pi
 alias pdf2ocr="~/Git/OneOffCodes/Shell/ocr_pdf"
 #Convert a pdf to tiff for tesseract and OCR it
 
-alias pd2smallpdf="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/<screen(72dpi)ebook(150dpi)prepress(300dpi)> -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
+alias pdf2smallpdf="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/<screen(72dpi)ebook(150dpi)prepress(300dpi)> -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
 #Uses ghostscript to downsize pdfs
+
+pdfmerge() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$@ ; }
+#The usage looks like this: pdfmerge merged.pdf mine1.pdf mine2.pdf
 
 alias play_DCAU="~/Git/OneOffCodes/Shell/playlistPlay ~/wynZFS/Media/WatchOrders/DCAU.order"
 #Plays the next episode in the DCAU that I am up to
