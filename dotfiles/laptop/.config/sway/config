@@ -7,7 +7,7 @@ font SauceCodePro Nerd Font Regular 11
 set $mod Mod1
 #Alt key. Use Mod4 for Windows.
 
-set $term kitty
+set $term alacritty
 # Your preferred terminal emulator
 
 set $menu bemenu-run -i --line-height 30 --fn "SauceCodePro Nerd Font [30]" --tb "#001e25" --tf "#D3D7CF" --fb "#001e25" --ff "#001e25" --nb "#001e25" --nf "#D3D7CF" --hb "#555753" --hf "#029A20" --sb "#555753" --sf "#029A20"
@@ -15,7 +15,7 @@ set $menu bemenu-run -i --line-height 30 --fn "SauceCodePro Nerd Font [30]" --tb
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
 # Set sway colours
@@ -354,3 +354,7 @@ bindsym $mod+m exec pactl set-sink-mute 0 toggle
 #bindsym $mod+/
 #bindsym $mod+shift+/
 #bindsym $mod+control+/
+
+# Run wallpaper script and set as background
+exec python $HOME/Git/wallpaperMaker/manipulate_image.py
+output * bg /tmp/wallpaper.png fill

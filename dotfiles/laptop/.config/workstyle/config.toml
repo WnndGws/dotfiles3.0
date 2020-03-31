@@ -10,6 +10,7 @@
 # precedence is given in order of apparition in this file.
 
 "zsh" = ""
+"alacritty" = ""
 "firefox" = ""
 "tor" = ""
 "vim" = ""

@@ -209,7 +209,7 @@ noremap <Leader>P "+p
 " --------------------------- "
 " >>>>> SWITCH SETTINGS <<<<< "
 " --------------------------- "
-syntax on
+syntax enable
 " Turn on syntax highlighting
 
 " --------------------- "
@@ -262,7 +262,6 @@ Plug 'https://github.com/haya14busa/incsearch.vim.git' "improved incrimental sea
 Plug 'https://github.com/luochen1990/rainbow.git' "rainbow parentheses
 Plug 'https://github.com/wellle/targets.vim.git' "better targeting
 Plug 'https://github.com/chiedo/vim-case-convert.git' "convert between cases
-Plug 'https://github.com/altercation/vim-colors-solarized.git' "vim colours solarized
 Plug 'https://github.com/easymotion/vim-easymotion.git' "easymotion
 Plug 'https://github.com/terryma/vim-expand-region.git' "expand region
 Plug 'https://github.com/jamessan/vim-gnupg.git' "gnupg
@@ -277,6 +276,7 @@ Plug 'https://github.com/lervag/vimtex.git' "use latex
 Plug 'https://github.com/dhruvasagar/vim-table-mode.git' "tables in vim
 Plug 'https://github.com/mattn/webapi-vim.git' "webapi for vim
 Plug 'https://github.com/lifepillar/vim-solarized8.git' "colours
+Plug 'https://github.com/altercation/vim-colors-solarized' "alternate colours"
 Plug 'https://github.com/shime/vim-livedown.git' "need for md preview
 
 Plug 'https://github.com/sirver/ultisnips' "Ultisnips is the completion engine that reads vim-snippets
@@ -408,14 +408,10 @@ map <Leader>sth :SnakeToHyphen
 
 " ----------------------"
 " SOLARIZED COLOURS
-if has('gui_running')
-    colorscheme solarized8_dark
-endif
-" Sets the colorscheme in gvim, but keeps terminal vim default
 
-"set termguicolors
-"set background=dark
-"colorscheme solarized8
+set termguicolors
+set background=dark
+colorscheme solarized8
 " ----------------------"
 " FZF
 command! -bang -nargs=* Rg
