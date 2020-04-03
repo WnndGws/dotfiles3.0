@@ -15,6 +15,7 @@ export XDG_CACHE_HOME=$HOME'/.cache'
 export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export _FASD_DATA="$XDG_CACHE_HOME/fasd/fasd"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
