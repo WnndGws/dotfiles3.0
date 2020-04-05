@@ -11,7 +11,7 @@ import requests
 import time
 
 CONFIG = configparser.ConfigParser()
-FILEDIR = '/home/wynand/.config/saved_credentials'
+FILEDIR = '/home/wynand/.config/credentials'
 CONFIG.read(FILEDIR + '/weather.ini')
 
 CITY = CONFIG['SETTINGS']['CITY']
