@@ -48,9 +48,6 @@ exec redshift -g 0.75 -l -33:117
 exec insync start
 #starts insync
 
-exec $HOME/.config/waybar/battery_brightness.sh
-#sets brightness of screen based on battery level
-
 #exec swayidle -w \
     #timeout 600 'swaymsg "output * dpms off"' \
         #resume 'swaymsg "output * dpms on"' \
