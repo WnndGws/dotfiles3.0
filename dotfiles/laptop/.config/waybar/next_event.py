@@ -30,7 +30,7 @@ def get_credentials():
     flags = None
 
     home_dir = os.path.expanduser("~")
-    credential_dir = os.path.join(home_dir, ".config/saved_credentials")
+    credential_dir = os.path.join(home_dir, ".config/credentials")
     if not os.path.exists(credential_dir):
        os.makedirs(credential_dir)
     credential_path = os.path.join(credential_dir, "nextevent2savedcredentials.json")
