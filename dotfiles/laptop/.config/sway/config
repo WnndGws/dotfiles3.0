@@ -48,6 +48,9 @@ exec redshift -g 0.75 -l -33:117
 exec insync start
 #starts insync
 
+exec $HOME/.config/waybar/battery_brightness.sh
+#sets brightness of screen based on battery level
+
 #exec swayidle -w \
     #timeout 600 'swaymsg "output * dpms off"' \
         #resume 'swaymsg "output * dpms on"' \
@@ -356,4 +359,4 @@ bindsym $mod+m exec pactl set-sink-mute 0 toggle
 #bindsym $mod+control+/
 
 # Run wallpaper script and set as background
-exec python $HOME/Git/wallpaperMaker/manipulate_image.py && output * bg /tmp/wallpaper.png fill
+exec python $HOME/Git/wallpaperMaker/manipulate_image.py && swaymsh 'output * bg /tmp/wallpaper.png fill'
