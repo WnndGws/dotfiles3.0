@@ -379,7 +379,7 @@ mouse:
     #   - (Linux/BSD) xdg-open
     #   - (Windows) explorer
     launcher:
-      program: $BROWSER
+      program: dmenu_openwith_prompt
     #  args: []
 
     # URL modifiers
