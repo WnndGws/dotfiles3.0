@@ -409,9 +409,9 @@ map <Leader>sth :SnakeToHyphen
 " ----------------------"
 " SOLARIZED COLOURS
 
-set termguicolors
-set background=dark
-colorscheme solarized8
+"set termguicolors
+"set background=dark
+"colorscheme solarized8
 " ----------------------"
 " FZF
 command! -bang -nargs=* Rg
