@@ -430,6 +430,12 @@ alias ll='exa --all --color always --color-scale --long'
 alias ls='exa --color always --color-scale'
 #Colours in ls
 
+alias lt='exa --color always --color-scale --tree --level=3'
+# Show tree of folder depth 3
+
+alias lta='exa --all --color always --color-scale --tree --level=3'
+# Show tree of all folders depth 3
+
 alias md='/usr/bin/mkdir -p'
 #Speed up making dirs
 
