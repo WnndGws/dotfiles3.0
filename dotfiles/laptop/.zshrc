@@ -445,7 +445,7 @@ alias mm='myman'
 alias mkdir='mkdir -p'
 #Create parent folders if doesnt exists
 
-alias nb="kitty --class newsboat --detach -e zsh -ci 'killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file /home/wynand/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'; exit"
+alias nb="killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file /home/wynand/GoogleDrive/01_Personal/04_Software/newsboatcache.txt"
 #Saves typing, sets class of terminal instead of default
 
 alias nf="neofetch"
