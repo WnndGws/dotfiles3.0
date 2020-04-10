@@ -1,9 +1,12 @@
-.gist-vim:desktop
+## Shared
+.config/credentials:desktop,laptop
 .config/git/:desktop,laptop
-.config/polybar_credentials/:desktop
 .config/newsboat/urls:desktop,laptop
-#.config/credentials/:desktop
 
-#.config/credentials/calendar_reminder_client_secrets.json:desktop,laptop
-#.config/credentials/next_event_client_secrets.json:desktop,laptop
-#.config/credentials/boxing_client_secrets.json:desktop,laptop
+## Seperate Computers
+### Laptop
+.gist-vim:laptop
+
+### Desktop
+.gist-vim:desktop
+.config/polybar_credentials/:desktop

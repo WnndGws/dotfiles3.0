@@ -1,50 +1,40 @@
 ## Shared
 .config/alacritty:desktop,laptop
 .config/cmus/rc:desktop,laptop
-.config/kitty/:desktop,laptop
 .config/latexmk/:desktop,laptop
-#.config/mailcap/:desktop,laptop
 .config/mpv/:desktop,laptop
-#.config/mutt/:desktop,laptop
 .config/neofetch/:desktop,laptop
-#.config/neomutt/:desktop,laptop
-#.config/ranger/:desktop,laptop
+.config/newsboat/config:desktop,laptop
+.config/ncspot:deskop,laptop
+.config/starship.toml:desktop,laptop
 .config/stig/:desktop,laptop
 .config/zathura/:desktop,laptop
 .config/zsh/:desktop,laptop
-#.mailboxes:desktop,laptop
-#.notmuch-config:desktop,laptop
-#.config/offlineimap/:desktop,laptop
 .passwords.asc:desktop,laptop
-.config/starship.toml:desktop,laptop
 .scimrc:desktop,laptop
 .vim/templates:desktop,laptop
 .vim/vimplugins.sh:desktop,laptop
 .vimrc:desktop,laptop
 
 ## Seperate Computers
-.config/feh:desktop
-.config/i3:desktop
-.config/sway:laptop
-.config/installed_packages:desktop
-#.config/installed_packages:laptop
+### Laptop
+.config/installed_packages:laptop
 .config/light:laptop
-.config/newsboat/config:desktop,laptop
-#.config/newsboat/config:laptop
-.config/polybar:desktop
-.config/pymodoro:desktop
+.config/sway:laptop
 .config/waybar:laptop
 .config/workstyle:laptop
-#.oh-my-zsh/:desktop
-#.oh-my-zsh/:laptop
+.zprofile:laptop
+.zshrc:laptop
+
+### Desktop
+.config/feh:desktop
+.config/i3:desktop
+.config/installed_packages:desktop
+.config/polybar:desktop
+.config/pymodoro:desktop
 .screenlayout:desktop
 .xinitrc:desktop
-#.xinitrc:laptop
 .Xmodmap:deskop
-#.Xmodmap:laptop
 .Xresources:desktop
-#.Xresources:laptop
 .zprofile:desktop
-.zprofile:laptop
 .zshrc:desktop
-.zshrc:laptop
