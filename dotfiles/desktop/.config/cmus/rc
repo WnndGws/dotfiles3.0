@@ -1,7 +1,4 @@
-#################
-## KEYBINDINGS ##
-#################
-
+# Keybindings
 bind -f common q quit -i
 #bind -f common w <++>
 bind -f common e toggle shuffle
@@ -42,9 +39,7 @@ bind -f common space win-activate
 #bind -f common backspace <++>
 bind -f common enter win-toggle 
 
-##############
-## SETTINGS ##
-##############
+# Settings
 set display_artist_sort_name=true
 set format_current=%a - %l - %02n. %t%= %{bitrate}Kbps %g %y
 set format_title=%a-%l-%n_%t - cmus
@@ -52,3 +47,35 @@ set show_all_tracks=true
 set show_current_bitrate=true
 set show_remaining_time=true
 
+# Colours
+# see .conf/ncspot for reference
+#color_cmdline_bg
+#color_cmdline_fg
+#color_cmdline_attr
+#color_error
+#color_info
+#color_separator
+#color_statusline_bg
+#color_statusline_fg
+#color_statusline_attr
+#color_titleline_bg
+#color_titleline_fg
+#color_titleline_attr
+#color_win_bg
+#color_win_cur
+#color_win_cur_attr
+#color_win_cur_sel_bg
+#color_win_cur_sel_fg
+#color_win_cur_sel_attr
+#color_win_dir
+#color_win_fg
+#color_win_attr
+#color_win_inactive_cur_sel_bg
+#color_win_inactive_cur_sel_fg
+#color_win_inactive_cur_sel_attr
+#color_win_inactive_sel_bg
+#color_win_inactive_sel_fg
+#color_win_inactive_sel_attr
+#color_win_sel_bg
+#color_win_sel_fg
+#color_win_sel_attr
