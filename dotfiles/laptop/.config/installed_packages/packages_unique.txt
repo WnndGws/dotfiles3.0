@@ -105,6 +105,7 @@ which
 wine
 wireguard-dkms
 wireguard-tools
+wl-clipboard
 wpa_supplicant
 youtube-dl
 zathura-pdf-mupdf
