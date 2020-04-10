@@ -41,6 +41,7 @@ feh
 ffsend
 file
 filesystem
+find-the-command
 findutils
 firefox
 flex

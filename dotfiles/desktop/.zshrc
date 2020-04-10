@@ -26,29 +26,6 @@ export MAILCAPS="$XDG_CONFIG_HOME"/mailcap/mailcap
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 
-# Export FFF Settings
-export FFF_OPENER=$BROWSER
-export FFF_KEY_SEARCH="/"
-## Directory color [0-9]
-export FFF_COL1=0
-## Status color [0-9]
-export FFF_COL2=7
-## Selection color [0-9] (copied/moved files)
-export FFF_COL3=3
-## Cursor color [0-9]
-export FFF_COL4=6
-## Favourites (Bookmarks) (keys 1-9) (dir or file)
-export FFF_FAV1=~
-export FFF_FAV2=~/GoogleDrive
-export FFF_FAV3=~/Git
-export FFF_FAV4=/home/wynand/wynZFS/Media/TV
-export FFF_FAV5=
-export FFF_FAV6=
-export FFF_FAV7=
-export FFF_FAV8=
-export FFF_FAV9=
-export FFF_TRASH=~/.local/share/Trash
-
 # Set Shell Variables
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/cargo/bin:$HOME/Git/OneOffCodes/Shell:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
@@ -187,6 +164,11 @@ function chpwd() {
     emulate -L zsh
     exa --color always --color-scale
 }
+#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+#find-the-command
+#make sure to run pacman -Fy anad systemctl enable pacman-files.timer
+source /usr/share/doc/find-the-command/ftc.zsh
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #command-not-found
@@ -452,6 +434,12 @@ alias ll='exa --all --color always --color-scale --long'
 alias ls='exa --color always --color-scale'
 #Colours in ls
 
+alias lt='exa --color always --color-scale --tree --level=3'
+# Show tree of folder depth 3
+
+alias lta='exa --all --color always --color-scale --tree --level=3'
+# Show tree of all folders depth 3
+
 alias md='/usr/bin/mkdir -p'
 #Speed up making dirs
 
@@ -476,6 +464,12 @@ alias o='fasd -a -e xdg-open'
 
 alias pg="prettyping --nolegend -c 5 google.com"
 #Quick ping google.com
+
+alias pdf2smallpdf="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/<screen(72dpi)ebook(150dpi)prepress(300dpi)> -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
+#Uses ghostscript to downsize pdfs
+
+pdfmerge() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$@ ; }
+#The usage looks like this: pdfmerge merged.pdf mine1.pdf mine2.pdf
 
 alias paorph='pacman --query --unrequired --deps --quiet'
 alias po='paorph'
