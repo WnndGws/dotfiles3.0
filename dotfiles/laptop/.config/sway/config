@@ -322,7 +322,7 @@ bindsym $mod+z exec steam-native
 #bindsym $mod+shift+x
 #bindsym $mod+control+x
 
-#bindsym $mod+c
+bindsym $mod+c exec "$HOME/Git/OneOffCodes/Shell/bemenu_clipboard_management"
 #bindsym $mod+shift+c SET TO reset config
 #bindsym $mod+control+c
 
