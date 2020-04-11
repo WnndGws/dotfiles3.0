@@ -15,6 +15,7 @@ dialog
 doh-client
 dotgit
 downgrade
+entr
 exa
 exercism
 fakeroot
@@ -33,6 +34,7 @@ git
 grep
 groff
 gzip
+hyperfine
 img2pdf
 imv
 ipython

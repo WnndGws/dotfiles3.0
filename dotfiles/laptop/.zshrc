@@ -377,6 +377,9 @@ alias dml='dm laptop'
 alias du="ncdu --color dark -rr -x"
 #Use a nicer du
 
+entrwatch() { exa "$1" | entr /_ }
+#watches a file, and runs that file everytime it changes
+
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
 
