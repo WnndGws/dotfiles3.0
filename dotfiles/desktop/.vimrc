@@ -3,6 +3,8 @@
 " ------------------------------ "
 
 set title
+"Set the window’s title, reflecting the file currently being edited.
+
 set nocompatible
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -25,7 +27,9 @@ if has('autocmd')
   augroup END
 endif
 
-autocmd FileType markdown let g:indentLine_enabled=0
+augroup markdown
+  autocmd FileType markdown let g:indentLine_enabled=0
+augroup END
 
 "Navigating with guides
 "inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
@@ -59,12 +63,20 @@ endif
 " automatically leave insert mode after 'updatetime' milliseconds of inaction
 " set 'updatetime' to 5 seconds when in insert mode
 
+" Vertically center document when entering insert mode
+augroup niceties
+    autocmd InsertEnter * norm zz
+augroup END
+
 set autoindent
+"New lines inherit the indentation of previous lines
 
 set formatoptions+=j
-"Proper line join
+"Proper line join removes comment flags
+set formatoptions-=ro
+"Dont insert comment leader in new line
 
-set clipboard=unnamed
+set clipboard+=unnamedplus
 "set relativenumber
 "Shows relative line numbers so math doesnt need to be done
 
@@ -137,10 +149,13 @@ set hidden
 
 set noswapfile
 set nobackup
-set nowb
+set nowritebackup
 
 set smarttab
+"Insert “tabstop” number of spaces when the “tab” key is pressed.
 set shiftwidth=4
+set shiftround
+"When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
 set softtabstop=4
 set tabstop=4
 set expandtab
@@ -148,20 +163,28 @@ set expandtab
 set list listchars=tab:\ \ ,trail:·
 " Display tabs and trailing spaces visually
 
-set nowrap
-"Don't wrap lines
+set wrap
+"Do wrap lines
+
+set linebreak
+"Avoid wrapping a line in the middle of a word.
 
 set nofoldenable
-set foldmethod=manual
+set foldnestmax=3
+"Only fold up to three nested levels.
+set foldmethod=indent
 "Allow me to fold by my settings
+
+set lazyredraw
+"Don’t update screen during macro and script execution.
+
+set wildmenu
+"Display command line’s tab complete options as a menu.
 
 " --------------------------- "
 " >>>>> KEYMAP SETTINGS <<<<< "
 " --------------------------- "
-let mapleader = ","
-
-noremap <leader>b :w<Home>silent <End> !urlview<CR>
-"Use urlview to open links
+let mapleader = ','
 
 map <leader>sc :setlocal spell!<cr>
 "Pressing :sc will toggle and untoggle spell checking
@@ -192,8 +215,8 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <Leader>w :w<CR>
 " Save file using leader w
 
-nnoremap <Leader><right> :vsp<CR>
-nnoremap <Leader><down> :sp<CR>
+nnoremap <Leader>l :vsp<CR>
+nnoremap <Leader>j :sp<CR>
 " Split vim using leader keys
 
 nnoremap <BS> {
@@ -211,6 +234,7 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 "using the PRIMARY clipboard * with the y and p commands
+
 " --------------------------- "
 " >>>>> SWITCH SETTINGS <<<<< "
 " --------------------------- "
@@ -223,34 +247,7 @@ syntax enable
 cmap w!! %!sudo tee > /dev/null %
 "Stolen from CIA Hack, save file you forgot to open as root
 
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-
-fun! ExitInsertMode()
-    if &ft =~ 'tex'
-        return
-    endif
-    if &ft =~ 'python'
-        return
-    endif
-    stopinsert
-endfun
-
-""" Cycle through case of selected text
-function! TwiddleCase(str)
-  if a:str ==# toupper(a:str)
-    let result = tolower(a:str)
-  elseif a:str ==# tolower(a:str)
-    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
-  else
-    let result = toupper(a:str)
-  endif
-  return result
-endfunction
-vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+noremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 " ----------------------- "
 " >>>>> VIM PLUGINS <<<<< "
@@ -259,15 +256,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/w0rp/ale.git' "linter
 " Install shellcheck, vint, python-pylint from aur
 Plug 'https://github.com/dkarter/bullets.vim' "plugins for automated bullet lists
-Plug 'https://github.com/Raimondi/delimitMate.git' "autocomplete brackets etc.
 Plug 'https://github.com/junegunn/fzf.vim.git' "fuzzyfind
 Plug 'https://github.com/mattn/gist-vim.git' "gists in vim
 Plug 'https://github.com/Yggdroot/indentLine.git' "better indenting
 Plug 'https://github.com/haya14busa/incsearch.vim.git' "improved incrimental searching
-Plug 'https://github.com/luochen1990/rainbow.git' "rainbow parentheses
 Plug 'https://github.com/wellle/targets.vim.git' "better targeting
 Plug 'https://github.com/chiedo/vim-case-convert.git' "convert between cases
-Plug 'https://github.com/easymotion/vim-easymotion.git' "easymotion
 Plug 'https://github.com/terryma/vim-expand-region.git' "expand region
 Plug 'https://github.com/jamessan/vim-gnupg.git' "gnupg
 Plug 'https://github.com/jez/vim-superman.git' "use man pages
@@ -280,10 +274,7 @@ Plug 'https://github.com/rust-lang/rust.vim' "polyglot-rust
 Plug 'https://github.com/lervag/vimtex.git' "use latex
 Plug 'https://github.com/dhruvasagar/vim-table-mode.git' "tables in vim
 Plug 'https://github.com/mattn/webapi-vim.git' "webapi for vim
-Plug 'https://github.com/lifepillar/vim-solarized8.git' "colours
-Plug 'https://github.com/altercation/vim-colors-solarized' "alternate colours"
 Plug 'https://github.com/shime/vim-livedown.git' "need for md preview
-
 Plug 'https://github.com/sirver/ultisnips' "Ultisnips is the completion engine that reads vim-snippets
 Plug 'https://github.com/honza/vim-snippets' "Read by ultisnips for completions
 "Need YouCompleteMe for a nice popup interface for ultisnips
@@ -328,9 +319,6 @@ nnoremap <Leader>g :Gist
 "------------------------"
 " PYTHON MUMBOJUMBO
 let python_highlight_all=1
-
-autocmd BufWrite *.py :call DeleteTrailingWS()
-"Delete trailing white space on save, useful for Python and CoffeeScript
 
 "autocmd BufWritePost *.py :term ipython %:p
 "Run ipython everytime save python file
@@ -427,25 +415,6 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 " ----------------------"
-" EASYMOTIONS
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
-" or
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-
-" JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
-" ----------------------"
 " VIM-PENCIL
 "autocmd FileType * call pencil#init({'wrap': 'soft'})
 
@@ -454,10 +423,6 @@ map <Leader>k <Plug>(easymotion-k)
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
-" ----------------------"
-" RAINBOW
- let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 " ----------------------"
 " VIM-MARKDOWN
@@ -474,6 +439,6 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', 'K']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
