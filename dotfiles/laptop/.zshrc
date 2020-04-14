@@ -5,10 +5,11 @@
 eval "$(starship init zsh)"
 
 # Sets environment variables
-export BROWSER=$HOME/Git/OneOffCodes/Shell/bemenu_openwith_prompt
-export EDITOR=vim
+[ $HOST = "HPlap" ] && export BROWSER=$HOME/Git/OneOffCodes/Shell/bemenu_openwith_prompt ||\
+[ $HOST = "anarchyPC" ] && export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
-export VISUAL=vim
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 
 # Sets all my XDG paths
 export XDG_CACHE_HOME=$HOME'/.cache'
@@ -29,6 +30,9 @@ export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/cargo/bin:$HOME/Git/OneOffCodes/Shell:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='-i --border'
+
+export _FASD_DATA="$XDG_CACHE_HOME/fasd/fasd"
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -219,18 +223,18 @@ bindkey -M vicmd 'j' history-substring-search-down
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #globalias
-globalias() {
-   zle _expand_alias
-   zle expand-word
-   zle self-insert
-}
-zle -N globalias
-# space expands all aliases, including global
-bindkey -M viins " " globalias
-# control-space to make a normal space
-bindkey -M viins "^ " magic-space
-# normal space during searches
-bindkey -M isearch " " magic-space
+#globalias() {
+   #zle _expand_alias
+   #zle expand-word
+   #zle self-insert
+#}
+#zle -N globalias
+## space expands all aliases, including global
+#bindkey -M viins " " globalias
+## control-space to make a normal space
+#bindkey -M viins "^ " magic-space
+## normal space during searches
+#bindkey -M isearch " " magic-space
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 # Enable gpg-agent if it is not running
@@ -334,7 +338,7 @@ alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild -
 alias add="archdatedisorder"
 #Update command
 
-alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; tldr --update'
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; tldr --update; sudo updatedb; [ $HOST = "anarchyPC" ] && i3-msg "restart"'
 alias ad="archdate"
 #Update command
 
@@ -371,11 +375,15 @@ alias dd='sudo dd status=progress conv=fsync'
 #alwas dd with same flags
 
 alias dm='~/Git/OneOffCodes/Shell/dotmake'
+alias dmd='dm desktop'
 alias dml='dm laptop'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
 #Use a nicer du
+
+entrwatch() { exa "$1" | entr /_ }
+#watches a file, and runs that file everytime it changes
 
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
@@ -458,6 +466,12 @@ alias open="xdg-open"
 alias o='fasd -a -e xdg-open' 
 #Quick opening files with xdg-open
 
+alias pdf2smallpdf="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/<screen(72dpi)ebook(150dpi)prepress(300dpi)> -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
+#Uses ghostscript to downsize pdfs
+
+pdfmerge() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$@ ; }
+#The usage looks like this: pdfmerge merged.pdf mine1.pdf mine2.pdf
+
 alias pg="while true; do; prettyping --nolegend -c 5 google.com && break; echo 'trying again...'; done"
 #Quick ping google.com
 
@@ -500,7 +514,7 @@ alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
 alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown="~/Git/OneOffCodes/Shell/bemenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
+alias shutdown="[ $HOST = "HPlap" ] && ~/Git/OneOffCodes/Shell/bemenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\" || ~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
 convert480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }

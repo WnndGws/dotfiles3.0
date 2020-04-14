@@ -3,6 +3,7 @@ alacritty-git
 autoconf
 automake
 autotiling
+bandwhich
 base
 bat
 bc
@@ -15,8 +16,10 @@ dialog
 doh-client
 dotgit
 downgrade
+entr
 exa
 exercism
+fail2ban
 fakeroot
 fasd
 fd
@@ -33,6 +36,7 @@ git
 grep
 groff
 gzip
+hyperfine
 img2pdf
 imv
 ipython
@@ -42,11 +46,13 @@ libtool
 light
 linux
 linux-firmware
+linux-headers
 m4
 magic-wormhole
 make
 man-db
 man-pages
+mlocate
 mono
 mosh
 mpv
@@ -64,6 +70,7 @@ pandoc-bin
 patch
 pikaur
 pkgconf
+polybar
 pulseaudio
 python-click
 python-google-api-python-client
@@ -75,6 +82,7 @@ python-pytz
 python-requests
 python-setuptools
 python-tzlocal
+qt5-wayland
 ripgrep
 ripgrep-all
 rsync
@@ -99,6 +107,8 @@ udiskie
 vim
 vim-plug
 vim-youcompleteme-git
+virtualbox
+virtualbox-host-modules-arch
 waybar
 wget
 which

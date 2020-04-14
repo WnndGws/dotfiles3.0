@@ -65,7 +65,7 @@ set formatoptions+=j
 "Proper line join
 
 set clipboard=unnamed
-set relativenumber
+"set relativenumber
 "Shows relative line numbers so math doesnt need to be done
 
 set number

@@ -15,6 +15,7 @@
 .vim/templates:desktop,laptop
 .vim/vimplugins.sh:desktop,laptop
 .vimrc:desktop,laptop
+.zshrc:desktop,laptop
 
 ## Seperate Computers
 ### Laptop
@@ -24,7 +25,6 @@
 .config/waybar:laptop
 .config/workstyle:laptop
 .zprofile:laptop
-.zshrc:laptop
 
 ### Desktop
 .config/feh:desktop
@@ -37,4 +37,3 @@
 .Xmodmap:deskop
 .Xresources:desktop
 .zprofile:desktop
-.zshrc:desktop

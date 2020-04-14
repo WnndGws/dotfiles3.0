@@ -5,9 +5,10 @@
 eval "$(starship init zsh)"
 
 # Sets environment variables
-export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
-export EDITOR=/usr/bin/vim
+[ $HOST = "HPlap" ] && export BROWSER=$HOME/Git/OneOffCodes/Shell/bemenu_openwith_prompt ||\
+[ $HOST = "anarchyPC" ] && export BROWSER=$HOME/Git/OneOffCodes/Shell/dmenu_openwith_prompt
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
+export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
 # Sets all my XDG paths
@@ -15,7 +16,6 @@ export XDG_CACHE_HOME=$HOME'/.cache'
 export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export _FASD_DATA="$XDG_CACHE_HOME/fasd/fasd"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/ICEauthority
@@ -30,6 +30,9 @@ export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/cargo/bin:$HOME/Git/OneOffCodes/Shell:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='-i --border'
+
+export _FASD_DATA="$XDG_CACHE_HOME/fasd/fasd"
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -88,6 +91,9 @@ SAVEHIST=100000
 
 setopt AUTO_CD
 #Allows me to just type a directory
+
+unsetopt BEEP
+#shuts zsh up
 
 setopt EXTENDED_HISTORY
 #Write the history file in the ":start:elapsed;command" format
@@ -167,14 +173,8 @@ function chpwd() {
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #find-the-command
-#make sure to run pacman -Fy anad systemctl enable pacman-files.timer
+#make sure to run pacman -Fy and systemctl enable pacman-files.timer
 source /usr/share/doc/find-the-command/ftc.zsh
-#---------------------------------------------------------------------------
-#---------------------------------------------------------------------------
-#command-not-found
-# Arch Linux command-not-found support, you must have package pkgfile installed
-[[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
-[[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #fasd shortcuts
@@ -223,18 +223,18 @@ bindkey -M vicmd 'j' history-substring-search-down
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #globalias
-globalias() {
-   zle _expand_alias
-   zle expand-word
-   zle self-insert
-}
-zle -N globalias
-# space expands all aliases, including global
-bindkey -M viins " " globalias
-# control-space to make a normal space
-bindkey -M viins "^ " magic-space
-# normal space during searches
-bindkey -M isearch " " magic-space
+#globalias() {
+   #zle _expand_alias
+   #zle expand-word
+   #zle self-insert
+#}
+#zle -N globalias
+## space expands all aliases, including global
+#bindkey -M viins " " globalias
+## control-space to make a normal space
+#bindkey -M viins "^ " magic-space
+## normal space during searches
+#bindkey -M isearch " " magic-space
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 # Enable gpg-agent if it is not running
@@ -338,7 +338,7 @@ alias archdatedisorder='pikaur --sync --refresh --sysupgrade --devel --rebuild -
 alias add="archdatedisorder"
 #Update command
 
-alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; i3-msg "restart"; sudo updatedb; tldr --update'
+alias archdate='pikaur --sync --refresh --sysupgrade --rebuild; pikaur --deptest; wget -O /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts; tldr --update; sudo updatedb; [ $HOST = "anarchyPC" ] && i3-msg "restart"'
 alias ad="archdate"
 #Update command
 
@@ -376,10 +376,14 @@ alias dd='sudo dd status=progress conv=fsync'
 
 alias dm='~/Git/OneOffCodes/Shell/dotmake'
 alias dmd='dm desktop'
+alias dml='dm laptop'
 #Saves typing
 
 alias du="ncdu --color dark -rr -x"
 #Use a nicer du
+
+entrwatch() { exa "$1" | entr /_ }
+#watches a file, and runs that file everytime it changes
 
 alias failed_ctl='systemctl list-units --state=failed'
 #To list any failed systemctl units
@@ -449,7 +453,7 @@ alias mm='myman'
 alias mkdir='mkdir -p'
 #Create parent folders if doesnt exists
 
-alias nb='killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file /home/wynand/GoogleDrive/01_Personal/04_Software/newsboatcache.txt'
+alias nb="killall newsboat; newsboat --import-from-file $HOME/GoogleDrive/01_Personal/04_Software/newsboatcache.txt; newsboat && newsboat --export-to-file /home/wynand/GoogleDrive/01_Personal/04_Software/newsboatcache.txt"
 #Saves typing, sets class of terminal instead of default
 
 alias nf="neofetch"
@@ -462,14 +466,14 @@ alias open="xdg-open"
 alias o='fasd -a -e xdg-open' 
 #Quick opening files with xdg-open
 
-alias pg="prettyping --nolegend -c 5 google.com"
-#Quick ping google.com
-
 alias pdf2smallpdf="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/<screen(72dpi)ebook(150dpi)prepress(300dpi)> -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
 #Uses ghostscript to downsize pdfs
 
 pdfmerge() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$@ ; }
 #The usage looks like this: pdfmerge merged.pdf mine1.pdf mine2.pdf
+
+alias pg="while true; do; prettyping --nolegend -c 5 google.com && break; echo 'trying again...'; done"
+#Quick ping google.com
 
 alias paorph='pacman --query --unrequired --deps --quiet'
 alias po='paorph'
@@ -478,12 +482,6 @@ alias porm='paorph | xargs -I{} pikaur -R --noconfirm {}; paorph | xargs -I{} pi
 
 alias pdf2ocr="~/Git/OneOffCodes/Shell/ocr_pdf"
 #Convert a pdf to tiff for tesseract and OCR it
-
-alias pdf2smallpdf="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/<screen(72dpi)ebook(150dpi)prepress(300dpi)> -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
-#Uses ghostscript to downsize pdfs
-
-pdfmerge() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$@ ; }
-#The usage looks like this: pdfmerge merged.pdf mine1.pdf mine2.pdf
 
 alias play_DCAU="~/Git/OneOffCodes/Shell/playlistPlay ~/wynZFS/Media/WatchOrders/DCAU.order"
 #Plays the next episode in the DCAU that I am up to
@@ -516,7 +514,7 @@ alias shutdown_at="~/Git/OneOffCodes/Shell/shutdownAt"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
 alias shutdown_in="~/Git/OneOffCodes/Shell/shutdownIn"
 #Allows user to enter shutdown_in hh:mm:ss and gives a countdown
-alias shutdown="~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
+alias shutdown="[ $HOST = "HPlap" ] && ~/Git/OneOffCodes/Shell/bemenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\" || ~/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Do You want to shut down?' \"~/Git/OneOffCodes/Shell/shutdownIn 0:05\""
 #Is the same as normal shutdown, except instead of just saying a min it counts down. Much more convenient
 
 convert480p() { ffmpeg -i "$1" -vf scale=-2:480 -crf 20 -vcodec h264 -acodec libvorbis -ac 2 Small_"$1" }
@@ -535,9 +533,6 @@ alias ssr="sudo systemctl restart"
 alias sse="sudo systemctl enable"
 alias ssd="sudo systemctl disable"
 #Saves typing
-
-surf() { /usr/bin/surf $1 & disown > /dev/null; exit }
-#Opens surf site and doesnt need terminal
 
 alias sv='sudo vim'
 alias svim='sudo vim'
