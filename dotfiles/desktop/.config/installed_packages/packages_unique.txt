@@ -111,8 +111,8 @@ ncdu
 ncspot-git
 neofetch
 neomutt
+nerd-fonts-cascadia-code
 nerd-fonts-complete-mono-glyphs
-nerd-fonts-hack
 netctl
 newsboat
 nltk-data
