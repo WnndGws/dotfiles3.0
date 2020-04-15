@@ -27,7 +27,6 @@ dialog
 diffutils
 dmenu2
 dmenufm-git
-dmidecode
 dotgit
 downgrade
 dtrx
@@ -59,7 +58,6 @@ goobook-git
 gparted
 grep
 groff
-grub
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -179,7 +177,6 @@ steam-native-runtime
 stig
 sudo
 surf
-sxhkd
 sysfsutils
 syslinux
 systemd

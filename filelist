@@ -8,7 +8,10 @@
 .config/ncspot:deskop,laptop
 .config/starship.toml:desktop,laptop
 .config/stig/:desktop,laptop
+<<<<<<< HEAD
 .config/sxhkd:desktop,laptop
+=======
+>>>>>>> parent of dc04768... Modified desktop/.config/i3/config; modified desktop/.config/installed_packages/packages_unique.txt; modified desktop/.config/polybar_credentials/.weather_data.txt
 .config/zathura/:desktop,laptop
 .config/zsh/:desktop,laptop
 .passwords.asc:desktop,laptop
