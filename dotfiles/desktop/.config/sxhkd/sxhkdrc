@@ -1,0 +1,31 @@
+###--- Applications ---###
+alt + Return
+    alacritty
+
+alt + q
+    $HOME/Git/OneOffCodes/Shell/dmenu_yn_prompt 'Quit?' "i3-msg kill"
+
+###--- i3 Window Manager ---###
+# Move around open nodes
+alt + {h,j,k,l}
+    i3-msg "focus {left, down, up, right}"
+
+# Move nodes relative to each other
+alt + shift + {h,j,k,l}
+    i3-msg "move {left, down, up, right}"
+
+# Move to the workspace right or left of the current one
+alt + control + {h,j,k,l}
+    i3-msg "move workspace to output {left, down, up, right}"
+
+# Switch between the last two used workspaces
+alt + Escape
+    i3-msg "workspace back_and_forth"
+
+# Move to a workspace
+alt + {1,2,3,4,5,6,7,8,9,0}
+    i3-msg "workspace number {1,2,3,4,5,6,7,8,9,10}"
+
+# Move node to a workspace
+alt + Shift + {1,2,3,4,5,6,7,8,9,0}
+    i3-msg "move contrainer to workspace number {1,2,3,4,5,6,7,8,9,10}"
