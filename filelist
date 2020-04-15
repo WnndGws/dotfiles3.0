@@ -8,6 +8,7 @@
 .config/ncspot:deskop,laptop
 .config/starship.toml:desktop,laptop
 .config/stig/:desktop,laptop
+.config/sxhkd/:deskop,laptop
 .config/zathura/:desktop,laptop
 .config/zsh/:desktop,laptop
 .passwords.asc:desktop,laptop
