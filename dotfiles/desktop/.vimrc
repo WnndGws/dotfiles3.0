@@ -235,9 +235,6 @@ noremap <Leader>Y "+y
 noremap <Leader>P "+p
 "using the PRIMARY clipboard * with the y and p commands
 
-nnoremap gl $
-nnoremap gh 0
-
 " --------------------------- "
 " >>>>> SWITCH SETTINGS <<<<< "
 " --------------------------- "
