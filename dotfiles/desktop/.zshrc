@@ -223,18 +223,18 @@ bindkey -M vicmd 'j' history-substring-search-down
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 #globalias
-#globalias() {
-   #zle _expand_alias
-   #zle expand-word
-   #zle self-insert
-#}
-#zle -N globalias
-## space expands all aliases, including global
-#bindkey -M viins " " globalias
-## control-space to make a normal space
-#bindkey -M viins "^ " magic-space
-## normal space during searches
-#bindkey -M isearch " " magic-space
+globalias() {
+   zle _expand_alias
+   zle expand-word
+   zle self-insert
+}
+zle -N globalias
+# space expands all aliases, including global
+bindkey -M viins " " globalias
+# control-space to make a normal space
+bindkey -M viins "^ " magic-space
+# normal space during searches
+bindkey -M isearch " " magic-space
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 # Enable gpg-agent if it is not running
@@ -447,7 +447,7 @@ alias lta='exa --all --color always --color-scale --tree --level=3'
 alias md='/usr/bin/mkdir -p'
 #Speed up making dirs
 
-alias mm='myman'
+alias mm='wyman'
 #Uses vimman instead of normal man
 
 alias mkdir='mkdir -p'
@@ -602,7 +602,7 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 #FZF
 
-eval "$(_MYMAN_COMPLETE=source_zsh myman)"
+eval "$(_WYMAN_COMPLETE=source_zsh wyman)"
 #My Scripts
 #. ----------------------- #
 # >>>>> END SOURCING <<<<< #
