@@ -22,13 +22,14 @@ prompt_order = [
 
 [time]
 disabled = false
+style = "yellow"
 
 [username]
 disabled = false
 show_always = true
 
 [hostname]
-ssh_only = false
+ssh_only = true
 prefix = ""
 suffix = ""
 disabled = false
@@ -41,6 +42,7 @@ fish_style_pwd_dir_length = 1
 
 [cmd_duration]
 min_time = 1
+style = "yellow"
 
 [character]
 symbol = "❯"
