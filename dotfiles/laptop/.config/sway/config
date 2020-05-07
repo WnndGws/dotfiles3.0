@@ -356,4 +356,4 @@ bindsym $mod+m exec pactl set-sink-mute 0 toggle
 #bindsym $mod+control+/
 
 # Run wallpaper script and set as background
-exec python $HOME/Git/wallpaperMaker/manipulate_image.py && swaymsg 'output * bg /tmp/wallpaper.png fill'
+exec $HOME/Git/Agendrum/agendrum.py && swaymsg 'output * bg /tmp/wallpaper.png fill'
